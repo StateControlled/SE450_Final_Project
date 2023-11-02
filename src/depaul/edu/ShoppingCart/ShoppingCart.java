@@ -1,4 +1,7 @@
-package depaul.edu;
+package depaul.edu.ShoppingCart;
+
+import depaul.edu.Item.IAbstractItem;
+import java.util.LinkedList;
 
 /**
  * ShoppingCart class represents a shopping cart that can store
@@ -7,6 +10,7 @@ package depaul.edu;
 public class ShoppingCart {
 	
 	private static final ShoppingCart SHOPPING_CART = null;
+	private static LinkedList<IAbstractItem> items;
 	
 	//required parameters
 	private String field1;
@@ -19,6 +23,7 @@ public class ShoppingCart {
 	private ShoppingCart(ShoppingCartBuilder builder) {
 		this.field1 = builder.bField1;
 		this.field2 = builder.bField2;
+		items = new LinkedList<>();
 	}
 	
 	public static ShoppingCart getInstance() {
@@ -26,6 +31,10 @@ public class ShoppingCart {
 			return new ShoppingCart.ShoppingCartBuilder().build();
 		}
 		return SHOPPING_CART;
+	}
+
+	public static boolean addToCart(IAbstractItem item) {
+		return items.add(item);
 	}
 
 	public String getField1() {
