@@ -129,7 +129,7 @@ public class ItemTests {
 
 	public static void writeToFile(String filePath, IAbstractItem itemObject) {
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             // Write some text to the file
 			String data = String.format(
 				"%s,%s,%s,%.2f,%s",
