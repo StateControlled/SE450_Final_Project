@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class ShoppingCart {
 	
 	private static final ShoppingCart SHOPPING_CART = null;
-	private static LinkedList<IAbstractItem> items;
+	private static LinkedList<CartPair<IAbstractItem, Integer>> items;
 	
 	//required parameters
 	private String field1;
@@ -33,8 +33,8 @@ public class ShoppingCart {
 		return SHOPPING_CART;
 	}
 
-	public static boolean addToCart(IAbstractItem item) {
-		return items.add(item);
+	public static boolean addToCart(IAbstractItem item, int quantity) {
+		return items.add(new CartPair<>(item, quantity));
 	}
 
 	public String getField1() {

@@ -14,21 +14,121 @@ public class ItemTests {
 	private static String testPath = "src\\depaul\\edu\\Catalogue\\testproducts.csv";
 
 	public static void main(String[] args) {
-		System.out.println("Generating items...");
-		ArrayList<IAbstractItem> list = createItems();
+		System.out.println("\n************************EQUALITY TESTS************************");
+		equalityTests();
 
-		System.out.println("All items added to list:");
+		System.out.println("\n************************TO STRING TEST************************");
+		System.out.println("\nGenerating items...");
+		ArrayList<IAbstractItem> list = createItems();
 		for (IAbstractItem i : list) {
 			System.out.println(i.toString());
 		}
 
-		System.out.println("Write test...");
+		System.out.println("\n************************FILE WRITE TEST************************");
 		for (IAbstractItem i : list) {
 			writeToFile(testPath, i);
 		}
 
-		System.out.println("Read test");
+		System.out.println("\n************************FILE READ TEST************************");
 		readFile(testPath);
+	}
+
+	public static void equalityTests() {
+		IAbstractItem itemA = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Bad Violin", 89.99);
+		IAbstractItem itemB = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Bad Violin", 89.99);
+
+		System.out.print("itemA.equals(itemA) == true : ");
+		System.out.println(itemA.equals(itemA) == true);
+
+		System.out.print("itemA.equals(itemB) : ");
+		System.out.println(itemA.equals(itemB));
+
+		System.out.print("itemB.equals(itemA) : ");
+		System.out.println(itemB.equals(itemA));
+
+		System.out.print("itemB.equals(itemB) == true : ");
+		System.out.println(itemB.equals(itemB) == true);
+
+		System.out.print("itemA.equals(null) : ");
+		System.out.println(itemA.equals(null));
+
+		System.out.print("itemB.equals(null) : ");
+		System.out.println(itemB.equals(null));
+
+
+		IAbstractItem itemC = ItemFactory.createProduct(ItemType.VIOLIN, "Shar", "Cool Violin", 5000.0);
+		IAbstractItem itemD = ItemFactory.createProduct(ItemType.VIOLIN, "Benjamin Ruth", "Cool Violin", 5000.0);
+
+		System.out.println();
+		System.out.print("itemC.equals(itemC) == true : ");
+		System.out.println(itemC.equals(itemC) == true);
+
+		System.out.print("itemC.equals(itemD) : ");
+		System.out.println(itemC.equals(itemD));
+
+		System.out.print("itemD.equals(itemC) : ");
+		System.out.println(itemD.equals(itemC));
+
+		System.out.print("itemD.equals(itemD) == true : ");
+		System.out.println(itemD.equals(itemD) == true);
+
+
+		IAbstractItem itemE = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Dumb Violin", 109.99);
+		IAbstractItem itemF = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Dumb Violin", 109.99);
+		IAbstractItem itemG = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Dumb Violin", 109.99);
+
+		System.out.println();
+		System.out.print("itemE.equals(itemE) == true : ");
+		System.out.println(itemE.equals(itemE) == true);
+
+		System.out.print("itemE.equals(itemF) : ");
+		System.out.println(itemE.equals(itemF));
+
+		System.out.print("itemE.equals(itemG) : ");
+		System.out.println(itemE.equals(itemG));
+
+		System.out.println();
+		System.out.print("itemF.equals(itemF)  == true : ");
+		System.out.println(itemF.equals(itemF)  == true);
+
+		System.out.print("itemF.equals(itemE) : ");
+		System.out.println(itemF.equals(itemE));
+
+		System.out.print("itemF.equals(itemG) : ");
+		System.out.println(itemF.equals(itemG));		
+		
+		System.out.println();
+		System.out.print("itemG.equals(itemG)  == true : ");
+		System.out.println(itemG.equals(itemG)  == true);
+
+		System.out.print("itemG.equals(itemE) : ");
+		System.out.println(itemG.equals(itemE));
+
+		System.out.print("itemG.equals(itemF) : ");
+		System.out.println(itemG.equals(itemF));
+
+
+		IAbstractItem itemH = ItemFactory.createProduct(ItemType.VIOLIN, "Shar", "Instrument", 2500.0);
+		IAbstractItem itemI = ItemFactory.createProduct(ItemType.VIOLA, "Shar", "Instrument", 2500.0);
+
+		System.out.println();
+		System.out.println(itemH.toString());
+		System.out.println(itemH.hashCode());
+		System.out.println(itemI.toString());
+		System.out.println(itemI.hashCode());
+
+		System.out.println();
+		System.out.print("itemH.equals(itemH) == true : ");
+		System.out.println(itemH.equals(itemH) == true);
+
+		System.out.print("itemH.equals(itemI) : ");
+		System.out.println(itemH.equals(itemI));
+
+		System.out.print("itemI.equals(itemH) : ");
+		System.out.println(itemI.equals(itemH));
+
+		System.out.print("itemI.equals(itemI) == true : ");
+		System.out.println(itemI.equals(itemI) == true);
 	}
 
 	public static ArrayList<IAbstractItem> createItems() {
@@ -36,9 +136,13 @@ public class ItemTests {
 
 		//System.out.println("VIOLIN TEST*******************************************");
 		// 93d4b63c-e8a0-3770-89eb-b18b3d20bace
-		IAbstractItem item1 = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Trash Violin", 99.95);
-		//System.out.println(item1.toString());
-		list.add(item1);
+		IAbstractItem item1a = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Trash Violin", 99.95);
+		//System.out.println(item1a.toString());
+		list.add(item1a);
+
+		IAbstractItem item1b = ItemFactory.createProduct(ItemType.VIOLIN, "Amazon", "Trash Violin", 99.95);
+		//System.out.println(item1b.toString());
+		list.add(item1b);
 	
 		// 1dc01952-9f2c-3054-9237-1815fd1bd1b3
 		IAbstractItem item2 = ItemFactory.createProduct(ItemType.VIOLIN, "Shar", "Student Violin", 900.0);
