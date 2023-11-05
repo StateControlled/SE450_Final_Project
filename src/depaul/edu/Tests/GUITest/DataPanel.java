@@ -9,7 +9,7 @@ import javax.swing.Scrollable;
 import javax.swing.SwingConstants;
 
 class DataPanel extends JPanel implements Scrollable {
-    private int visibleRowCount = 1;
+    private int visibleRowCount;
 
     public DataPanel(int visibleRowCount) {
         this.visibleRowCount = visibleRowCount;
@@ -26,9 +26,10 @@ class DataPanel extends JPanel implements Scrollable {
             JComponent comp = (JComponent) getComponents()[0];
             int width = getPreferredSize().width;
             int height = visibleRowCount * comp.getPreferredSize().height;
-            Dimension d = new Dimension(width, height);
-            System.out.println(d);
-            return d;
+
+            Dimension dimension = new Dimension(width, height);
+            System.out.println(dimension);
+            return dimension;
         } else {
             return new Dimension(0, 0);
         }
@@ -37,12 +38,12 @@ class DataPanel extends JPanel implements Scrollable {
     @Override
     public int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction) {
         if (getComponentCount() > 0) {
-            JComponent comp = (JComponent) getComponents()[0];
-            Dimension d = comp.getPreferredSize();
+            JComponent component = (JComponent) getComponents()[0];
+            Dimension dimension = component.getPreferredSize();
             if (orientation == SwingConstants.VERTICAL) {
-                return d.height;
+                return dimension.height;
             } else {
-                return d.width;
+                return dimension.width;
             }
         }
         return 0;

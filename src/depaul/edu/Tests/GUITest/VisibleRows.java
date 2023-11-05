@@ -9,6 +9,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
+/**
+ * Original source https://stackoverflow.com/questions/33894580/scrollable-list-with-items-of-set-pixel-height-in-java-swing
+ * Modified by WB
+ */
 public class VisibleRows extends JPanel {
     private DefaultListModel<Datum> dataModel = new DefaultListModel<>();
     private JList<Datum> datumList = new JList<>(dataModel);
@@ -17,7 +21,7 @@ public class VisibleRows extends JPanel {
         DataPanel dataPanel = new DataPanel(8);
         for (int i = 0; i < 200; i++) {
             String name = "John Smith " + (i + 1);
-            String second = generatingRandomAlpha(8);
+            String second = generateRandomAlpha(10);
             int value = ((i + 1) * 15299) - 12318;
 
             Datum datum = new Datum(name, second, value);
@@ -30,6 +34,7 @@ public class VisibleRows extends JPanel {
 
         add(scrollPane1);
 
+        /***********************************************************/
         datumList.setVisibleRowCount(5);
         datumList.setCellRenderer(new DatumRenderer());
         datumList.setPrototypeCellValue(new Datum("XXXXXXXXXXX", "XXXXXXXXXXX", 100));
@@ -49,13 +54,12 @@ public class VisibleRows extends JPanel {
         frame.setVisible(true);
     }
 
-    private String generatingRandomAlpha(int targetStringLength) {
+    private String generateRandomAlpha(int targetStringLength) {
         int leftLimit = 97;
         int rightLimit = 122;
         Random random = new Random();
 
         String generatedString = random.ints(leftLimit, rightLimit + 1)
-            .filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97))
             .limit(targetStringLength)
             .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
             .toString();

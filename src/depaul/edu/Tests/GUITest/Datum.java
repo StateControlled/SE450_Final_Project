@@ -1,5 +1,8 @@
 package depaul.edu.Tests.GUITest;
 
+/**
+ * A class for storing information.
+ **/
 class Datum {
     private String name;
     private String second;
