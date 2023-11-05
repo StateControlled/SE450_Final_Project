@@ -1,14 +1,16 @@
 package depaul.edu.Tests;
 
-import depaul.edu.Item.*;
-
-import java.util.ArrayList;
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+import depaul.edu.Item.IAbstractItem;
+import depaul.edu.Item.ItemFactory;
+import depaul.edu.Item.ItemType;
 
 public class ItemTests {
 	private static String testPath = "src\\depaul\\edu\\Catalogue\\testproducts.csv";

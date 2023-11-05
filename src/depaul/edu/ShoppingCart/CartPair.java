@@ -1,37 +1,55 @@
 package depaul.edu.ShoppingCart;
 
-public class CartPair<K, V> implements IPair<K, V> {
-    private K key;
-    private V value;
+import depaul.edu.Item.IAbstractItem;
 
-    public CartPair(K key, V value) {
+/**
+ * The CartPair class associates an item with a quantity and provides methods to retrieve
+ * either value, increment and decrement quantity, and compare pairs.
+ **/
+public class CartPair implements IPair<IAbstractItem, Integer> {
+    private IAbstractItem key;
+    private Integer quantity;
+
+    public CartPair(IAbstractItem key, Integer quantity) {
         this.key = key;
-        this.value = value;
+        this.quantity = quantity;
+    }
+
+    public int increaseQuantity() {
+        quantity += 1;
+        return quantity;
+    }
+
+    public int decreaseQuantity() {
+        if (quantity > 0) {
+            quantity -= 1;
+        }
+        return quantity;
     }
 
     @Override
-    public K getKey() {
+    public IAbstractItem getKey() {
         return this.key;
     }
 
     @Override
-    public void setKey(K key) {
+    public void setKey(IAbstractItem key) {
         this.key = key;
     }
 
     @Override
-    public V getValue() {
-        return this.value;
+    public Integer getValue() {
+        return this.quantity;
     }
 
     @Override
-    public void setValue(V value) {
-        this.value = value;
+    public void setValue(Integer quantity) {
+        this.quantity = quantity;
     }
 
     @Override
     public int hashCode() {
-        return 31081 + key.hashCode() + value.hashCode();
+        return 31081 + key.hashCode() + quantity;
     }
 
     @Override
@@ -47,9 +65,8 @@ public class CartPair<K, V> implements IPair<K, V> {
                 return false;
             }
             
-            @SuppressWarnings("unchecked")
-            CartPair<K, V> that = (CartPair<K, V>) obj;
-            return ( this.key.equals(that.getKey() ) && ( this.value.equals(that.getValue()) ) );
+            CartPair that = (CartPair) obj;
+            return ( this.key.equals(that.key ) && ( this.quantity == that.quantity) );
         } catch (Exception e) {
             return false;
         }
@@ -57,7 +74,7 @@ public class CartPair<K, V> implements IPair<K, V> {
 
     @Override
     public String toString() {
-        return String.format("(%s, %s)", key.toString(), value.toString());
+        return String.format("(%s, %d)", key.getItemName(), quantity);
     }
 
 
