@@ -38,6 +38,7 @@ public class guiTest2 {
 
         // Text Area at the Center
         JTextArea textArea = new JTextArea();
+        textArea.setText("Test");
 
         //Adding Components to the frame.
         frame.getContentPane().add(BorderLayout.SOUTH, panel);

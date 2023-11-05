@@ -67,9 +67,14 @@ public class Viola implements IAbstractItem {
 		return String.format("Item ID: %s\n" +
 							 "Manufacturer: %s\n" +
 							 "Description : %s\n" +
-							 "Price: %.2f\n",
+							 "Price: %.2f",
 							 UID, manufacturer, itemName, price
 							 );
+	}
+
+	@Override
+	public String view() {
+		return String.format("%s, %s $%,.2f", itemName, manufacturer, price);
 	}
 }
 

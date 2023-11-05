@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import depaul.edu.Item.IAbstractItem;
 
 public class Catalogue {
-    private static final File CATALOGUE_FILE = new File("src\\depaul\\edu\\Catalogue\\products.csv");
+    //private static final File CATALOGUE_FILE = new File("src\\depaul\\edu\\Catalogue\\products.csv");
 
     public static void readFile(File file) {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {

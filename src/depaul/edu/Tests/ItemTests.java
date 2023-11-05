@@ -17,14 +17,23 @@ public class ItemTests {
 
 	public static void main(String[] args) {
 		System.out.println("\n************************EQUALITY TESTS************************");
+		System.out.println();
 		equalityTests();
 
 		System.out.println("\n************************TO STRING TEST************************");
 		System.out.println("\nGenerating items...");
+		System.out.println();
 		ArrayList<IAbstractItem> list = createItems();
 		for (IAbstractItem i : list) {
 			System.out.println(i.toString());
+			System.out.println();
 		}
+
+		System.out.println("\n************************VIEW TEST************************");
+		System.out.println();
+		for (IAbstractItem i : list) {
+			System.out.println(i.view());
+		}		
 
 		System.out.println("\n************************FILE WRITE TEST************************");
 		for (IAbstractItem i : list) {
