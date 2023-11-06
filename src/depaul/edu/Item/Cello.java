@@ -8,7 +8,7 @@ public class Cello implements IAbstractItem {
 	private double price;
 	private final String UID;
 
-	public Cello(String manufacturer, String itemName, double price) {
+	protected Cello(String manufacturer, String itemName, double price) {
 		this.manufacturer = manufacturer;
 		this.itemName = itemName;
 		this.price = price;

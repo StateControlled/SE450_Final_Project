@@ -8,7 +8,7 @@ public class Bass implements IAbstractItem {
 	private double price;
 	private final String UID;
 
-	public Bass(String manufacturer, String itemName, double price) {
+	protected Bass(String manufacturer, String itemName, double price) {
 		this.manufacturer = manufacturer;
 		this.itemName = itemName;
 		this.price = price;

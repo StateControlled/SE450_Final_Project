@@ -1,4 +1,4 @@
-package depaul.edu.Tests.GUITest;
+package depaul.edu.Tests.GUIExample;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;

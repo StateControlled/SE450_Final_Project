@@ -8,7 +8,7 @@ public class Piano implements IAbstractItem {
 	private double price;
 	private final String UID;
 
-	public Piano(String manufacturer, String itemName, double price) {
+	protected Piano(String manufacturer, String itemName, double price) {
 		this.manufacturer = manufacturer;
 		this.itemName = itemName;
 		this.price = price;

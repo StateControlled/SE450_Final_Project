@@ -1,4 +1,4 @@
-package depaul.edu.Tests.GUITest;
+package depaul.edu.Tests.GUIExample;
 
 /**
  * A class for storing information.

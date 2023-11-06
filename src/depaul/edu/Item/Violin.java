@@ -8,7 +8,7 @@ public class Violin implements IAbstractItem {
 	private double price;
 	private final String UID;
 
-	public Violin(String manufacturer, String itemName, double price) {
+	protected Violin(String manufacturer, String itemName, double price) {
 		this.manufacturer = manufacturer;
 		this.itemName = itemName;
 		this.price = price;

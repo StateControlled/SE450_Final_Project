@@ -1,4 +1,4 @@
-package depaul.edu.Tests.GUITest;
+package depaul.edu.Tests.GUIExample;
 
 import java.util.Random;
 
@@ -14,11 +14,12 @@ import javax.swing.SwingUtilities;
  * Modified by WB
  */
 public class VisibleRows extends JPanel {
+    private static final int INIT_MAX_ROWS = 4;
     private DefaultListModel<Datum> dataModel = new DefaultListModel<>();
     private JList<Datum> datumList = new JList<>(dataModel);
 
     public VisibleRows() {
-        DataPanel dataPanel = new DataPanel(8);
+        DataPanel dataPanel = new DataPanel(INIT_MAX_ROWS);
         for (int i = 0; i < 200; i++) {
             String name = "John Smith " + (i + 1);
             String second = generateRandomAlpha(10);
@@ -35,7 +36,7 @@ public class VisibleRows extends JPanel {
         add(scrollPane1);
 
         /***********************************************************/
-        datumList.setVisibleRowCount(5);
+        datumList.setVisibleRowCount(INIT_MAX_ROWS);
         datumList.setCellRenderer(new DatumRenderer());
         datumList.setPrototypeCellValue(new Datum("XXXXXXXXXXX", "XXXXXXXXXXX", 100));
         JScrollPane scrollPane2 = new JScrollPane(datumList);
