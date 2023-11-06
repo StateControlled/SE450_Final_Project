@@ -33,7 +33,7 @@ public class Cello implements IAbstractItem {
 	
 	private String makeUID(String v1, String v2, String v3, String v4) {
 		String concatenatedInputs = v1 + v2 + v3 + v4;
-		return UUID.nameUUIDFromBytes(concatenatedInputs.getBytes()).toString();
+		return "INS-SVC-" + UUID.nameUUIDFromBytes(concatenatedInputs.getBytes()).toString().substring(0, 8);
 	}
 
 	@Override

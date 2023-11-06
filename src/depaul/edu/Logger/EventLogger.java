@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class EventLogger {
-    private static EventLogger instance;
+    private static EventLogger INSTANCE;
     private File logFile;
 
     private EventLogger(File log) {
@@ -17,10 +17,10 @@ public class EventLogger {
      * @throws NullPointerException if the name is null.
      **/
     public static EventLogger getLoggerInstance(String name) throws NullPointerException {
-        if (instance == null) {
-            instance = new EventLogger(new File(name + ".log"));
+        if (INSTANCE == null) {
+            INSTANCE = new EventLogger(new File(name + ".log"));
         }
-        return instance;
+        return INSTANCE;
     }
 
     public File getLog() {

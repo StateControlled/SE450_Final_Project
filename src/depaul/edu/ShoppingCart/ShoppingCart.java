@@ -9,7 +9,7 @@ import java.util.HashMap;
  **/
 public class ShoppingCart {
 	/** Singleton instance of the shopping cart*/
-	private static final ShoppingCart SHOPPING_CART = null;
+	private static ShoppingCart SHOPPING_CART = null;
 	/** Stores items and quantities. */
 	private static HashMap<IAbstractItem, Integer> shoppingList;
 	
