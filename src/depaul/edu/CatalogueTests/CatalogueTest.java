@@ -1,4 +1,4 @@
-package depaul.edu.Tests;
+package depaul.edu.CatalogueTests;
 
 import depaul.edu.Catalogue.Catalogue;
 import depaul.edu.Item.IAbstractItem;

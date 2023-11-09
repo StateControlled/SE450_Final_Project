@@ -1,20 +1,15 @@
 package depaul.edu.Authenticator;
 
+import depaul.edu.Customer.Customer;
+
 public class Authenticator {
-    private static Authenticator INSTANCE;
-
     private Authenticator() {
-
+        ;
     }
 
-    public static Authenticator getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new Authenticator();
-        }
-        return INSTANCE;
-    }
-
-    public boolean authenticate(String username, String hashedPassword) {
-        return false;
+    public static boolean validateCustomerPassword(Customer user, String typedPassword) {
+        String userPassword = user.getPassword();
+        String test = Hash.hash(typedPassword);
+        return userPassword.equals(test);
     }
 }
