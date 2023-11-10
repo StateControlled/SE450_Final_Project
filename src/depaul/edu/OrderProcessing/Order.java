@@ -5,42 +5,56 @@ import java.util.ArrayList;
 
 import depaul.edu.Customer.IAbstractCustomer;
 import depaul.edu.Item.IAbstractItem;
+import java.text.SimpleDateFormat;
 
 public class Order implements IAbstractOrder {
     private long orderID;
     private double totalCost;
-    private Date orderDate;
+    private String orderDate;
     private IAbstractCustomer customer;
 
     public Order(IAbstractCustomer customer, ArrayList<IAbstractItem> cart) {
         this.customer = customer;
-        this.orderDate = new Date();
-        setOrderID(orderDate);
-        setCost(cart);
+        initialize(cart);
     }
 
-    public void setCost(ArrayList<IAbstractItem> items) {
+    private void initialize(ArrayList<IAbstractItem> cart) {
+        Date now = new Date();
+        this.orderID = setOrderID(now);
+        this.totalCost = setCost(cart);
+        this.orderDate = formatDate(now);
+    }
+
+    public double setCost(ArrayList<IAbstractItem> items) {
         double result = 0.0;
         for (IAbstractItem item : items) {
             result += item.getPrice();
         }
-        totalCost = result;
+        return result;
     }
 
     public double getCost() {
         return totalCost;
     }
 
+    private long setOrderID(Date date) {
+        return 2000000L + date.getTime() + customer.hashCode();
+    }
+
     public long getOrderID() {
         return orderID;
     }
 
-    private void setOrderID(Date date) {
-        long result = 2000000L + date.getTime() + customer.hashCode();
-        this.orderID = result;
+    public String getOrderDate() {
+        return orderDate;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public String toCsvFormat() {
+        return String.format("%d,%s,%s,%,.2f", orderID, orderDate.toString(), customer.getUsername(), totalCost);
+    }
+
+    private String formatDate(Date date) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        return format.format(date);
     }
 }
