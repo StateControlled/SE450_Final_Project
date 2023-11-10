@@ -7,42 +7,41 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
 import depaul.edu.Catalogue.AbstractCatalogue;
 import depaul.edu.Customer.Customer;
+import depaul.edu.Customer.IAbstractCustomer;
 
-public class UserDatabase extends AbstractCatalogue<Customer> {
+public class UserDatabase extends AbstractCatalogue<IAbstractCustomer> {
     private static final File CATALOGUE_FILE = new File("src\\depaul\\edu\\Authenticator\\users.csv");
-    private static UserDatabase INSTANCE;
+    private static UserDatabase instance;
+    //private static HashTable<String username, String hashedPassword> internalUserCatalogue;
 
     private UserDatabase() {
-        super(CATALOGUE_FILE, readFileToList(CATALOGUE_FILE));
+        super(CATALOGUE_FILE);
     }
 
     public static UserDatabase getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new UserDatabase();
+        if (instance == null) {
+            instance = new UserDatabase();
         }
-        return INSTANCE;
-    }
-
-    public void refreshCatalogue() {
-        setCatalogueArray(readFileToList(CATALOGUE_FILE));
+        return instance;
     }
 
     /**
      * Reads the class variable {@code CATALOGUE_FILE} and creates a java {@code ArrayList} of {@code Customer} objects from the data.
      **/
-    protected static ArrayList<Customer> readFileToList(File file) {
-        ArrayList<Customer> list = null;
+    protected static ArrayList<IAbstractCustomer> readFileToList(File file) {
+        ArrayList<IAbstractCustomer> list = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             list = new ArrayList<>();
             String line;
             while ( (line = reader.readLine()) != null ) {
-                //String[] record = line.split(",");
-                Customer item = null;
-                //if (item != null) {
-                    list.add(item);
-                ///}
+                String[] record = line.split(",");
+                IAbstractCustomer customer = new Customer(record[0], record[1]);
+                if (customer != null) {
+                    list.add(customer);
+                }
             }
         } catch (FileNotFoundException e) {
 			System.out.println("File not found.");
@@ -55,15 +54,31 @@ public class UserDatabase extends AbstractCatalogue<Customer> {
     }
 
     @Override
-    public void writeToFile(File file, ArrayList<Customer> list, boolean append) {
-        // TODO Auto-generated method stub
+    public void writeToFile(File file, ArrayList<IAbstractCustomer> list, boolean append) {
+        // TODO implement this
         throw new UnsupportedOperationException("Unimplemented method 'writeToFile'");
     }
 
-    @Override
-    public ArrayList<Customer> readFromFile(File file) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'readFromFile'");
+    public ArrayList<IAbstractCustomer> readFromFile(File file) {
+        ArrayList<IAbstractCustomer> list = null;
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            list = new ArrayList<>();
+            String line;
+            while ( (line = reader.readLine()) != null ) {
+                String[] record = line.split(",");
+                IAbstractCustomer item = new Customer(record[0], record[1]);
+                if (item != null) {
+                    list.add(item);
+                }
+            }
+        } catch (FileNotFoundException e) {
+			System.out.println("File not found.");
+			e.printStackTrace();
+        } catch (IOException e) {
+		    System.out.println("Failed to read file.");
+            e.printStackTrace();
+        }        
+        return list;
     }
     
 }

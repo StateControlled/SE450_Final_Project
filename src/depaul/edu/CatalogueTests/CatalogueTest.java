@@ -1,6 +1,6 @@
 package depaul.edu.CatalogueTests;
 
-import depaul.edu.Catalogue.Catalogue;
+import depaul.edu.Catalogue.TCatalogue;
 import depaul.edu.Item.IAbstractItem;
 import depaul.edu.Item.ItemFactory;
 import depaul.edu.Item.ItemType;
@@ -13,8 +13,8 @@ import java.io.File;
 public class CatalogueTest {
 
     public static void main(String[] args) {
-		Catalogue.getInstance();
-		ArrayList<IAbstractItem> list = Catalogue.getCatalogueAsList();
+		TCatalogue.getInstance();
+		ArrayList<IAbstractItem> list = TCatalogue.getCatalogueAsList();
 
 		for (IAbstractItem i : list) {
 			System.out.println(i.toString());
@@ -23,11 +23,11 @@ public class CatalogueTest {
 
 		System.out.println("*********************************");
 
-		ArrayList<IAbstractItem> test1 = Catalogue.findName("Viol");
+		ArrayList<IAbstractItem> test1 = TCatalogue.findName("Viol");
 		test1.forEach((item) -> System.out.println(item.toString() + "\n"));
 
 		ArrayList<IAbstractItem> testList = createItems();
-		Catalogue.writeToFile(new File("src\\depaul\\edu\\Catalogue\\testCatalogue.csv"), testList ,true);
+		TCatalogue.writeToFile(new File("src\\depaul\\edu\\Catalogue\\testCatalogue.csv"), testList ,true);
 	}
 
 	public static ArrayList<IAbstractItem> createItems() {

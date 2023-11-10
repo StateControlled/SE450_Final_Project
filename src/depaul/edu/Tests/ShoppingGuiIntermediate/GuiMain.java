@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
-import depaul.edu.Catalogue.Catalogue;
+import depaul.edu.Catalogue.TCatalogue;
 import depaul.edu.Item.IAbstractItem;
 import depaul.edu.Item.ItemFactory;
 
@@ -83,8 +83,8 @@ public class GuiMain extends JPanel {
         System.out.println("SETTING UP...");
         PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
 
-        Catalogue.getInstance();
-        ArrayList<IAbstractItem> items = Catalogue.getCatalogueAsList();
+        TCatalogue.getInstance();
+        ArrayList<IAbstractItem> items = TCatalogue.getCatalogueAsList();
 
         System.out.println("READING CATALOGUE");
         //System.out.println(Catalogue.getFilePath(false));

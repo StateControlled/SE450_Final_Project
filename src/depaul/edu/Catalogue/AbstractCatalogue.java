@@ -3,16 +3,23 @@ package depaul.edu.Catalogue;
 import java.io.File;
 import java.util.ArrayList;
 
+//import java.io.BufferedReader;
+import java.io.BufferedWriter;
+//import java.io.FileNotFoundException;
+//import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public abstract class AbstractCatalogue<T> {
     private File SOURCE_CATALOGUE_FILE;
-    protected ArrayList<T> CATALOGUE;
+    //protected ArrayList<T> CATALOGUE;
 
     /**
      * Constructs a new Catalogue.
      **/
-    public AbstractCatalogue(File catalogueSource, ArrayList<T> catalogueArray) {
+    public AbstractCatalogue(File catalogueSource) {
         SOURCE_CATALOGUE_FILE = catalogueSource;
-        CATALOGUE = catalogueArray;
+        //CATALOGUE = catalogueArray;
     }
 
     /**
@@ -27,24 +34,6 @@ public abstract class AbstractCatalogue<T> {
     }
 
     /**
-     * Returns the Catalogue in the form of an ArrayList.
-     * @throws NullPointerException If the Catalogue is null.
-     **/
-    public ArrayList<T> getCatalogueAsList() throws NullPointerException {
-        if (CATALOGUE == null) {
-            throw new NullPointerException("The Catalogue is NULL.");
-        }
-        return CATALOGUE;
-    }
-
-    /**
-     * 
-     **/
-    protected void setCatalogueArray(ArrayList<T> catalogueArray) {
-        CATALOGUE = catalogueArray;
-    }
-
-    /**
      * Returns, as a {@code File} object, the source file for this Catalogue.
      **/
     public File getSourceFile() {
@@ -54,18 +43,33 @@ public abstract class AbstractCatalogue<T> {
     /**
      * Writes a list of elements to a given file.
      * 
-     * @param file  The file to write.
+     * @param file  The file to write to.
      * @param list  The list of data to be written to the file.
      * @param append    If {@code true}, append the list to the existing file.
      *                  If {@code false}, the existing file will not be preserved.
      **/
-    public abstract void writeToFile(File file, ArrayList<T> list, boolean append);
-
+    public void writeToFile(File file, ArrayList<T> list, boolean append) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, append))) {
+            for (T item : list) {
+                String data = item.toString();
+                writer.append(data);
+                writer.newLine();
+            }
+            writer.close();
+        } catch (IOException e) {
+		    System.out.println("Failed to read or write file: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 
     /**
-     * Reads a file and returns an ArrayList of objects.
-     * 
-     * @param file  The file to read.
+     * Searches a file for a given key.
+     * @param file  the file to search
+     * @param key   the key to search the file for
+     * @param column    if the file is a .csv or other separated file, this is the column in which to search.
      **/
-    public abstract ArrayList<T> readFromFile(File file);
+    public static boolean findInFile(File file, String key, int column) {
+        // TODO
+        return false;
+    }
 }

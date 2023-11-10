@@ -1,12 +1,8 @@
 package depaul.edu.Customer;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 import depaul.edu.Authenticator.Hash;
 
 public class Customer implements IAbstractCustomer {
-
     // TODO associate shopping cart
     private String username;
     private String password;
@@ -33,5 +29,10 @@ public class Customer implements IAbstractCustomer {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public int hashCode() {
+        return username.hashCode() + password.hashCode() + 15373;
     }
 }
