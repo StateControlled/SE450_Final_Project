@@ -6,13 +6,37 @@
 
     <body>
         <p>
-            This is the set of files for running the shopping system.
+            This is an explanation of how the system works and the components of the system.</br>
+
             <dl>
-                <dt>Product (Item) and Factory</dt>
+            <dt>Initialization</dt>
+                <dd>On startup, the program generates the catalogue from a list of items.</dd>
+                <dd>A factory method builds the items from the data retrieved from the file and adds them to an internal "database."</dd>
+
+            <dt>User operation</dt>
+                <dd>A user can log in to an existing account or create a new account. A unique shopping cart is associated with each account.</dd>
+                <dd>The user can browse a (text only) catalogue of products.</dd>
+                <dd>Products can be added to or removed from the user's cart.</dd>
+                <dd>The user can "check out" to make a purchase.</dd>
+                    <dl><dt>Authentication</dt>
+                        <dd>Credit card information will be validated (simulated).</dd>
+                        <dd>Payment will be processed (simulated).</dd>
+                    </dl>
+                <dd>An record of the order will be kept.</dd>
+
+            <dt>Shutdown</dt>
+                <dd>Any changes to the product "database" are written to a file.</dd>
+                <dd>Records of new orders are written to file.</dd>
+                <dd>New user information is written to file.</dd>
+            </dl>
+            Components:
+            <dl>
+                <dt>Product Management</dt>
                 <dd><i>A Factory class creates an item based on given parameters.</i></dd>
 
                 <dt>Product Catalogue</dt>
-                <dd><i>The product catalogue is stored as a .csv file.</i></dd>
+                <dd><i> The product catalogue is stored as a .csv file.
+                        Items may be added and retrieved from the catalogue. The user may only retrieve items to view them.</i></dd>
 
                 <dt>Order Processing</dt>
                 <dd><i style="color:RED;">Not Implemented</i></dd>

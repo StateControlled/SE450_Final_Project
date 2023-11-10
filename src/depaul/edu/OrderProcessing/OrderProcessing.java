@@ -1,4 +1,4 @@
-package depaul.edu;
+package depaul.edu.OrderProcessing;
 
 public class OrderProcessing {
 

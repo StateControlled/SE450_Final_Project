@@ -1,14 +1,21 @@
 package depaul.edu.Catalogue;
 
 import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
 //import java.io.BufferedReader;
 import java.io.BufferedWriter;
 //import java.io.FileNotFoundException;
 //import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Type;
 
 public abstract class AbstractCatalogue<T> {
     private File SOURCE_CATALOGUE_FILE;
@@ -50,11 +57,10 @@ public abstract class AbstractCatalogue<T> {
      **/
     public void writeToFile(File file, ArrayList<T> list, boolean append) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, append))) {
-            for (T item : list) {
-                String data = item.toString();
-                writer.append(data);
-                writer.newLine();
-            }
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            gson.toJson(list, writer);
+
             writer.close();
         } catch (IOException e) {
 		    System.out.println("Failed to read or write file: " + e.getMessage());
@@ -68,8 +74,22 @@ public abstract class AbstractCatalogue<T> {
      * @param key   the key to search the file for
      * @param column    if the file is a .csv or other separated file, this is the column in which to search.
      **/
-    public static boolean findInFile(File file, String key, int column) {
+    public T findInFile(File file, String key, int column) {
         // TODO
-        return false;
+        Gson gson = new Gson();
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            //T item = gson.fromJson(reader, T.class);
+            Type collectionType = new TypeToken<ArrayList<T>>(){}.getType();
+            ArrayList<T> temp = gson.fromJson(reader, collectionType);
+            for (T item : temp) {
+                if (item.toString().contains(key)) {
+                    return item;
+                }
+            }
+            return null;
+
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
