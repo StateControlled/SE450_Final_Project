@@ -1,0 +1,128 @@
+[
+  {
+    "category": "INSTRUMENT",
+    "itemType": "VIOLIN",
+    "itemName": "Amazon",
+    "manufacturer": "Trash Violin",
+    "price": 99.95
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "VIOLIN",
+    "itemName": "Joseph Curtin",
+    "manufacturer": "Preofessional Violin",
+    "price": 21000.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "VIOLA",
+    "itemName": "Benjamin Ruth",
+    "manufacturer": "Professional Viola",
+    "price": 19500.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "VIOLA",
+    "itemName": "Shar",
+    "manufacturer": "Student Viola",
+    "price": 800.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "VIOLONCELLO",
+    "itemName": "Shar",
+    "manufacturer": "Beginner Cello",
+    "price": 900.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "VIOLONCELLO",
+    "itemName": "Antonio Stradivari",
+    "manufacturer": "Davidov Stradivarius",
+    "price": 3500000.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "BASS",
+    "itemName": "Shar",
+    "manufacturer": "Intermediate Bass",
+    "price": 1250.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "BASS",
+    "itemName": "Abraham Prescott",
+    "manufacturer": "Professional Bass",
+    "price": 50000.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "PIANO",
+    "itemName": "Yamaha",
+    "manufacturer": "Concert Grand Piano",
+    "price": 150000.0
+  },
+  {
+    "category": "INSTRUMENT",
+    "itemType": "PIANO",
+    "itemName": "Suzuki",
+    "manufacturer": "Electric Keyboard",
+    "price": 1500.0
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "CELLPHONE",
+    "itemName": "Flip Phone",
+    "manufacturer": "Nokia",
+    "price": 249.99
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "CELLPHONE",
+    "itemName": "Pixel 6",
+    "manufacturer": "Google",
+    "price": 700.0
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "COMPUTER",
+    "itemName": "Aurora R15",
+    "manufacturer": "Alienware",
+    "price": 2999.99
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "COMPUTER",
+    "itemName": "Swift 5",
+    "manufacturer": "Acer",
+    "price": 1399.95
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "SPEAKER",
+    "itemName": "SurroundSound Mk V",
+    "manufacturer": "Dell",
+    "price": 499.95
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "SPEAKER",
+    "itemName": "SoundBar",
+    "manufacturer": "Sony",
+    "price": 249.99
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "TELEVISION",
+    "itemName": "SuperCool Widescreen",
+    "manufacturer": "Sony",
+    "price": 2499.95
+  },
+  {
+    "category": "ELECTRONICS",
+    "itemType": "TELEVISION",
+    "itemName": "Small Flatscreen 30 in",
+    "manufacturer": "Samsung",
+    "price": 1200.0
+  }
+]

@@ -1,15 +1,11 @@
 package edu.depaul.catalogue;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 
 public abstract class AbstractCatalogue<T> {
     private File SOURCE_CATALOGUE_FILE;
@@ -29,19 +25,9 @@ public abstract class AbstractCatalogue<T> {
     }
 
     /**
-     * Reads objects from a .json file.
+     * Reads objects from a .json file. This method must be individually defined in a descendent class.
      **/
-    public ArrayList<T> readFromFile(File jsonFile) {
-        ArrayList<T> result = null;
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try (BufferedReader reader = new BufferedReader(new FileReader(jsonFile))) {
-            Type collectionType = new TypeToken<ArrayList<T>>(){}.getType();
-            result = gson.fromJson(reader, collectionType);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
+    public abstract ArrayList<T> readFromFile(File jsonFile);
 
     /**
      * Writes objects to a .json file.

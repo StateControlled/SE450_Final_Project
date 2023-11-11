@@ -1,17 +1,16 @@
 package edu.depaul.item.instrument;
 
 import edu.depaul.item.AbstractItem;
-import edu.depaul.item.Category;
 
 public class Bass extends AbstractItem {
 
-    public Bass(Category category, String itemType, String itemName, String manufacturer, double price) {
+    public Bass(String category, String itemType, String itemName, String manufacturer, double price) {
         super(category, itemType, itemName, manufacturer, price);
     }
 
     @Override
     public int hashCode() {
-        return 31159 + this.category.hashCode() + this.manufacturer.hashCode() + this.itemName.hashCode() + ((Double) price).hashCode();
+        return 31159 + this.itemType.hashCode() + this.manufacturer.hashCode() + this.itemName.hashCode() + ((Double) price).hashCode();
     }
 
     @Override

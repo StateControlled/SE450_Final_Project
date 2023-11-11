@@ -1,7 +1,6 @@
 package edu.depaul.factory;
 
 import edu.depaul.item.AbstractItem;
-import edu.depaul.item.Category;
 import edu.depaul.item.instrument.Bass;
 import edu.depaul.item.instrument.Cello;
 import edu.depaul.item.instrument.Piano;
@@ -13,7 +12,7 @@ public class InstrumentFactory {
 		;
     }
 
-    public static AbstractItem getProduct(Category category, String itemType, String itemName, String manufacturer, double price) {
+    protected static AbstractItem createProduct(String category, String itemType, String itemName, String manufacturer, double price) {
         AbstractItem item = null;
 		if (itemType.equalsIgnoreCase("VIOLIN")) {
 			item = new Violin(category, "VIOLIN", manufacturer, itemName, price);

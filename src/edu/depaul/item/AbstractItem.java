@@ -1,22 +1,24 @@
 package edu.depaul.item;
 
-public abstract class AbstractItem {
-    protected Category superCategory;
+import java.io.Serializable;
+
+public abstract class AbstractItem implements Serializable {
     protected String category;
+    protected String itemType;
     protected String itemName;
     protected String manufacturer;
     protected double price;
 
-    public AbstractItem(Category superCategory, String itemType, String itemName, String manufacturer, double price) {
-        this.superCategory = superCategory;
-        this.category = itemType;
+    public AbstractItem(String category, String itemType, String itemName, String manufacturer, double price) {
+        this.category = category;
+        this.itemType = itemType;
         this.itemName = itemName;
         this.manufacturer = manufacturer;
         this.price = price;
     }
 
-    public String getCategory() {
-        return category;
+    public String getItemType() {
+        return itemType;
     }
 
     public String getItemName() {

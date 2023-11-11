@@ -43,6 +43,14 @@ public class ShoppingCart {
 		return item;
 	}
 
+	public double getTotal() {
+		double total = 0.0;
+		for (double p : shoppingList.values()) {
+			total += p;
+		}
+		return total;
+	}
+
 	public static HashMap<AbstractItem, Integer> getShoppingList() {
 		return shoppingList;
 	}
