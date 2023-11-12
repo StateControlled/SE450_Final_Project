@@ -2,71 +2,71 @@
   {
     "category": "INSTRUMENT",
     "itemType": "VIOLIN",
-    "itemName": "Amazon",
-    "manufacturer": "Trash Violin",
+    "itemName": "Trash Violin",
+    "manufacturer": "Amazon",
     "price": 99.95
   },
   {
     "category": "INSTRUMENT",
     "itemType": "VIOLIN",
-    "itemName": "Joseph Curtin",
-    "manufacturer": "Preofessional Violin",
+    "itemName": "Professional Violin",
+    "manufacturer": "Joseph Curtin",
     "price": 21000.0
   },
   {
     "category": "INSTRUMENT",
     "itemType": "VIOLA",
-    "itemName": "Benjamin Ruth",
-    "manufacturer": "Professional Viola",
+    "itemName": "Professional Viola",
+    "manufacturer": "Benjamin Ruth",
     "price": 19500.0
   },
   {
     "category": "INSTRUMENT",
     "itemType": "VIOLA",
-    "itemName": "Shar",
-    "manufacturer": "Student Viola",
+    "itemName": "Student Viola",
+    "manufacturer": "Shar",
     "price": 800.0
   },
   {
     "category": "INSTRUMENT",
-    "itemType": "VIOLONCELLO",
-    "itemName": "Shar",
-    "manufacturer": "Beginner Cello",
+    "itemType": "CELLO",
+    "itemName": "Beginner Cello",
+    "manufacturer": "Shar",
     "price": 900.0
   },
   {
     "category": "INSTRUMENT",
-    "itemType": "VIOLONCELLO",
-    "itemName": "Antonio Stradivari",
-    "manufacturer": "Davidov Stradivarius",
+    "itemType": "CELLO",
+    "itemName": "Davidov Stradivarius",
+    "manufacturer": "Antonio Stradivari",
     "price": 3500000.0
   },
   {
     "category": "INSTRUMENT",
     "itemType": "BASS",
-    "itemName": "Shar",
-    "manufacturer": "Intermediate Bass",
+    "itemName": "Intermediate Bass",
+    "manufacturer": "Shar",
     "price": 1250.0
   },
   {
     "category": "INSTRUMENT",
     "itemType": "BASS",
-    "itemName": "Abraham Prescott",
-    "manufacturer": "Professional Bass",
+    "itemName": "Professional Bass",
+    "manufacturer": "Abraham Prescott",
     "price": 50000.0
   },
   {
     "category": "INSTRUMENT",
     "itemType": "PIANO",
-    "itemName": "Yamaha",
-    "manufacturer": "Concert Grand Piano",
+    "itemName": "Concert Grand Piano",
+    "manufacturer": "Yamaha",
     "price": 150000.0
   },
   {
     "category": "INSTRUMENT",
     "itemType": "PIANO",
-    "itemName": "Suzuki",
-    "manufacturer": "Electric Keyboard",
+    "itemName": "Electric Keyboard",
+    "manufacturer": "Suzuki",
     "price": 1500.0
   },
   {

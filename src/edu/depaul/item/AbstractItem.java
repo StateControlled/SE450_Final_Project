@@ -20,6 +20,10 @@ public abstract class AbstractItem {
         this.manufacturer = manufacturer;
         this.price = price;
     }
+    
+    public String getCategory() {
+    	return category;
+    }
 
     public String getItemType() {
         return itemType;

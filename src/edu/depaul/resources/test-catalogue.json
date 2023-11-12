@@ -1,17 +1,17 @@
 [
     {
       "category": "INSTRUMENT",
-      "itemType": "VIOLIN",
+      "itemType": "CELLO",
       "itemName": "Amazon",
-      "manufacturer": "Trash Violin",
-      "price": 89.95
+      "manufacturer": "Trash Cello",
+      "price": 189.95
     },
     {
       "category": "INSTRUMENT",
       "itemType": "VIOLIN",
-      "itemName": "Joseph Curtin",
-      "manufacturer": "Preofessional Violin",
-      "price": 21500.0
+      "itemName": "Electric Violin",
+      "manufacturer": "Shar",
+      "price": 1500.0
     },
     {
       "category": "INSTRUMENT",
@@ -29,14 +29,14 @@
     },
     {
       "category": "INSTRUMENT",
-      "itemType": "VIOLONCELLO",
+      "itemType": "CELLO",
       "itemName": "Shar",
       "manufacturer": "Beginner Cello",
       "price": 950.0
     },
     {
       "category": "INSTRUMENT",
-      "itemType": "VIOLONCELLO",
+      "itemType": "CELLO",
       "itemName": "Antonio Stradivari",
       "manufacturer": "Davidov Stradivarius",
       "price": 3500000.0
@@ -60,7 +60,7 @@
       "itemType": "PIANO",
       "itemName": "Yamaha",
       "manufacturer": "Concert Grand Piano",
-      "price": 150000.0
+      "price": 135000.0
     },
     {
       "category": "INSTRUMENT",
@@ -72,9 +72,9 @@
     {
       "category": "ELECTRONICS",
       "itemType": "CELLPHONE",
-      "itemName": "Flip Phone",
-      "manufacturer": "Nokia",
-      "price": 249.99
+      "itemName": "iPhone 12",
+      "manufacturer": "Apple",
+      "price": 1249.95
     },
     {
       "category": "ELECTRONICS",
@@ -93,30 +93,30 @@
     {
       "category": "ELECTRONICS",
       "itemType": "COMPUTER",
-      "itemName": "Aurora R15",
-      "manufacturer": "Alienware",
-      "price": 2999.99
+      "itemName": "XPS8900",
+      "manufacturer": "Dell",
+      "price": 1899.99
     },
     {
       "category": "ELECTRONICS",
       "itemType": "COMPUTER",
-      "itemName": "Aspire 5",
+      "itemName": "Gaming Laptop",
       "manufacturer": "Acer",
-      "price": 376.0
+      "price": 2376.0
     },
     {
       "category": "ELECTRONICS",
       "itemType": "SPEAKER",
       "itemName": "SurroundSound Mk V",
       "manufacturer": "Dell",
-      "price": 499.95
+      "price": 299.95
     },
     {
       "category": "ELECTRONICS",
       "itemType": "SPEAKER",
-      "itemName": "SoundBar",
+      "itemName": "SoundBar II",
       "manufacturer": "Sony",
-      "price": 249.99
+      "price": 349.99
     },
     {
       "category": "ELECTRONICS",

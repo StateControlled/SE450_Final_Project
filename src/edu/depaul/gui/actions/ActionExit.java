@@ -1,4 +1,4 @@
-package edu.depaul.gui;
+package edu.depaul.gui.actions;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -22,18 +22,19 @@ public class SuperFactory {
         AbstractItem item = null;
         validate(category, itemType, itemName, manufacturer);
         
-        if (category.equals("ELECTRONICS")) {
-            item = ElectronicsFactory.createProduct(category, itemType, itemName, manufacturer, price);
+        if(category.equals("ELECTRONICS")) {
+        	item = ElectronicsFactory.createProduct(category, itemType, itemName, manufacturer, price);
         } else if (category.equals("INSTRUMENT")) {
-            item = InstrumentFactory.createProduct(category, itemType, itemName, manufacturer, price);
-        } else {
-            throw new IllegalArgumentException("Item Category is not valid");
+        	item = InstrumentFactory.createProduct(category, itemType, itemName, manufacturer, price);
         }
         return item;
     }
 
     private static void validate(String category, String itemType, String itemName, String manufacturer) throws IllegalArgumentException {
-        if (itemType == null) {
+        if (category == null) {
+        	throw new IllegalArgumentException("Item Category cannot be null");
+        }
+    	if (itemType == null) {
             throw new IllegalArgumentException("Item Type cannot be null");
         }
         if (itemName == null) {

@@ -12,7 +12,8 @@ import javax.swing.JPanel;
 
 import edu.depaul.item.AbstractItem;
 
-public class DisplayPanel extends JPanel {
+@SuppressWarnings("serial")
+public class DisplayPanel extends JPanel implements GridBagConstraintsConstructor {
     private static final int CONSTRAINT_INSET = 2;
 
     private AbstractItem itemData;
@@ -28,14 +29,14 @@ public class DisplayPanel extends JPanel {
         // Each DisplayPanel has its own internal grid layout.
         setLayout(new GridBagLayout());
 
-        add(new JLabel("Item description :"), setGridBagConstraints(0, 0, GridBagConstraints.BASELINE_TRAILING));
-        add(itemNameLabel, setGridBagConstraints(1, 0, GridBagConstraints.BASELINE_LEADING));
+        add(new JLabel("Item description :"), setGridBagConstraints(0, 0, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(itemNameLabel, setGridBagConstraints(1, 0, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
 
-        add(new JLabel("Manufacturer :"), setGridBagConstraints(0, 1, GridBagConstraints.BASELINE_TRAILING));
-        add(itemManufacturerLabel, setGridBagConstraints(1, 1, GridBagConstraints.BASELINE_LEADING));
+        add(new JLabel("Manufacturer :"), setGridBagConstraints(0, 1, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(itemManufacturerLabel, setGridBagConstraints(1, 1, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
 
-        add(new JLabel("Item price :"), setGridBagConstraints(0, 2, GridBagConstraints.BASELINE_TRAILING));
-        add(itemPriceLabel, setGridBagConstraints(1, 2, GridBagConstraints.BASELINE_LEADING));
+        add(new JLabel("Item price :"), setGridBagConstraints(0, 2, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(itemPriceLabel, setGridBagConstraints(1, 2, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
 
         this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
     }
@@ -64,21 +65,37 @@ public class DisplayPanel extends JPanel {
     public AbstractItem getData() {
         return itemData;
     }
-
-    private GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, int alignment) {
+    
+    public static GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, double xWeight, double yWeight, 
+    		int componentWidth, int componentHeight, int alignment, int inset, int fill) {
         GridBagConstraints constraints = new GridBagConstraints();
-        int left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
+        int left = (xCoordinate != 0) ? 3 * inset : inset;
         constraints.gridx = xCoordinate;
         constraints.gridy = yCoordinate;
-        constraints.insets = new Insets(CONSTRAINT_INSET, left, CONSTRAINT_INSET, CONSTRAINT_INSET);
-        //constraints.insets.left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
-        constraints.weightx = 0.0;
-        constraints.weighty = 0.0;
+        constraints.insets = new Insets(inset, left, inset, inset);
+        constraints.weightx = xWeight;
+        constraints.weighty = yWeight;
+        constraints.gridwidth = componentWidth;
+        constraints.gridheight = componentHeight;
         constraints.anchor = alignment;
-        //constraints.fill = GridBagConstraints.BOTH;
-        //constraints.anchor = (xCoordinate == 0) ? GridBagConstraints.WEST : GridBagConstraints.EAST;
-        //constraints.fill = (xCoordinate == 0) ? GridBagConstraints.BOTH : GridBagConstraints.HORIZONTAL;
+        constraints.fill = fill;
         return constraints;
-    }
+    }    
+
+//    private GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, int alignment) {
+//        GridBagConstraints constraints = new GridBagConstraints();
+//        int left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
+//        constraints.gridx = xCoordinate;
+//        constraints.gridy = yCoordinate;
+//        constraints.insets = new Insets(CONSTRAINT_INSET, left, CONSTRAINT_INSET, CONSTRAINT_INSET);
+//        //constraints.insets.left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
+//        constraints.weightx = 0.0;
+//        constraints.weighty = 0.0;
+//        constraints.anchor = alignment;
+//        //constraints.fill = GridBagConstraints.BOTH;
+//        //constraints.anchor = (xCoordinate == 0) ? GridBagConstraints.WEST : GridBagConstraints.EAST;
+//        //constraints.fill = (xCoordinate == 0) ? GridBagConstraints.BOTH : GridBagConstraints.HORIZONTAL;
+//        return constraints;
+//    }
 
 }

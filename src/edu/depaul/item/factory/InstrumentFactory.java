@@ -15,15 +15,15 @@ public class InstrumentFactory {
     protected static AbstractItem createProduct(String category, String itemType, String itemName, String manufacturer, double price) {
         AbstractItem item = null;
 		if (itemType.equalsIgnoreCase("VIOLIN")) {
-			item = new Violin(category, "VIOLIN", manufacturer, itemName, price);
+			item = new Violin(category, "VIOLIN", itemName, manufacturer, price);
 		} else if (itemType.equalsIgnoreCase("VIOLA")) {
-			item = new Viola(category, "VIOLA", manufacturer, itemName, price);
+			item = new Viola(category, "VIOLA", itemName, manufacturer, price);
 		} else if (itemType.equalsIgnoreCase("CELLO")) {
-			item = new Cello(category, "VIOLONCELLO", manufacturer, itemName, price);
+			item = new Cello(category, "CELLO", itemName, manufacturer, price);
 		} else if (itemType.equalsIgnoreCase("BASS")) {
-			item = new Bass(category, "BASS", manufacturer, itemName, price);
+			item = new Bass(category, "BASS", itemName, manufacturer, price);
 		} else if (itemType.equalsIgnoreCase("PIANO")) {
-			item = new Piano(category, "PIANO", manufacturer, itemName, price);
+			item = new Piano(category, "PIANO", itemName, manufacturer, price);
 		}
 		return item;
     }

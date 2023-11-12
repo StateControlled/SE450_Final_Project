@@ -17,11 +17,15 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 import edu.depaul.catalogue.Catalogue;
+import edu.depaul.gui.actions.ActionExit;
+import edu.depaul.gui.actions.ActionOpenHtml;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.factory.SuperFactory;
+import edu.depaul.resources.constants.StorageFiles;
 
+@SuppressWarnings("serial")
 public class GuiTest extends JPanel {
-    private File catalogueFile = new File("src\\edu\\depaul\\resources\\itemcatalogue.json");
+    private File catalogueFile = StorageFiles.CATALOGUE_SOURCE;
     private static final int INIT_MAX_ROWS = 8;
     private static final int CONSTRAINT_INSET = 2;
     private DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
@@ -59,11 +63,6 @@ public class GuiTest extends JPanel {
 
         ControlPanel panel = new ControlPanel();
 
-        //frame.setLayout(new GridBagLayout());
-        //frame.getContentPane().add(BorderLayout.NORTH, menuBar);
-        //frame.getContentPane().add(BorderLayout.CENTER, main);
-        //frame.getContentPane().add(BorderLayout.EAST, panel);
-
         frame.setLayout(new GridBagLayout());
         frame.add(menuBar, setGridBagConstraints(0, 0, 0, 0, 2, 1, GridBagConstraints.BASELINE_LEADING));
         frame.add(main, setGridBagConstraints(0, 1, 0, 0, 1, 1, GridBagConstraints.BASELINE_LEADING));
@@ -80,14 +79,11 @@ public class GuiTest extends JPanel {
     public GuiTest() {
         System.out.println("SETTING UP...");
         PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
-
         
         Catalogue catalogue = new Catalogue(catalogueFile);
         ArrayList<AbstractItem> items = catalogue.readFromFile(catalogueFile);
 
         System.out.println("READING CATALOGUE");
-        //System.out.println(Catalogue.getFilePath(false));
-        //System.out.println(Catalogue.getFilePath(true));
 
         for (AbstractItem i : items) {
             scrollList.addItemToScrollList(i);

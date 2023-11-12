@@ -27,6 +27,9 @@ public class LogWriter {
      * @throws NullPointerException if the name is null.
      **/
     public static LogWriter getLogWriter(String name) throws NullPointerException {
+    	if (name == null) {
+    		throw new NullPointerException("Name cannot be null");
+    	}
         if (instance == null) {
             instance = new LogWriter(new File(name + ".log"));
         }
@@ -42,7 +45,7 @@ public class LogWriter {
      **/
     public static void log(Level level, String event, String optionalMessage) {
         try (FileWriter writer = new FileWriter(logFile, true)) {
-            String logEvent = String.format("%s %s: %s %s \\ %s\n", dateFormat.format(new Date()), level.toString(), event, optionalMessage);
+            String logEvent = String.format("%s %s: %s \\ %s\n", dateFormat.format(new Date()), level.toString(), event, optionalMessage);
             writer.append(logEvent);
             writer.close();
         } catch (IOException e) {

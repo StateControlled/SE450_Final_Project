@@ -10,6 +10,7 @@ import javax.swing.SwingConstants;
 
 import edu.depaul.item.AbstractItem;
 
+@SuppressWarnings("serial")
 public class PanelScrollList extends JPanel implements Scrollable {
     private int visibleRowCount;
 

@@ -1,33 +1,19 @@
+package edu.depaul.item;
+
 import java.util.ArrayList;
 
-import edu.depaul.item.AbstractItem;
 import edu.depaul.item.factory.SuperFactory;
 
-public class ItemTest {
-    public static void main(String[] args) {
-        ArrayList<AbstractItem> list = generateItems();
-        int n = 1;
-        for (AbstractItem i : list) {
-            System.out.println("Item number " + n++);
-            if (i != null) {
-                System.out.println(i.toString());
-                System.out.println();
-                System.out.println(i.view());
-                System.out.println();
-            } else {
-                System.out.println("ITEM IS NULL");
-                System.out.println();
-            }
-        }
-
-        crashTest();
-    }
-
+public class ItemPopulator {
+	private ItemPopulator() {
+		;
+	}
+	
     public static ArrayList<AbstractItem> generateItems() {
         ArrayList<AbstractItem> result = new ArrayList<>();
         AbstractItem item1a = SuperFactory.createProduct("INSTRUMENT", "violin", "Trash Violin", "Amazon", 99.95);
         result.add(item1a);
-        AbstractItem item1b = SuperFactory.createProduct("INSTRUMENT", "violin", "Preofessional Violin", "Joseph Curtin", 21000.0);
+        AbstractItem item1b = SuperFactory.createProduct("INSTRUMENT", "violin", "Professional Violin", "Joseph Curtin", 21000.0);
         result.add(item1b);
 
         AbstractItem item2a = SuperFactory.createProduct("INSTRUMENT", "viola", "Professional Viola", "Benjamin Ruth", 19500.0);
@@ -72,53 +58,5 @@ public class ItemTest {
         result.add(item9b);
 
         return result;
-    }
-
-    public static void crashTest() {
-        try {
-            AbstractItem crash0 = SuperFactory.createProduct(null, "Television", "30 inch TV", "Sony", 500.0);
-            System.out.println(crash0.toString());
-        } catch (Exception e) {
-            System.out.println("TEST Category=null");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-
-        try {
-            AbstractItem crash1 = SuperFactory.createProduct("ELECTRONICS", null, "30 inch TV", "Sony", 500.0);
-            System.out.println(crash1.toString());
-        } catch (Exception e) {
-            System.out.println("TEST itemType=null");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-
-        try {
-            AbstractItem crash2 = SuperFactory.createProduct("ELECTRONICS", "Television", null, "Sony", 500.0);
-            System.out.println(crash2.toString());
-        } catch (Exception e) {
-            System.out.println("TEST itemName null");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-
-        try {
-            AbstractItem crash3 = SuperFactory.createProduct("ELECTRONICS", "Television", "30 inch TV", null, 500.0);
-            System.out.println(crash3.toString());
-        } catch (Exception e) {
-            System.out.println("TEST manufacturer null");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }        
-
-        try {
-            AbstractItem crash4 = SuperFactory.createProduct("ELECTRONICS", "Television", "30 inch TV", "Sony", -10.0);
-            System.out.println("This should succeed.");
-            System.out.println(crash4.toString());
-        } catch (Exception e) {
-            System.out.println("TEST negative price");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
     }
 }
