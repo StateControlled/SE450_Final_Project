@@ -17,8 +17,8 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 import edu.depaul.catalogue.Catalogue;
-import edu.depaul.factory.SuperFactory;
 import edu.depaul.item.AbstractItem;
+import edu.depaul.item.factory.SuperFactory;
 
 public class GuiTest extends JPanel {
     private File catalogueFile = new File("src\\edu\\depaul\\resources\\itemcatalogue.json");

@@ -15,22 +15,15 @@ public class Television extends AbstractItem {
 
     @Override
     public boolean equals(Object obj) {
-        try {
-            if (obj == this) {
-                return true;
-            }
-            if (obj == null) {
-                return false;
-            }
-            if (!(obj instanceof Television)) {
-                return false;
-            }
-
-            Television that = (Television) obj;
-            return (this.itemName.equals(that.itemName)) && (this.manufacturer.equals(that.manufacturer)) && (Double.compare(this.price, that.price) == 0);
-        } catch (Exception e) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof Television)) {
             return false;
         }
+
+        Television that = (Television) obj;
+        return (this.itemName.equals(that.itemName)) && (this.manufacturer.equals(that.manufacturer)) && (Double.compare(this.price, that.price) == 0);
     }    
     
 }

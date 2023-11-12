@@ -1,4 +1,4 @@
-package edu.depaul.factory;
+package edu.depaul.item.factory;
 
 import edu.depaul.item.AbstractItem;
 
@@ -20,15 +20,8 @@ public class SuperFactory {
      **/
     public static AbstractItem createProduct(String category, String itemType, String itemName, String manufacturer, double price) throws IllegalArgumentException {
         AbstractItem item = null;
-        if (itemType == null) {
-            throw new IllegalArgumentException("Item Type cannot be null");
-        }
-        if (itemName == null) {
-            throw new IllegalArgumentException("Item Name cannot be null");
-        }
-        if (manufacturer == null) {
-            throw new IllegalArgumentException("Manufacturer cannot be null");
-        }
+        validate(category, itemType, itemName, manufacturer);
+        
         if (category.equals("ELECTRONICS")) {
             item = ElectronicsFactory.createProduct(category, itemType, itemName, manufacturer, price);
         } else if (category.equals("INSTRUMENT")) {
@@ -38,4 +31,17 @@ public class SuperFactory {
         }
         return item;
     }
+
+    private static void validate(String category, String itemType, String itemName, String manufacturer) throws IllegalArgumentException {
+        if (itemType == null) {
+            throw new IllegalArgumentException("Item Type cannot be null");
+        }
+        if (itemName == null) {
+            throw new IllegalArgumentException("Item Name cannot be null");
+        }
+        if (manufacturer == null) {
+            throw new IllegalArgumentException("Manufacturer cannot be null");
+        }
+    }
+
 }

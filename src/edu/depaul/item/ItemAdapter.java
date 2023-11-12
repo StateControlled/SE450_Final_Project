@@ -7,7 +7,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
 
-import edu.depaul.factory.SuperFactory;
+import edu.depaul.item.factory.SuperFactory;
 
 public class ItemAdapter extends TypeAdapter<AbstractItem> {
 

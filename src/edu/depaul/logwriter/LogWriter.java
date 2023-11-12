@@ -14,11 +14,15 @@ public class LogWriter {
     private static LogWriter instance;
     private static File logFile;
 
+    /**
+     * Private constructor. Can't touch this.
+     **/
     private LogWriter(File log) {
         logFile = log;
     }
 
     /**
+     * Instantiates a new LogWriter.
      * @param name A name for the log file output.
      * @throws NullPointerException if the name is null.
      **/
@@ -33,6 +37,9 @@ public class LogWriter {
         return logFile;
     }
 
+    /**
+     * Writes an event to the log file. This method is intended to log general, non-error events.
+     **/
     public static void log(Level level, String event, String optionalMessage) {
         try (FileWriter writer = new FileWriter(logFile, true)) {
             String logEvent = String.format("%s %s: %s %s \\ %s\n", dateFormat.format(new Date()), level.toString(), event, optionalMessage);
@@ -45,6 +52,9 @@ public class LogWriter {
         }
     }
 
+    /**
+     * Writes an event to the log file. This form is intended for use with exceptions and errors.
+     **/
     public static void log(Level level, String event, Exception exception) {
         try (FileWriter writer = new FileWriter(logFile, true)) {
             String logEvent = String.format("%s %s: %s %s", dateFormat.format(new Date()), level.toString(), event, exception.toString());

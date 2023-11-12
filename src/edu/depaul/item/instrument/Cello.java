@@ -15,22 +15,15 @@ public class Cello extends AbstractItem {
 
     @Override
     public boolean equals(Object obj) {
-        try {
-            if (obj == this) {
-                return true;
-            }
-            if (obj == null) {
-                return false;
-            }
-            if (!(obj instanceof Cello)) {
-                return false;
-            }
-
-            Cello that = (Cello) obj;
-            return (this.itemName.equals(that.itemName)) && (this.manufacturer.equals(that.manufacturer)) && (Double.compare(this.price, that.price) == 0);
-        } catch (Exception e) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || !(obj instanceof Cello)) {
             return false;
         }
+
+        Cello that = (Cello) obj;
+        return (this.itemName.equals(that.itemName)) && (this.manufacturer.equals(that.manufacturer)) && (Double.compare(this.price, that.price) == 0);
     }    
     
 }

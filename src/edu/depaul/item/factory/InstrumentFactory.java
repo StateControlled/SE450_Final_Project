@@ -1,4 +1,4 @@
-package edu.depaul.factory;
+package edu.depaul.item.factory;
 
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.instrument.Bass;

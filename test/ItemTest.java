@@ -2,8 +2,8 @@ package edu.depaul.test;
 
 import java.util.ArrayList;
 
-import edu.depaul.factory.SuperFactory;
 import edu.depaul.item.AbstractItem;
+import edu.depaul.item.factory.SuperFactory;
 
 public class ItemTest {
     public static void main(String[] args) {

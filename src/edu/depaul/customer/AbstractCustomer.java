@@ -3,19 +3,20 @@ package edu.depaul.customer;
 import edu.depaul.authenticator.Hash;
 
 /**
- * An abstract class representing a customer. Stores the customer's username and (hashed) password.
+ * An abstract class representing a customer. Stores the customer's username and (hashed) password and customer ID number.
  * The plaintext password should not be stored.
  **/
 public abstract class AbstractCustomer {
-    // TODO associate ShoppingCart
+    private int customerID;
     private String name;
     private String password;
 
     /**
      * Constructor.
      **/
-    public AbstractCustomer(String name, String password) {
+    public AbstractCustomer(int ID, String name, String password) {
         this.name = name;
+        this.customerID = ID;
         setPassword(password);
     }
 
@@ -44,5 +45,14 @@ public abstract class AbstractCustomer {
 
     public void resetPassword(String password) {
         this.password = password;
+    }
+
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d : %s", this.customerID, this.name);
     }
 }

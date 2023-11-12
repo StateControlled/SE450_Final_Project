@@ -3,6 +3,7 @@ package edu.depaul.authenticator;
 import java.security.MessageDigest;
 
 public class Hash {
+    private static final String SALT = "germanaugmentedsixthchord";
     private Hash() {
         ;
     }
@@ -12,6 +13,7 @@ public class Hash {
      **/
     public static String hash(String text) {
         try {
+            text += SALT;
             MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
             messageDigest.update(text.getBytes());
             byte[] byteArray = messageDigest.digest();

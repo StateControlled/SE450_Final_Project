@@ -1,4 +1,4 @@
-package edu.depaul.factory;
+package edu.depaul.item.factory;
 
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.electronics.CellPhone;
@@ -7,12 +7,12 @@ import edu.depaul.item.electronics.Speaker;
 import edu.depaul.item.electronics.Television;
 
 public class ElectronicsFactory {
-    private ElectronicsFactory() {
+	private ElectronicsFactory() {
 		;
-    }
+	}
 
-    protected static AbstractItem createProduct(String category, String itemType, String itemName, String manufacturer, double price) {
-        AbstractItem item = null;
+	protected static AbstractItem createProduct(String category, String itemType, String itemName, String manufacturer, double price) {
+		AbstractItem item = null;
 		if (itemType.equalsIgnoreCase("CELLPHONE")) {
 			item = new CellPhone(category, "CELLPHONE", itemName, manufacturer, price);
 		} else if (itemType.equalsIgnoreCase("TELEVISION")) {
@@ -23,5 +23,7 @@ public class ElectronicsFactory {
 			item = new Speaker(category, "SPEAKER", itemName, manufacturer, price);
 		}
 		return item;
+
+		
     }
 }

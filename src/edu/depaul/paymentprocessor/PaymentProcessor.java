@@ -1,5 +1,8 @@
 package edu.depaul.paymentprocessor;
 
+/**
+ * The PaymentProcessor class contains the logic to "validate" a credit card.
+ **/
 public class PaymentProcessor {
     private static PaymentProcessor processor;
 

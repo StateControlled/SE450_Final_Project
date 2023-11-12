@@ -1,14 +1,18 @@
 package edu.depaul.item;
 
-import java.io.Serializable;
-
-public abstract class AbstractItem implements Serializable {
+/**
+ * The AbstractItem class serves as the basis for all the item classes.
+ **/
+public abstract class AbstractItem {
     protected String category;
     protected String itemType;
     protected String itemName;
     protected String manufacturer;
     protected double price;
 
+    /**
+     * Constructs a new item.
+     **/
     public AbstractItem(String category, String itemType, String itemName, String manufacturer, double price) {
         this.category = category;
         this.itemType = itemType;
@@ -53,6 +57,7 @@ public abstract class AbstractItem implements Serializable {
 
     /**
      * Returns a simplified string representation of the object with no line breaks.
+     * This method is intended for use to display in the program's GUI to allow a user to browse items for sale.
      **/
     public String view() {
         return String.format("%s, %s $%,.2f", itemName, manufacturer, price);

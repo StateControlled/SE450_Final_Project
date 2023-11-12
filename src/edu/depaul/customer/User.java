@@ -5,8 +5,8 @@ import edu.depaul.shoppingcart.ShoppingCart;
 public class User extends AbstractCustomer {
     private ShoppingCart cart;
 
-    public User(String name, String password) {
-        super(name, password);
+    public User(int userID, String name, String password) {
+        super(userID, name, password);
         cart = new ShoppingCart.ShoppingCartBuilder().build();
     }
 
