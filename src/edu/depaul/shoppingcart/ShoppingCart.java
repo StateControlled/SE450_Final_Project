@@ -28,6 +28,9 @@ public class ShoppingCart {
 		return shoppingCart;
 	}
 
+	/**
+	 * Adds an item to the cart and updates the quantity.
+	 **/
 	public static int addToCart(AbstractItem item) {
 		if (shoppingList.keySet().contains(item)) {
 			int temp = shoppingList.get(item);
@@ -38,6 +41,10 @@ public class ShoppingCart {
 		return 1;
 	}
 
+	/**
+	 * Completely removes an item from the cart. If quantity is greater than 1, this method will
+	 * remove all items of that type.
+	 **/
 	public static AbstractItem removeFromCart(AbstractItem item) {
 		shoppingList.remove(item);
 		return item;

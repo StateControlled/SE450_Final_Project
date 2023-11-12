@@ -1,4 +1,3 @@
-package edu.depaul.test;
 import java.util.ArrayList;
 
 import edu.depaul.item.AbstractItem;
