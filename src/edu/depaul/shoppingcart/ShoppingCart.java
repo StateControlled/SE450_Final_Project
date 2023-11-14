@@ -13,12 +13,14 @@ public class ShoppingCart {
 	private static ShoppingCart shoppingCart;
 	/** Stores items and quantities. */
 	private static HashMap<AbstractItem, Integer> shoppingList;
+	private static double total = 0.0;
 	
 	/**
 	 * Private constructor.
 	 **/
 	private ShoppingCart(ShoppingCartBuilder builder) {
 		shoppingList = builder.shoppingList;
+		setTotal();
 	}
 	
 	public static ShoppingCart getInstance() {
@@ -38,6 +40,7 @@ public class ShoppingCart {
 			return shoppingList.get(item);
 		}
 		shoppingList.put(item, 1);
+		setTotal();
 		return 1;
 	}
 
@@ -47,14 +50,17 @@ public class ShoppingCart {
 	 **/
 	public static AbstractItem removeFromCart(AbstractItem item) {
 		shoppingList.remove(item);
+		setTotal();
 		return item;
 	}
-
-	public double getTotal() {
-		double total = 0.0;
+	
+	public static void setTotal() {
 		for (double p : shoppingList.values()) {
 			total += p;
 		}
+	}
+
+	public double getTotal() {
 		return total;
 	}
 

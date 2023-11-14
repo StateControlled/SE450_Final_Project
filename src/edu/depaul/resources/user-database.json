@@ -1,0 +1,20 @@
+[
+  {
+    "customerID": 2000,
+    "name": "Joe",
+    "password": "ffa0f6eb934758841f4361686402adf617934e2d5f8736830ab6f256d58cb83",
+    "cart": {}
+  },
+  {
+    "customerID": 2045,
+    "name": "Bob",
+    "password": "67c16546a9fac2e17ccc128343845188adddda505f396d997ecae2c16762c35b",
+    "cart": {}
+  },
+  {
+    "customerID": 2105,
+    "name": "Sam",
+    "password": "c938f1b7744e99b4e9214a781dfdba18bee1472a3f41cecb3feb271287126",
+    "cart": {}
+  }
+]

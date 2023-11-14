@@ -19,29 +19,31 @@ import edu.depaul.item.AbstractItem;
 import edu.depaul.item.factory.SuperFactory;
 
 @SuppressWarnings("serial")
-public class ControlPanel extends JPanel implements ActionListener, GridBagConstraintsConstructor {
+public class ControlPanel extends JPanel implements GridBagConstraintsConstructor {
     private static final int CONSTRAINT_INSET = 2;
     private final JLabel label = new JLabel("Actions");
-    private JTextField usernameField;
-    private JTextField passwordField;
+    private JTextField usernameField = new JTextField("username", 32);
+    private JTextField passwordField = new JTextField("password", 32);
     private JButton loginButton;
+    private JButton newUserButton;
     
     private DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
     private JList<AbstractItem> cartItemList = new JList<>(dataModel);
 
     public ControlPanel() {
         loginButton = new JButton("Log in");
-        usernameField = new JTextField("username", 32);
-        passwordField = new JTextField("password", 32);
+        newUserButton = new JButton("Create Account");
+        
         loginButton.addActionListener(new ActionAuthenticate());
-        //
+        newUserButton.addActionListener(new ActionAuthenticate());
 
         setLayout(new GridBagLayout());
-
-        add(label, setGridBagConstraints(0, 0, GridBagConstraints.CENTER));
-        add(loginButton, setGridBagConstraints(0, 1, GridBagConstraints.CENTER));
-        add(usernameField, setGridBagConstraints(0, 2, GridBagConstraints.CENTER));
-        add(passwordField, setGridBagConstraints(0, 3, GridBagConstraints.CENTER));
+        
+        add(label, 			setGridBagConstraints(0, 0, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(loginButton,	setGridBagConstraints(0, 1, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(newUserButton, 	setGridBagConstraints(1, 1, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(usernameField, 	setGridBagConstraints(0, 2, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(passwordField, 	setGridBagConstraints(0, 3, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
         PanelScrollList cartWindow = new PanelScrollList(2);
         
@@ -55,30 +57,31 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
         JScrollPane scrollPane = new JScrollPane(cartWindow);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         
-        add(scrollPane, setGridBagConstraints(0, 4, GridBagConstraints.CENTER));
+        add(scrollPane, setGridBagConstraints(0, 4, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
-    }
+    } // END CONSTRUCTOR
 
-    public String getLabelText() {
-        return label.getText();
+    /**
+     * 
+     * @return	The content of the text fields "username" and "password" as an array.
+     **/
+    public String[] getTextFields() {
+    	return new String[]{usernameField.getText(), passwordField.getText()};
     }
-
-    private GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, int alignment) {
+    
+    public static GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, double xWeight, double yWeight, 
+    		int componentWidth, int componentHeight, int alignment, int inset, int fill) {
         GridBagConstraints constraints = new GridBagConstraints();
-        int left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
+        int left = (xCoordinate != 0) ? 3 * inset : inset;
         constraints.gridx = xCoordinate;
         constraints.gridy = yCoordinate;
-        constraints.insets = new Insets(CONSTRAINT_INSET, left, CONSTRAINT_INSET, CONSTRAINT_INSET);
-        constraints.weightx = 0.0;
-        constraints.weighty = 0.0;
+        constraints.insets = new Insets(inset, left, inset, inset);
+        constraints.weightx = xWeight;
+        constraints.weighty = yWeight;
+        constraints.gridwidth = componentWidth;
+        constraints.gridheight = componentHeight;
         constraints.anchor = alignment;
+        constraints.fill = fill;
         return constraints;
     }
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		//usernameField.getText(), passwordField.getText()
-		
-	}
-
 }

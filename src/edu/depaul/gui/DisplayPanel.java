@@ -1,10 +1,11 @@
 package edu.depaul.gui;
 
 import java.awt.Color;
-//import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
@@ -47,7 +48,12 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
     public DisplayPanel(AbstractItem item) {
         this();
         setData(item);
-        //setPreferredSize(new Dimension(200, 60));
+        this.addMouseListener(new MouseAdapter() {
+        	@Override
+        	public void mouseClicked(MouseEvent e) {
+        		System.out.println(itemData.view());
+        	}
+        });
     }
 
     /**
@@ -80,22 +86,6 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
         constraints.anchor = alignment;
         constraints.fill = fill;
         return constraints;
-    }    
-
-//    private GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, int alignment) {
-//        GridBagConstraints constraints = new GridBagConstraints();
-//        int left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
-//        constraints.gridx = xCoordinate;
-//        constraints.gridy = yCoordinate;
-//        constraints.insets = new Insets(CONSTRAINT_INSET, left, CONSTRAINT_INSET, CONSTRAINT_INSET);
-//        //constraints.insets.left = (xCoordinate != 0) ? 3 * CONSTRAINT_INSET : CONSTRAINT_INSET;
-//        constraints.weightx = 0.0;
-//        constraints.weighty = 0.0;
-//        constraints.anchor = alignment;
-//        //constraints.fill = GridBagConstraints.BOTH;
-//        //constraints.anchor = (xCoordinate == 0) ? GridBagConstraints.WEST : GridBagConstraints.EAST;
-//        //constraints.fill = (xCoordinate == 0) ? GridBagConstraints.BOTH : GridBagConstraints.HORIZONTAL;
-//        return constraints;
-//    }
+    }
 
 }

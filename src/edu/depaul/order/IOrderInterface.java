@@ -1,4 +1,4 @@
-package edu.depaul.orderprocessor;
+package edu.depaul.order;
 
 /**
  * Common methods an order or any potential similar classes will need.

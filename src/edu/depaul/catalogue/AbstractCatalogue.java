@@ -23,6 +23,14 @@ public abstract class AbstractCatalogue<T> {
     public ArrayList<T> getCatalogue() {
         return list;
     }
+    
+    public boolean addEntry(T item) {
+    	return list.add(item);
+    }
+    
+    public boolean removeEntry(T item) {
+    	return list.remove(item);
+    }
 
     /**
      * Reads objects from a .json file. This method must be individually defined in a descendent class.

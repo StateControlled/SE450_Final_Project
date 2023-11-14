@@ -9,16 +9,26 @@ import java.util.Date;
 import java.io.StringWriter;
 import java.io.PrintWriter;
 
+/**
+ * LogWriter handles logging events.
+ **/
 public class LogWriter {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
     private static LogWriter instance;
     private static File logFile;
+    private static long id;
 
     /**
      * Private constructor. Can't touch this.
      **/
     private LogWriter(File log) {
         logFile = log;
+        setID();
+        log(Level.INFO, "INIT", Long.toHexString(id));
+    }
+    
+    private static void setID() {
+    	id = 45035891L + System.currentTimeMillis() + logFile.hashCode();
     }
 
     /**
@@ -42,6 +52,9 @@ public class LogWriter {
 
     /**
      * Writes an event to the log file. This method is intended to log general, non-error events.
+     * @param level	an indicator of how serious this event is.
+     * @param event	a short description of the event being logged.
+     * @param optionalMessage	an optional message for additional information about the event
      **/
     public static void log(Level level, String event, String optionalMessage) {
         try (FileWriter writer = new FileWriter(logFile, true)) {
