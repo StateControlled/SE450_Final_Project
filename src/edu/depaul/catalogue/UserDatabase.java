@@ -22,9 +22,10 @@ public class UserDatabase extends AbstractCatalogue<User> {
 		super(catalogueSourceFile);
 	}
 	
-	public User findUser(String username) {
+	@Override
+	public User findInCatalogue(String key) {
 		for (User u : this.getCatalogue()) {
-			if (u.getName().equals(username)) {
+			if (u.getName().equals(key)) {
 				return u;
 			}
 		}
@@ -35,7 +36,6 @@ public class UserDatabase extends AbstractCatalogue<User> {
     public ArrayList<User> readFromFile(File jsonFile) {
         ArrayList<User> result = null;
         GsonBuilder builder = new GsonBuilder();
-        //builder.registerTypeAdapter(User.class, new CustomerAdapter());
         Gson gson = builder.setPrettyPrinting().create();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(jsonFile))) {

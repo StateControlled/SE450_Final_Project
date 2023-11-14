@@ -18,6 +18,7 @@ import javax.swing.JScrollPane;
 import edu.depaul.catalogue.AbstractCatalogue;
 import edu.depaul.customer.User;
 import edu.depaul.gui.ControlPanel;
+import edu.depaul.gui.GridBagConstraintsConstructor;
 import edu.depaul.gui.PanelScrollList;
 import edu.depaul.gui.ScrollListRenderer;
 import edu.depaul.gui.actions.ActionExit;
@@ -30,7 +31,7 @@ import edu.depaul.order.Order;
 import edu.depaul.resources.constants.StorageFiles;
 
 @SuppressWarnings("serial")
-public class GUI extends JPanel {
+public class GUI extends JPanel implements GridBagConstraintsConstructor {
     private File catalogueFile = StorageFiles.CATALOGUE_SOURCE;
     private static final int INIT_MAX_ROWS = 8;
     private static final int CONSTRAINT_INSET = 2;

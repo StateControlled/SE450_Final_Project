@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import edu.depaul.customer.User;
 import edu.depaul.order.Order;
 
 public class OrderDatabase extends AbstractCatalogue<Order> {
@@ -33,5 +34,15 @@ public class OrderDatabase extends AbstractCatalogue<Order> {
         }
         return result;
     }
+
+	@Override
+	public Order findInCatalogue(String key) {
+		for (Order order : this.getCatalogue()) {
+			if (order.getCustomerName().equals(key)) {
+				return order;
+			}
+		}
+		return null;
+	}
 
 }

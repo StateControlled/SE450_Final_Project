@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import edu.depaul.customer.User;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.ItemAdapter;
 
@@ -34,5 +35,15 @@ public class Catalogue extends AbstractCatalogue<AbstractItem> {
         }
         return result;
     }
+
+	@Override
+	public AbstractItem findInCatalogue(String key) {
+		for (AbstractItem item : this.getCatalogue()) {
+			if (item.getItemName().equals(key)) {
+				return item;
+			}
+		}
+		return null;
+	}
     
 }

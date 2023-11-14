@@ -14,14 +14,16 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
-import edu.depaul.gui.actions.ActionAuthenticate;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.factory.SuperFactory;
+import edu.depaul.logwriter.Level;
+import edu.depaul.logwriter.LogWriter;
 
 @SuppressWarnings("serial")
-public class ControlPanel extends JPanel implements GridBagConstraintsConstructor {
+public class ControlPanel extends JPanel implements ActionListener, GridBagConstraintsConstructor {
     private static final int CONSTRAINT_INSET = 2;
     private final JLabel label = new JLabel("Actions");
+    private JLabel message = new JLabel("********");
     private JTextField usernameField = new JTextField("username", 32);
     private JTextField passwordField = new JTextField("password", 32);
     private JButton loginButton;
@@ -34,16 +36,17 @@ public class ControlPanel extends JPanel implements GridBagConstraintsConstructo
         loginButton = new JButton("Log in");
         newUserButton = new JButton("Create Account");
         
-        loginButton.addActionListener(new ActionAuthenticate());
-        newUserButton.addActionListener(new ActionAuthenticate());
+        loginButton.addActionListener(this);
+        newUserButton.addActionListener(this);
 
         setLayout(new GridBagLayout());
         
-        add(label, 			setGridBagConstraints(0, 0, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(loginButton,	setGridBagConstraints(0, 1, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(newUserButton, 	setGridBagConstraints(1, 1, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(usernameField, 	setGridBagConstraints(0, 2, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(passwordField, 	setGridBagConstraints(0, 3, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(label, 			setGridBagConstraints(0, 0, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(message, 		setGridBagConstraints(0, 1, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(loginButton,	setGridBagConstraints(0, 2, 0.0, 0.0, 1, 1, GridBagConstraints.WEST, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(newUserButton, 	setGridBagConstraints(1, 2, 0.0, 0.0, 1, 1, GridBagConstraints.EAST, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(usernameField, 	setGridBagConstraints(0, 3, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(passwordField, 	setGridBagConstraints(0, 4, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
         PanelScrollList cartWindow = new PanelScrollList(2);
         
@@ -57,17 +60,28 @@ public class ControlPanel extends JPanel implements GridBagConstraintsConstructo
         JScrollPane scrollPane = new JScrollPane(cartWindow);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         
-        add(scrollPane, setGridBagConstraints(0, 4, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(scrollPane, setGridBagConstraints(0, 5, 0.0, 0.0, 2, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
     } // END CONSTRUCTOR
 
     /**
-     * 
      * @return	The content of the text fields "username" and "password" as an array.
      **/
     public String[] getTextFields() {
     	return new String[]{usernameField.getText(), passwordField.getText()};
     }
+    
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		passwordField.setText("********");
+		if (e.getActionCommand().equals("Log in")) {
+			LogWriter.log(Level.INFO, "Control Panel Button Press", e.getActionCommand());
+		} else if (e.getActionCommand().equals("Create Account")) {
+			LogWriter.log(Level.INFO, "Control Panel Button Press", e.getActionCommand());
+		} else {
+			;
+		}
+	}
     
     public static GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, double xWeight, double yWeight, 
     		int componentWidth, int componentHeight, int alignment, int inset, int fill) {
@@ -84,4 +98,5 @@ public class ControlPanel extends JPanel implements GridBagConstraintsConstructo
         constraints.fill = fill;
         return constraints;
     }
+
 }

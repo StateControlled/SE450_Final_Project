@@ -28,6 +28,8 @@ public abstract class AbstractCatalogue<T> {
     	return list.add(item);
     }
     
+    public abstract T findInCatalogue(String key);
+    
     public boolean removeEntry(T item) {
     	return list.remove(item);
     }
