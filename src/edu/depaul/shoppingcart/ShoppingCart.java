@@ -27,9 +27,10 @@ public class ShoppingCart {
 	
 	public static ShoppingCart getInstance() {
 		if (shoppingCart == null) {
-			return new ShoppingCart.ShoppingCartBuilder().build();
+			shoppingCart = new ShoppingCart.ShoppingCartBuilder().build();
+			LogWriter.log(Level.INFO, "Built new ShoppingCart", "INIT");
 		}
-		LogWriter.log(Level.INFO, "User Shopping Cart initialized.", "SHOPPING CART");
+		LogWriter.log(Level.INFO, "User Shopping Cart getInstance method call", "SHOPPING CART");
 		return shoppingCart;
 	}
 
@@ -62,8 +63,10 @@ public class ShoppingCart {
 	}
 	
 	public static void setTotal() {
-		for (double p : shoppingList.values()) {
-			total += p;
+		for (AbstractItem item : shoppingList.keySet()) {
+			double p = item.getPrice();
+			int q = shoppingList.get(item);
+			total += (p * q);
 		}
 		LogWriter.log(Level.INFO, String.format("Total updated %,.2f", total), "PRICE UPDATED");
 	}

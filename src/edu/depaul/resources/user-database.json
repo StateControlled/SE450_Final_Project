@@ -28,5 +28,11 @@
     "name": "username",
     "password": "929f7be4d01df7e51fd7e9d11074eae239da1ab2962aac61ae46fb97fe961f59",
     "cart": {}
+  },
+  {
+    "customerID": 2108,
+    "name": "Will",
+    "password": "bc1ee8ffa23593b148fa298478501ebb6375e450f4ba32c02ac94269ed276",
+    "cart": {}
   }
 ]

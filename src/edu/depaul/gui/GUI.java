@@ -78,7 +78,7 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
         ArrayList<AbstractItem> items = catalogue.readFromFile(catalogueFile);
 
         for (AbstractItem i : items) {
-            scrollList.addItemToScrollList(i);
+            scrollList.addItemToScrollList(i, true);
             dataModel.addElement(i);
         }
 

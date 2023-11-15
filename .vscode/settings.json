@@ -3,5 +3,6 @@
     "java.project.sourcePaths": [
         "test",
         "src"
-    ]
+    ],
+    "editor.parameterHints.enabled": false
 }

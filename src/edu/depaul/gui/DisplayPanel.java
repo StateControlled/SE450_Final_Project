@@ -11,9 +11,12 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import edu.depaul.customer.User;
+import edu.depaul.gui.actions.CartOperations;
 import edu.depaul.item.AbstractItem;
+import edu.depaul.logwriter.Level;
+import edu.depaul.logwriter.LogWriter;
 
-@SuppressWarnings("serial")
 public class DisplayPanel extends JPanel implements GridBagConstraintsConstructor {
     private static final int CONSTRAINT_INSET = 2;
 
@@ -21,6 +24,8 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
     private JLabel itemNameLabel = new JLabel();
     private JLabel itemManufacturerLabel = new JLabel();
     private JLabel itemPriceLabel = new JLabel();
+    private boolean isDisplay;
+    static User currentUser;
 
     /**
      * Constructor
@@ -30,11 +35,11 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
         // Each DisplayPanel has its own internal grid layout.
         setLayout(new GridBagLayout());
 
-        add(new JLabel("Item description :"), setGridBagConstraints(0, 0, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(itemNameLabel, setGridBagConstraints(1, 0, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(new JLabel("Item description :"),   setGridBagConstraints(0, 0, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(itemNameLabel,  setGridBagConstraints(1, 0, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
 
-        add(new JLabel("Manufacturer :"), setGridBagConstraints(0, 1, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(itemManufacturerLabel, setGridBagConstraints(1, 1, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(new JLabel("Manufacturer :"),   setGridBagConstraints(0, 1, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(itemManufacturerLabel,  setGridBagConstraints(1, 1, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
 
         add(new JLabel("Item price :"), setGridBagConstraints(0, 2, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_TRAILING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         add(itemPriceLabel, setGridBagConstraints(1, 2, 0.0, 0.0, 1, 1, GridBagConstraints.BASELINE_LEADING, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
@@ -45,13 +50,22 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
     /**
      * Constructs a new DisplayPanel object and initializes data.
      **/
-    public DisplayPanel(AbstractItem item) {
+    public DisplayPanel(AbstractItem item, boolean isDisplay) {
         this();
         setData(item);
+        this.isDisplay = isDisplay;
         this.addMouseListener(new MouseAdapter() {
         	@Override
         	public void mouseClicked(MouseEvent e) {
-        		System.out.println(itemData.view());
+                LogWriter.log(Level.INFO, "User clicked " + this.toString(), item.view());
+                if (isDisplay) {
+                    CartOperations.addToCart(ControlPanel.getUser(), item);
+                } else {
+                    // TODO
+                    // is not display = remove from cart
+                    CartOperations.removeFromCart(currentUser, item);
+                }
+                
         	}
         });
     }

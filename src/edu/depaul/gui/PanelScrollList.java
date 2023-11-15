@@ -19,8 +19,8 @@ public class PanelScrollList extends JPanel implements Scrollable {
         setLayout(new GridLayout(0, 1));
     }
 
-    public void addItemToScrollList(AbstractItem item) {
-        add(new DisplayPanel(item));
+    public void addItemToScrollList(AbstractItem item, boolean isDisplay) {
+        add(new DisplayPanel(item, isDisplay));
     }
 
     @Override
