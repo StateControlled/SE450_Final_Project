@@ -3,6 +3,7 @@ package edu.depaul.catalogue;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -10,20 +11,43 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import edu.depaul.customer.User;
 import edu.depaul.order.Order;
+import edu.depaul.resources.constants.StorageFiles;
 
-public class OrderDatabase extends AbstractCatalogue<Order> {
+public class OrderDatabase implements IAbstractCatalogue<Order> {
+    private static File SOURCE_CATALOGUE_FILE;
+    private static ArrayList<Order> list;
+    private static OrderDatabase instance;
 
-	public OrderDatabase(File catalogueSourceFile) {
-		super(catalogueSourceFile);
-	}
+    private OrderDatabase() {
+        SOURCE_CATALOGUE_FILE = StorageFiles.ORDER_DATABASE;
+        list = readFromFile(SOURCE_CATALOGUE_FILE);
+    }
+
+    public static OrderDatabase getInstance() {
+        if (instance == null) {
+            instance = new OrderDatabase();
+        }
+        return instance;
+    }
+
+    /**
+     * This method will write all changes to the database to file.
+     * It should be called before exiting the program.
+     **/
+    public static void close() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (FileWriter writer = new FileWriter(SOURCE_CATALOGUE_FILE)) {
+            gson.toJson(list, writer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }	
 
 	@Override
 	public ArrayList<Order> readFromFile(File jsonFile) {
         ArrayList<Order> result = null;
         GsonBuilder builder = new GsonBuilder();
-        //builder.registerTypeAdapter(Order.class, new OrderAdapter());
         Gson gson = builder.setPrettyPrinting().create();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(jsonFile))) {
@@ -43,6 +67,41 @@ public class OrderDatabase extends AbstractCatalogue<Order> {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public File getSourceFile() {
+		return SOURCE_CATALOGUE_FILE;
+	}
+
+	@Override
+	public ArrayList<Order> getCatalogue() {
+		return list;
+	}
+
+	@Override
+	public boolean addEntry(Order item) {
+		return list.add(item);
+	}
+
+	@Override
+	public boolean removeEntry(Order item) {
+		return list.remove(item);
+	}
+
+	@Override
+	public void writeToFile(File jsonFile, ArrayList<Order> list) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try (FileWriter writer = new FileWriter(jsonFile)) {
+            gson.toJson(list, writer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	}
+
+	@Override
+	public int size() {
+		return list.size();
 	}
 
 }

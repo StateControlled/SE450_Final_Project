@@ -28,7 +28,7 @@ public class LogWriter {
     }
     
     private static void setID() {
-    	id = 45035891L + System.currentTimeMillis() + logFile.hashCode();
+    	id = (System.currentTimeMillis() + logFile.hashCode()) * 173;
     }
 
     /**

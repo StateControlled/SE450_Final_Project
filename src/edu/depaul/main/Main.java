@@ -1,16 +1,16 @@
 package edu.depaul.main;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.SwingUtilities;
-
-import java.io.File;
 
 import edu.depaul.catalogue.Catalogue;
 import edu.depaul.catalogue.OrderDatabase;
 import edu.depaul.catalogue.UserDatabase;
 import edu.depaul.catalogue.UserPopulator;
 import edu.depaul.customer.User;
+import edu.depaul.gui.GUI;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.ItemPopulator;
 import edu.depaul.logwriter.Level;
@@ -20,6 +20,7 @@ import edu.depaul.order.OrderPopulator;
 import edu.depaul.resources.constants.StorageFiles;
 
 public class Main {
+    private User user;
 	
 	static {
 		LogWriter.getLogWriter(StorageFiles.LOG_NAME);
@@ -35,7 +36,7 @@ public class Main {
         
         // CATALOGUE
         File catalogue = StorageFiles.CATALOGUE_SOURCE;
-        Catalogue cat = new Catalogue(catalogue);
+        Catalogue cat = Catalogue.getInstance();
         LogWriter.log(Level.INFO, "CATALOGUE SOURCE: " + catalogue.toPath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
@@ -45,12 +46,12 @@ public class Main {
 
         LogWriter.log(Level.INFO, "Read Catalogue file.", "Source file populated.");
         
-        int cSize = cat.getCatalogue().size();
+        int cSize = cat.size();
         LogWriter.log(Level.INFO, "Populated " + cSize + " entities from file.", "");
         
         // DATABASE
         File userDatabase = StorageFiles.USER_DATABASE;
-        UserDatabase dat = new UserDatabase(userDatabase);
+        UserDatabase dat = UserDatabase.getInstance();
         LogWriter.log(Level.INFO, "USER DATABASE SOURCE: " + userDatabase.toPath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
@@ -64,7 +65,7 @@ public class Main {
         
         // ORDERS
         File orderDatabase = StorageFiles.ORDER_DATABASE;
-        OrderDatabase ord = new OrderDatabase(orderDatabase);
+        OrderDatabase ord = OrderDatabase.getInstance();
         LogWriter.log(Level.INFO, "ORDER DATABASE SOURCE: " + orderDatabase.toPath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
@@ -79,7 +80,7 @@ public class Main {
         // START GUI
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                GUI.createAndShowGUI(cat, dat, ord);
+                GUI.createAndShowGUI();
             }
         });
         

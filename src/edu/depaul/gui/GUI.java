@@ -1,4 +1,4 @@
-package edu.depaul.main;
+package edu.depaul.gui;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -15,19 +15,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-import edu.depaul.catalogue.AbstractCatalogue;
-import edu.depaul.customer.User;
-import edu.depaul.gui.ControlPanel;
-import edu.depaul.gui.GridBagConstraintsConstructor;
-import edu.depaul.gui.PanelScrollList;
-import edu.depaul.gui.ScrollListRenderer;
+import edu.depaul.catalogue.Catalogue;
 import edu.depaul.gui.actions.ActionExit;
 import edu.depaul.gui.actions.ActionOpenHtml;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.factory.SuperFactory;
 import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
-import edu.depaul.order.Order;
 import edu.depaul.resources.constants.StorageFiles;
 
 @SuppressWarnings("serial")
@@ -38,14 +32,13 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
     private DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
     private JList<AbstractItem> guiItemList = new JList<>(dataModel);
     
-    public static void createAndShowGUI(AbstractCatalogue<AbstractItem> catalogue, 
-    		AbstractCatalogue<User> userDatabase, AbstractCatalogue<Order> orderDatabase) {
+    public static void createAndShowGUI() {
     	LogWriter.getLogWriter(StorageFiles.LOG_NAME);
     	LogWriter.log(Level.INFO, "Starting GUI", "Init GUI");
     	
         JFrame frame = new JFrame("FINAL PROJECT");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        GUI main = new GUI(catalogue, userDatabase, orderDatabase);
+        GUI main = new GUI();
         
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
@@ -64,9 +57,9 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
         ControlPanel panel = new ControlPanel();
 
         frame.setLayout(new GridBagLayout());
-        frame.add(menuBar, setGridBagConstraints(0, 0, 0, 0, 2, 1, GridBagConstraints.BASELINE_LEADING));
-        frame.add(main, setGridBagConstraints(0, 1, 0, 0, 1, 1, GridBagConstraints.BASELINE_LEADING));
-        frame.add(panel, setGridBagConstraints(1, 1, 0, 0, 1, 1, GridBagConstraints.BASELINE_LEADING));
+        frame.add(menuBar,  setGridBagConstraints(0, 0, 0, 0, 2, 1, GridBagConstraints.BASELINE_LEADING));
+        frame.add(main,     setGridBagConstraints(0, 1, 0, 0, 1, 1, GridBagConstraints.BASELINE_LEADING));
+        frame.add(panel,    setGridBagConstraints(1, 1, 0, 0, 1, 1, GridBagConstraints.BASELINE_LEADING));
 
         frame.pack();
 
@@ -76,15 +69,13 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
         frame.setVisible(true);
     }
 
-    public GUI(AbstractCatalogue<AbstractItem> catalogue, 
-    		AbstractCatalogue<User> userDatabase, AbstractCatalogue<Order> orderDatabase) {
-        
-    	//System.out.println("SETTING UP...");
+    /**
+     * Constructor.
+     **/
+    public GUI() {
         PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
-        
+        Catalogue catalogue = Catalogue.getInstance();
         ArrayList<AbstractItem> items = catalogue.readFromFile(catalogueFile);
-
-        //System.out.println("READING CATALOGUE");
 
         for (AbstractItem i : items) {
             scrollList.addItemToScrollList(i);

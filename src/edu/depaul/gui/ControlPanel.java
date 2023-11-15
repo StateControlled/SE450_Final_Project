@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
+import edu.depaul.customer.User;
+import edu.depaul.handlers.AccountHandler;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.factory.SuperFactory;
 import edu.depaul.logwriter.Level;
@@ -28,9 +30,10 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
     private JTextField passwordField = new JTextField("password", 32);
     private JButton loginButton;
     private JButton newUserButton;
-    
+    private boolean userAuthenticated = false;
     private DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
     private JList<AbstractItem> cartItemList = new JList<>(dataModel);
+    private User user;
 
     public ControlPanel() {
         loginButton = new JButton("Log in");
@@ -73,14 +76,20 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
     
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		passwordField.setText("********");
-		if (e.getActionCommand().equals("Log in")) {
+		if (e.getActionCommand().equals("Log in") || e.getActionCommand().equals("Create Account")) {
 			LogWriter.log(Level.INFO, "Control Panel Button Press", e.getActionCommand());
-		} else if (e.getActionCommand().equals("Create Account")) {
-			LogWriter.log(Level.INFO, "Control Panel Button Press", e.getActionCommand());
+            LogWriter.log(Level.INFO, String.format("READ: %s, %s", usernameField.getText(), passwordField.getText()), e.getActionCommand());
+            user = AccountHandler.checkUser(usernameField.getText(), passwordField.getText(), e.getActionCommand());
+            if (user != null) {
+                userAuthenticated = true;
+                LogWriter.log(Level.INFO, user.toString(), "User set");
+                message.setText("Welcome " + user.getName() + "!");
+            }
 		} else {
-			;
+			LogWriter.log(Level.WARNING, "Unaccounted Operation", e.getActionCommand());
 		}
+        LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");
+        passwordField.setText("********");
 	}
     
     public static GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, double xWeight, double yWeight, 
