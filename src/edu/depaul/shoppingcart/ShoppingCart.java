@@ -3,6 +3,8 @@ package edu.depaul.shoppingcart;
 import java.util.HashMap;
 
 import edu.depaul.item.AbstractItem;
+import edu.depaul.logwriter.Level;
+import edu.depaul.logwriter.LogWriter;
 
 /**
  * This class represents a shopping cart. It stores items and quantities in a HashMap.
@@ -27,6 +29,7 @@ public class ShoppingCart {
 		if (shoppingCart == null) {
 			return new ShoppingCart.ShoppingCartBuilder().build();
 		}
+		LogWriter.log(Level.INFO, "User Shopping Cart initialized.", "SHOPPING CART");
 		return shoppingCart;
 	}
 
@@ -37,9 +40,12 @@ public class ShoppingCart {
 		if (shoppingList.keySet().contains(item)) {
 			int temp = shoppingList.get(item);
 			shoppingList.put(item, temp + 1);
+			LogWriter.log(Level.INFO, "Item " + item.getItemName() + " added to cart.", "Quantity " + temp + 1);
+			setTotal();
 			return shoppingList.get(item);
 		}
 		shoppingList.put(item, 1);
+		LogWriter.log(Level.INFO, "Item " + item.getItemName() + " added to cart.", "Quantity 1");
 		setTotal();
 		return 1;
 	}
@@ -51,6 +57,7 @@ public class ShoppingCart {
 	public static AbstractItem removeFromCart(AbstractItem item) {
 		shoppingList.remove(item);
 		setTotal();
+		LogWriter.log(Level.INFO, "Item " + item.getItemName() + " removed from cart.", "");
 		return item;
 	}
 	
@@ -58,6 +65,7 @@ public class ShoppingCart {
 		for (double p : shoppingList.values()) {
 			total += p;
 		}
+		LogWriter.log(Level.INFO, String.format("Total updated %,.2f", total), "PRICE UPDATED");
 	}
 
 	public double getTotal() {

@@ -1,6 +1,8 @@
 package edu.depaul.customer;
 
 import edu.depaul.authenticator.Hash;
+import edu.depaul.logwriter.Level;
+import edu.depaul.logwriter.LogWriter;
 import edu.depaul.shoppingcart.ShoppingCart;
 
 /**
@@ -17,9 +19,10 @@ public class User {
      * Constructor.
      **/
     public User(int customerID, String name, String password) {
+        LogWriter.log(Level.INFO, "User constructor called.", "CLASS CONSTRUCTOR");
         this.name = name;
         this.customerID = customerID;
-        this.cart = new ShoppingCart.ShoppingCartBuilder().build();
+        this.cart = ShoppingCart.getInstance();
         setPassword(password);
     }
 

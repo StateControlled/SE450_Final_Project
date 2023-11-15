@@ -1,64 +1,32 @@
-2023-22-14 22:22:33 INFO: INIT \ 10bd12d6df594
-2023-22-14 22:22:33 INFO: System start up \ Initialization.
-2023-22-14 22:22:33 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
-2023-22-14 22:22:33 INFO: Read Catalogue file. \ Source file populated.
-2023-22-14 22:22:33 INFO: Populated 18 entities from file. \ 
-2023-22-14 22:22:33 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
-2023-22-14 22:22:33 INFO: Read User Database file. \ Source file populated.
-2023-22-14 22:22:33 INFO: Populated 5 entities from file. \ 
-2023-22-14 22:22:33 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
-2023-22-14 22:22:33 INFO: Read Order Database file. \ Source file populated.
-2023-22-14 22:22:33 INFO: Populated 2 entities from file. \ 
-2023-22-14 22:22:33 INFO: Starting GUI \ Init GUI
-2023-22-14 22:22:38 INFO: Control Panel Button Press \ Log in
-2023-22-14 22:22:38 INFO: Searching for user "username" \ Log in
-2023-22-14 22:22:38 INFO: User log in Successful \ username
-2023-22-14 22:22:38 INFO: 2107 : username \ User set
-2023-22-14 22:22:38 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-22-14 22:22:42 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-22-14 22:22:42 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-22-14 22:22:42 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-22-14 22:22:42 INFO: System shut down \ OFFLINE.
-2023-26-14 22:26:02 INFO: INIT \ 10bd12f96eb81
-2023-26-14 22:26:02 INFO: System start up \ Initialization.
-2023-26-14 22:26:02 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
-2023-26-14 22:26:02 INFO: Read Catalogue file. \ Source file populated.
-2023-26-14 22:26:02 INFO: Populated 18 entities from file. \ 
-2023-26-14 22:26:02 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
-2023-26-14 22:26:02 INFO: Read User Database file. \ Source file populated.
-2023-26-14 22:26:02 INFO: Populated 5 entities from file. \ 
-2023-26-14 22:26:02 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
-2023-26-14 22:26:02 INFO: Read Order Database file. \ Source file populated.
-2023-26-14 22:26:02 INFO: Populated 2 entities from file. \ 
-2023-26-14 22:26:02 INFO: Starting GUI \ Init GUI
-2023-26-14 22:26:06 INFO: Control Panel Button Press \ Log in
-2023-26-14 22:26:06 INFO: READ: username, ******** \ Log in
-2023-26-14 22:26:06 INFO: Searching for user "username" \ Log in
-2023-26-14 22:26:06 INFO: User log in Successful \ username
-2023-26-14 22:26:06 INFO: 2107 : username \ User set
-2023-26-14 22:26:06 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-26-14 22:26:08 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-26-14 22:26:08 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-26-14 22:26:08 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-26-14 22:26:08 INFO: System shut down \ OFFLINE.
-2023-26-14 22:26:47 INFO: INIT \ 10bd1300d4ae3
-2023-26-14 22:26:47 INFO: System start up \ Initialization.
-2023-26-14 22:26:47 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
-2023-26-14 22:26:47 INFO: Read Catalogue file. \ Source file populated.
-2023-26-14 22:26:47 INFO: Populated 18 entities from file. \ 
-2023-26-14 22:26:47 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
-2023-26-14 22:26:47 INFO: Read User Database file. \ Source file populated.
-2023-26-14 22:26:47 INFO: Populated 5 entities from file. \ 
-2023-26-14 22:26:47 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
-2023-26-14 22:26:47 INFO: Read Order Database file. \ Source file populated.
-2023-26-14 22:26:47 INFO: Populated 2 entities from file. \ 
-2023-26-14 22:26:47 INFO: Starting GUI \ Init GUI
-2023-26-14 22:26:55 INFO: Control Panel Button Press \ Log in
-2023-26-14 22:26:55 INFO: READ: username, wran \ Log in
-2023-26-14 22:26:55 INFO: Searching for user "username" \ Log in
-2023-26-14 22:26:55 WARNING: User log in Failed \ username
-2023-26-14 22:26:55 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
-2023-26-14 22:26:59 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-26-14 22:26:59 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-26-14 22:26:59 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-26-14 22:26:59 INFO: System shut down \ OFFLINE.
+2023-58-15 08:58:48 INFO: INIT \ 10bd2b713b5e6
+2023-58-15 08:58:48 INFO: System start up \ Initialization.
+2023-58-15 08:58:48 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-58-15 08:58:48 INFO: Read Catalogue file. \ Source file populated.
+2023-58-15 08:58:48 INFO: Populated 18 entities from file. \ 
+2023-58-15 08:58:48 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-58-15 08:58:48 INFO: Read User Database file. \ Source file populated.
+2023-58-15 08:58:48 INFO: Populated 5 entities from file. \ 
+2023-58-15 08:58:48 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-58-15 08:58:48 INFO: Read Order Database file. \ Source file populated.
+2023-58-15 08:58:48 INFO: Populated 2 entities from file. \ 
+2023-58-15 08:58:48 INFO: Starting GUI \ Init GUI
+2023-58-15 08:58:50 INFO: Control Panel Button Press \ Log in
+2023-58-15 08:58:50 INFO: READ: username, password \ Log in
+2023-58-15 08:58:50 INFO: Searching for user "username" \ Log in
+2023-58-15 08:58:50 WARNING: User log in Failed \ username
+2023-58-15 08:58:50 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-58-15 08:58:58 INFO: Control Panel Button Press \ Log in
+2023-58-15 08:58:58 INFO: READ: Sam, trumpet \ Log in
+2023-58-15 08:58:58 INFO: Searching for user "Sam" \ Log in
+2023-58-15 08:58:58 INFO: User log in Successful \ Sam
+2023-58-15 08:58:58 INFO: 2105 : Sam \ User set
+2023-58-15 08:58:58 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-59-15 08:59:03 INFO: Control Panel Button Press \ Log in
+2023-59-15 08:59:03 INFO: READ: Sam, ******** \ Log in
+2023-59-15 08:59:03 INFO: Searching for user "Sam" \ Log in
+2023-59-15 08:59:03 WARNING: User log in Failed \ Sam
+2023-59-15 08:59:03 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-59-15 08:59:05 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-59-15 08:59:05 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-59-15 08:59:05 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-59-15 08:59:05 INFO: System shut down \ OFFLINE.
