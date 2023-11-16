@@ -35,7 +35,21 @@ public class Main {
     	}
 
         LogWriter.log(Level.INFO, "System start up", "Initialization.");
+
+        initDatabases(argument1);
         
+        // START GUI
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                GUI.createAndShowGUI();
+            }
+        });
+    }
+
+    /**
+     * Des the work of initializing the databases
+     **/
+    private static void initDatabases(String argument1) {
         // CATALOGUE
         File catalogue = StorageFiles.CATALOGUE_SOURCE;
         Catalogue cat = Catalogue.getInstance();
@@ -78,14 +92,5 @@ public class Main {
         
         int oSize = ord.getCatalogue().size();
         LogWriter.log(Level.INFO, "Populated " + oSize + " entities from file.", "");
-        
-        // START GUI
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                GUI.createAndShowGUI();
-            }
-        });
-        
-        
     }
 }

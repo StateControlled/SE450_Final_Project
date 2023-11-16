@@ -32,13 +32,6 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
     private File catalogueFile = StorageFiles.CATALOGUE_SOURCE;
     private static final int INIT_MAX_ROWS = 8;
     private static final int CONSTRAINT_INSET = 2;
-    private PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
-    private DefaultListModel<AbstractItem> catalogueScrollList = new DefaultListModel<>();
-    private JList<AbstractItem> renderedCatalogueList = new JList<>(catalogueScrollList);
-
-    private static PanelScrollList cartPanelList = new PanelScrollList(INIT_MAX_ROWS);
-    private static DefaultListModel<AbstractItem> cartScrollList = new DefaultListModel<>();
-    private JList<AbstractItem> renderedCartList = new JList<>(cartScrollList);
     
     public static void createAndShowGUI() {
     	LogWriter.getLogWriter(StorageFiles.LOG_NAME);
@@ -80,9 +73,14 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
         frame.setVisible(true);
     }
 
-    /**
-     * Constructor.
-     **/
+    private PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
+    private DefaultListModel<AbstractItem> catalogueScrollList = new DefaultListModel<>();
+    private JList<AbstractItem> renderedCatalogueList = new JList<>(catalogueScrollList);
+
+    private static PanelScrollList cartPanelList = new PanelScrollList(INIT_MAX_ROWS);
+    private static DefaultListModel<AbstractItem> cartScrollList = new DefaultListModel<>();
+    private JList<AbstractItem> renderedCartList = new JList<>(cartScrollList);
+    
     public GUI() {
         // Setup Cataoluge Scroll List
         // PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
