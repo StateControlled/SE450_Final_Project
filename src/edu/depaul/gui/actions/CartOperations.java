@@ -14,10 +14,9 @@ public class CartOperations {
 
     public static void addToCart(User user, AbstractItem item) {
         try {
+            //ShoppingCart.getInstance();
             user.getCart();
-            ShoppingCart.getInstance();
             ShoppingCart.addToCart(item);
-            //ControlPanel.addItemToCart(item);
             LogWriter.log(Level.INFO, "Added item to cart", item.getItemName());
         } catch (Exception e) {
             LogWriter.log(Level.SEVERE, "Failed to add item to cart", e);

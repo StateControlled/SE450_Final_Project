@@ -18,6 +18,7 @@ import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
 import edu.depaul.order.Order;
 import edu.depaul.order.OrderPopulator;
+import edu.depaul.paymentprocessor.PaymentProcessor;
 import edu.depaul.resources.constants.StorageFiles;
 
 /**
@@ -27,6 +28,7 @@ public class Main {
     // Initialize the LogWriter	before anything else.
 	static {
 		LogWriter.getLogWriter(StorageFiles.LOG_NAME);
+        PaymentProcessor.getProcessor();
 	}
     
     public static void main(String[] args) {
@@ -42,7 +44,6 @@ public class Main {
         // START GUI
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                //GUI.createAndShowGUI();
                 new Application();
             }
         });

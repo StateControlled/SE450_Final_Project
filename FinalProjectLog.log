@@ -1,29 +1,795 @@
-2023-36-16 13:36:01 INFO: INIT \ 10bd6dd836016
-2023-36-16 13:36:01 INFO: System start up \ Initialization.
-2023-36-16 13:36:01 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
-2023-36-16 13:36:01 INFO: Read Catalogue file. \ Source file populated.
-2023-36-16 13:36:01 INFO: Populated 18 entities from file. \ 
-2023-36-16 13:36:01 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
-2023-36-16 13:36:01 INFO: Read User Database file. \ Source file populated.
-2023-36-16 13:36:01 INFO: Populated 7 entities from file. \ 
-2023-36-16 13:36:01 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
-2023-36-16 13:36:01 INFO: Read Order Database file. \ Source file populated.
-2023-36-16 13:36:01 INFO: Populated 2 entities from file. \ 
-2023-36-16 13:36:01 INFO: Initializing GUI \ Initialization
-2023-36-16 13:36:05 INFO: Control Panel Button Press \ Log in
-2023-36-16 13:36:05 INFO: READ: username, password \ Log in
-2023-36-16 13:36:05 INFO: Log in existing user \ 
-2023-36-16 13:36:05 INFO: Searching for user "username" \ Log in
-2023-36-16 13:36:05 WARNING: User log in Failed \ username
-2023-36-16 13:36:05 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
-2023-36-16 13:36:06 INFO: Control Panel Button Press \ Log in
-2023-36-16 13:36:06 INFO: READ: username, ******** \ Log in
-2023-36-16 13:36:06 INFO: Log in existing user \ 
-2023-36-16 13:36:06 INFO: Searching for user "username" \ Log in
-2023-36-16 13:36:06 INFO: User log in Successful \ username
-2023-36-16 13:36:06 INFO: 2107 : username \ User set
-2023-36-16 13:36:06 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-36-16 13:36:47 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-36-16 13:36:47 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-36-16 13:36:47 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-36-16 13:36:47 INFO: System shut down \ OFFLINE.
+2023-08-16 14:08:14 INFO: INIT \ 10bd6f1731626
+2023-08-16 14:08:14 INFO: System start up \ Initialization.
+2023-08-16 14:08:14 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-08-16 14:08:14 INFO: Read Catalogue file. \ Source file populated.
+2023-08-16 14:08:14 INFO: Populated 18 entities from file. \ 
+2023-08-16 14:08:14 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-08-16 14:08:14 INFO: Read User Database file. \ Source file populated.
+2023-08-16 14:08:14 INFO: Populated 7 entities from file. \ 
+2023-08-16 14:08:14 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-08-16 14:08:14 INFO: Read Order Database file. \ Source file populated.
+2023-08-16 14:08:14 INFO: Populated 2 entities from file. \ 
+2023-08-16 14:08:15 INFO: Initializing GUI \ Initialization
+2023-08-16 14:08:20 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-08-16 14:08:20 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-08-16 14:08:20 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-08-16 14:08:20 INFO: System shut down \ OFFLINE.
+2023-09-16 14:09:11 INFO: INIT \ 10bd6f207bf72
+2023-09-16 14:09:11 INFO: System start up \ Initialization.
+2023-09-16 14:09:11 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-09-16 14:09:11 INFO: Read Catalogue file. \ Source file populated.
+2023-09-16 14:09:11 INFO: Populated 18 entities from file. \ 
+2023-09-16 14:09:11 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-09-16 14:09:11 INFO: Read User Database file. \ Source file populated.
+2023-09-16 14:09:11 INFO: Populated 7 entities from file. \ 
+2023-09-16 14:09:11 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-09-16 14:09:11 INFO: Read Order Database file. \ Source file populated.
+2023-09-16 14:09:11 INFO: Populated 2 entities from file. \ 
+2023-09-16 14:09:11 INFO: Initializing GUI \ Initialization
+2023-09-16 14:09:14 INFO: Control Panel Button Press \ Log in
+2023-09-16 14:09:14 INFO: READ: username, password \ Log in
+2023-09-16 14:09:14 INFO: Log in existing user \ 
+2023-09-16 14:09:14 INFO: Searching for user "username" \ Log in
+2023-09-16 14:09:14 WARNING: User log in Failed \ username
+2023-09-16 14:09:14 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-09-16 14:09:15 INFO: Control Panel Button Press \ Log in
+2023-09-16 14:09:15 INFO: READ: username, ******** \ Log in
+2023-09-16 14:09:15 INFO: Log in existing user \ 
+2023-09-16 14:09:15 INFO: Searching for user "username" \ Log in
+2023-09-16 14:09:15 INFO: User log in Successful \ username
+2023-09-16 14:09:15 INFO: 2107 : username \ User set
+2023-09-16 14:09:15 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-12-16 14:12:01 INFO: INIT \ 10bd6f3c9aa40
+2023-12-16 14:12:01 INFO: System start up \ Initialization.
+2023-12-16 14:12:01 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-12-16 14:12:01 INFO: Read Catalogue file. \ Source file populated.
+2023-12-16 14:12:01 INFO: Populated 18 entities from file. \ 
+2023-12-16 14:12:01 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-12-16 14:12:01 INFO: Read User Database file. \ Source file populated.
+2023-12-16 14:12:01 INFO: Populated 7 entities from file. \ 
+2023-12-16 14:12:01 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-12-16 14:12:01 INFO: Read Order Database file. \ Source file populated.
+2023-12-16 14:12:01 INFO: Populated 2 entities from file. \ 
+2023-12-16 14:12:01 INFO: Initializing GUI \ Initialization
+2023-12-16 14:12:05 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-12-16 14:12:05 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-12-16 14:12:05 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-12-16 14:12:05 INFO: System shut down \ OFFLINE.
+2023-12-16 14:12:08 INFO: INIT \ 10bd6f3dd3669
+2023-12-16 14:12:08 INFO: System start up \ Initialization.
+2023-12-16 14:12:09 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-12-16 14:12:09 INFO: Read Catalogue file. \ Source file populated.
+2023-12-16 14:12:09 INFO: Populated 18 entities from file. \ 
+2023-12-16 14:12:09 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-12-16 14:12:09 INFO: Read User Database file. \ Source file populated.
+2023-12-16 14:12:09 INFO: Populated 7 entities from file. \ 
+2023-12-16 14:12:09 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-12-16 14:12:09 INFO: Read Order Database file. \ Source file populated.
+2023-12-16 14:12:09 INFO: Populated 2 entities from file. \ 
+2023-12-16 14:12:09 INFO: Initializing GUI \ Initialization
+2023-12-16 14:12:11 INFO: Opening ABOUT \ Open file.
+2023-12-16 14:12:19 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-12-16 14:12:19 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-12-16 14:12:19 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-12-16 14:12:19 INFO: System shut down \ OFFLINE.
+2023-31-16 14:31:11 INFO: INIT \ 10bd6ffa692bc
+2023-31-16 14:31:11 INFO: System start up \ Initialization.
+2023-31-16 14:31:12 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-31-16 14:31:12 INFO: Read Catalogue file. \ Source file populated.
+2023-31-16 14:31:12 INFO: Populated 18 entities from file. \ 
+2023-31-16 14:31:12 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-31-16 14:31:12 INFO: Read User Database file. \ Source file populated.
+2023-31-16 14:31:12 INFO: Populated 7 entities from file. \ 
+2023-31-16 14:31:12 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-31-16 14:31:12 INFO: Read Order Database file. \ Source file populated.
+2023-31-16 14:31:12 INFO: Populated 2 entities from file. \ 
+2023-31-16 14:31:12 INFO: Initializing GUI \ Initialization
+2023-31-16 14:31:25 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-31-16 14:31:25 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-31-16 14:31:25 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-31-16 14:31:25 INFO: System shut down \ OFFLINE.
+2023-35-16 14:35:05 INFO: INIT \ 10bd7020ee8d1
+2023-35-16 14:35:05 INFO: System start up \ Initialization.
+2023-35-16 14:35:05 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-35-16 14:35:05 INFO: Read Catalogue file. \ Source file populated.
+2023-35-16 14:35:05 INFO: Populated 18 entities from file. \ 
+2023-35-16 14:35:05 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-35-16 14:35:05 INFO: Read User Database file. \ Source file populated.
+2023-35-16 14:35:05 INFO: Populated 7 entities from file. \ 
+2023-35-16 14:35:05 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-35-16 14:35:05 INFO: Read Order Database file. \ Source file populated.
+2023-35-16 14:35:05 INFO: Populated 2 entities from file. \ 
+2023-35-16 14:35:05 INFO: Initializing GUI \ Initialization
+2023-35-16 14:35:28 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-35-16 14:35:28 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-35-16 14:35:28 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-35-16 14:35:28 INFO: System shut down \ OFFLINE.
+2023-41-16 14:41:27 INFO: INIT \ 10bd7060033b2
+2023-41-16 14:41:27 INFO: System start up \ Initialization.
+2023-41-16 14:41:27 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-41-16 14:41:27 INFO: Read Catalogue file. \ Source file populated.
+2023-41-16 14:41:27 INFO: Populated 18 entities from file. \ 
+2023-41-16 14:41:27 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-41-16 14:41:27 INFO: Read User Database file. \ Source file populated.
+2023-41-16 14:41:27 INFO: Populated 7 entities from file. \ 
+2023-41-16 14:41:27 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-41-16 14:41:27 INFO: Read Order Database file. \ Source file populated.
+2023-41-16 14:41:27 INFO: Populated 2 entities from file. \ 
+2023-41-16 14:41:28 INFO: Initializing GUI \ Initialization
+2023-41-16 14:41:31 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-41-16 14:41:31 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-41-16 14:41:31 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-41-16 14:41:31 INFO: System shut down \ OFFLINE.
+2023-41-16 14:41:58 INFO: INIT \ 10bd70652425b
+2023-41-16 14:41:58 INFO: System start up \ Initialization.
+2023-41-16 14:41:58 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-41-16 14:41:58 INFO: Read Catalogue file. \ Source file populated.
+2023-41-16 14:41:58 INFO: Populated 18 entities from file. \ 
+2023-41-16 14:41:58 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-41-16 14:41:58 INFO: Read User Database file. \ Source file populated.
+2023-41-16 14:41:58 INFO: Populated 7 entities from file. \ 
+2023-41-16 14:41:59 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-41-16 14:41:59 INFO: Read Order Database file. \ Source file populated.
+2023-41-16 14:41:59 INFO: Populated 2 entities from file. \ 
+2023-41-16 14:41:59 INFO: Initializing GUI \ Initialization
+2023-42-16 14:42:22 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-42-16 14:42:22 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-42-16 14:42:22 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-42-16 14:42:22 INFO: System shut down \ OFFLINE.
+2023-45-16 14:45:06 INFO: INIT \ 10bd70840e184
+2023-45-16 14:45:06 INFO: System start up \ Initialization.
+2023-45-16 14:45:06 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-45-16 14:45:06 INFO: Read Catalogue file. \ Source file populated.
+2023-45-16 14:45:06 INFO: Populated 18 entities from file. \ 
+2023-45-16 14:45:06 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-45-16 14:45:06 INFO: Read User Database file. \ Source file populated.
+2023-45-16 14:45:06 INFO: Populated 7 entities from file. \ 
+2023-45-16 14:45:06 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-45-16 14:45:06 INFO: Read Order Database file. \ Source file populated.
+2023-45-16 14:45:06 INFO: Populated 2 entities from file. \ 
+2023-45-16 14:45:06 INFO: Initializing GUI \ Initialization
+2023-45-16 14:45:14 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-45-16 14:45:14 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-45-16 14:45:14 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-45-16 14:45:14 INFO: System shut down \ OFFLINE.
+2023-46-16 14:46:10 INFO: INIT \ 10bd708e97642
+2023-46-16 14:46:10 INFO: System start up \ Initialization.
+2023-46-16 14:46:10 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-46-16 14:46:10 INFO: Read Catalogue file. \ Source file populated.
+2023-46-16 14:46:10 INFO: Populated 18 entities from file. \ 
+2023-46-16 14:46:10 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-46-16 14:46:10 INFO: Read User Database file. \ Source file populated.
+2023-46-16 14:46:10 INFO: Populated 7 entities from file. \ 
+2023-46-16 14:46:10 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-46-16 14:46:10 INFO: Read Order Database file. \ Source file populated.
+2023-46-16 14:46:10 INFO: Populated 2 entities from file. \ 
+2023-46-16 14:46:10 INFO: Initializing GUI \ Initialization
+2023-46-16 14:46:20 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-46-16 14:46:20 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-46-16 14:46:20 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-46-16 14:46:20 INFO: System shut down \ OFFLINE.
+2023-46-16 14:46:37 INFO: INIT \ 10bd709323008
+2023-46-16 14:46:37 INFO: System start up \ Initialization.
+2023-46-16 14:46:37 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-46-16 14:46:37 INFO: Read Catalogue file. \ Source file populated.
+2023-46-16 14:46:37 INFO: Populated 18 entities from file. \ 
+2023-46-16 14:46:37 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-46-16 14:46:37 INFO: Read User Database file. \ Source file populated.
+2023-46-16 14:46:37 INFO: Populated 7 entities from file. \ 
+2023-46-16 14:46:37 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-46-16 14:46:37 INFO: Read Order Database file. \ Source file populated.
+2023-46-16 14:46:37 INFO: Populated 2 entities from file. \ 
+2023-46-16 14:46:37 INFO: Initializing GUI \ Initialization
+2023-46-16 14:46:43 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-46-16 14:46:43 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-46-16 14:46:43 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-46-16 14:46:43 INFO: System shut down \ OFFLINE.
+2023-48-16 14:48:38 INFO: INIT \ 10bd70a721d57
+2023-48-16 14:48:38 INFO: System start up \ Initialization.
+2023-48-16 14:48:38 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-48-16 14:48:38 INFO: Read Catalogue file. \ Source file populated.
+2023-48-16 14:48:38 INFO: Populated 18 entities from file. \ 
+2023-48-16 14:48:38 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-48-16 14:48:38 INFO: Read User Database file. \ Source file populated.
+2023-48-16 14:48:38 INFO: Populated 7 entities from file. \ 
+2023-48-16 14:48:38 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-48-16 14:48:38 INFO: Read Order Database file. \ Source file populated.
+2023-48-16 14:48:38 INFO: Populated 2 entities from file. \ 
+2023-48-16 14:48:39 INFO: Initializing GUI \ Initialization
+2023-48-16 14:48:42 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-48-16 14:48:42 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-48-16 14:48:42 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-48-16 14:48:42 INFO: System shut down \ OFFLINE.
+2023-51-16 14:51:40 INFO: INIT \ 10bd70c516a44
+2023-51-16 14:51:40 INFO: System start up \ Initialization.
+2023-51-16 14:51:40 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-51-16 14:51:40 INFO: Read Catalogue file. \ Source file populated.
+2023-51-16 14:51:40 INFO: Populated 18 entities from file. \ 
+2023-51-16 14:51:40 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-51-16 14:51:40 INFO: Read User Database file. \ Source file populated.
+2023-51-16 14:51:40 INFO: Populated 7 entities from file. \ 
+2023-51-16 14:51:40 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-51-16 14:51:40 INFO: Read Order Database file. \ Source file populated.
+2023-51-16 14:51:40 INFO: Populated 2 entities from file. \ 
+2023-51-16 14:51:40 INFO: Initializing GUI \ Initialization
+2023-51-16 14:51:45 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-51-16 14:51:45 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-51-16 14:51:45 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-51-16 14:51:45 INFO: System shut down \ OFFLINE.
+2023-57-16 14:57:00 INFO: INIT \ 10bd70f9d2fa2
+2023-57-16 14:57:00 INFO: System start up \ Initialization.
+2023-57-16 14:57:00 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-57-16 14:57:00 INFO: Read Catalogue file. \ Source file populated.
+2023-57-16 14:57:00 INFO: Populated 18 entities from file. \ 
+2023-57-16 14:57:00 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-57-16 14:57:00 INFO: Read User Database file. \ Source file populated.
+2023-57-16 14:57:00 INFO: Populated 7 entities from file. \ 
+2023-57-16 14:57:00 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-57-16 14:57:00 INFO: Read Order Database file. \ Source file populated.
+2023-57-16 14:57:00 INFO: Populated 2 entities from file. \ 
+2023-57-16 14:57:00 INFO: Initializing GUI \ Initialization
+2023-57-16 14:57:03 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-57-16 14:57:03 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-57-16 14:57:03 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-57-16 14:57:03 INFO: System shut down \ OFFLINE.
+2023-57-16 14:57:20 INFO: INIT \ 10bd70fd3208c
+2023-57-16 14:57:20 INFO: System start up \ Initialization.
+2023-57-16 14:57:20 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-57-16 14:57:20 INFO: Read Catalogue file. \ Source file populated.
+2023-57-16 14:57:20 INFO: Populated 18 entities from file. \ 
+2023-57-16 14:57:20 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-57-16 14:57:20 INFO: Read User Database file. \ Source file populated.
+2023-57-16 14:57:20 INFO: Populated 7 entities from file. \ 
+2023-57-16 14:57:20 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-57-16 14:57:20 INFO: Read Order Database file. \ Source file populated.
+2023-57-16 14:57:20 INFO: Populated 2 entities from file. \ 
+2023-57-16 14:57:20 INFO: Initializing GUI \ Initialization
+2023-57-16 14:57:25 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-57-16 14:57:25 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-57-16 14:57:25 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-57-16 14:57:25 INFO: System shut down \ OFFLINE.
+2023-58-16 14:58:03 INFO: INIT \ 10bd71044c18d
+2023-58-16 14:58:03 INFO: System start up \ Initialization.
+2023-58-16 14:58:03 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-58-16 14:58:03 INFO: Read Catalogue file. \ Source file populated.
+2023-58-16 14:58:03 INFO: Populated 18 entities from file. \ 
+2023-58-16 14:58:03 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-58-16 14:58:03 INFO: Read User Database file. \ Source file populated.
+2023-58-16 14:58:03 INFO: Populated 7 entities from file. \ 
+2023-58-16 14:58:03 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-58-16 14:58:03 INFO: Read Order Database file. \ Source file populated.
+2023-58-16 14:58:03 INFO: Populated 2 entities from file. \ 
+2023-58-16 14:58:03 INFO: Initializing GUI \ Initialization
+2023-58-16 14:58:44 INFO: INIT \ 10bd710af9a79
+2023-58-16 14:58:44 INFO: System start up \ Initialization.
+2023-58-16 14:58:44 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-58-16 14:58:44 INFO: Read Catalogue file. \ Source file populated.
+2023-58-16 14:58:44 INFO: Populated 18 entities from file. \ 
+2023-58-16 14:58:44 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-58-16 14:58:44 INFO: Read User Database file. \ Source file populated.
+2023-58-16 14:58:44 INFO: Populated 7 entities from file. \ 
+2023-58-16 14:58:44 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-58-16 14:58:44 INFO: Read Order Database file. \ Source file populated.
+2023-58-16 14:58:44 INFO: Populated 2 entities from file. \ 
+2023-58-16 14:58:44 INFO: Initializing GUI \ Initialization
+2023-58-16 14:58:49 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-58-16 14:58:49 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-58-16 14:58:49 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-58-16 14:58:49 INFO: System shut down \ OFFLINE.
+2023-59-16 14:59:54 INFO: INIT \ 10bd711699f6d
+2023-59-16 14:59:54 INFO: System start up \ Initialization.
+2023-59-16 14:59:54 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-59-16 14:59:54 INFO: Read Catalogue file. \ Source file populated.
+2023-59-16 14:59:54 INFO: Populated 18 entities from file. \ 
+2023-59-16 14:59:54 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-59-16 14:59:54 INFO: Read User Database file. \ Source file populated.
+2023-59-16 14:59:54 INFO: Populated 7 entities from file. \ 
+2023-59-16 14:59:54 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-59-16 14:59:54 INFO: Read Order Database file. \ Source file populated.
+2023-59-16 14:59:54 INFO: Populated 2 entities from file. \ 
+2023-59-16 14:59:54 INFO: Initializing GUI \ Initialization
+2023-59-16 14:59:59 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-59-16 14:59:59 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-59-16 14:59:59 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-59-16 14:59:59 INFO: System shut down \ OFFLINE.
+2023-01-16 15:01:35 INFO: INIT \ 10bd712754182
+2023-01-16 15:01:35 INFO: System start up \ Initialization.
+2023-01-16 15:01:35 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-01-16 15:01:35 INFO: Read Catalogue file. \ Source file populated.
+2023-01-16 15:01:35 INFO: Populated 18 entities from file. \ 
+2023-01-16 15:01:35 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-01-16 15:01:35 INFO: Read User Database file. \ Source file populated.
+2023-01-16 15:01:35 INFO: Populated 7 entities from file. \ 
+2023-01-16 15:01:35 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-01-16 15:01:35 INFO: Read Order Database file. \ Source file populated.
+2023-01-16 15:01:35 INFO: Populated 2 entities from file. \ 
+2023-01-16 15:01:36 INFO: Initializing GUI \ Initialization
+2023-01-16 15:01:59 INFO: INIT \ 10bd712b2f07d
+2023-01-16 15:01:59 INFO: System start up \ Initialization.
+2023-01-16 15:01:59 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-01-16 15:01:59 INFO: Read Catalogue file. \ Source file populated.
+2023-01-16 15:01:59 INFO: Populated 18 entities from file. \ 
+2023-01-16 15:01:59 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-01-16 15:01:59 INFO: Read User Database file. \ Source file populated.
+2023-01-16 15:01:59 INFO: Populated 7 entities from file. \ 
+2023-01-16 15:01:59 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-01-16 15:01:59 INFO: Read Order Database file. \ Source file populated.
+2023-01-16 15:01:59 INFO: Populated 2 entities from file. \ 
+2023-01-16 15:01:59 INFO: Initializing GUI \ Initialization
+2023-02-16 15:02:30 INFO: INIT \ 10bd713067020
+2023-02-16 15:02:30 INFO: System start up \ Initialization.
+2023-02-16 15:02:30 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-02-16 15:02:30 INFO: Read Catalogue file. \ Source file populated.
+2023-02-16 15:02:30 INFO: Populated 18 entities from file. \ 
+2023-02-16 15:02:30 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-02-16 15:02:30 INFO: Read User Database file. \ Source file populated.
+2023-02-16 15:02:30 INFO: Populated 7 entities from file. \ 
+2023-02-16 15:02:30 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-02-16 15:02:30 INFO: Read Order Database file. \ Source file populated.
+2023-02-16 15:02:30 INFO: Populated 2 entities from file. \ 
+2023-02-16 15:02:31 INFO: Initializing GUI \ Initialization
+2023-02-16 15:02:44 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-02-16 15:02:44 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-02-16 15:02:44 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-02-16 15:02:44 INFO: System shut down \ OFFLINE.
+2023-16-16 15:16:32 INFO: INIT \ 10bd71bb411a0
+2023-16-16 15:16:32 INFO: System start up \ Initialization.
+2023-16-16 15:16:32 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-16-16 15:16:32 INFO: Read Catalogue file. \ Source file populated.
+2023-16-16 15:16:32 INFO: Populated 18 entities from file. \ 
+2023-16-16 15:16:32 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-16-16 15:16:32 INFO: Read User Database file. \ Source file populated.
+2023-16-16 15:16:32 INFO: Populated 7 entities from file. \ 
+2023-16-16 15:16:32 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-16-16 15:16:32 INFO: Read Order Database file. \ Source file populated.
+2023-16-16 15:16:32 INFO: Populated 2 entities from file. \ 
+2023-16-16 15:16:32 INFO: Initializing GUI \ Initialization
+2023-16-16 15:16:36 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-16-16 15:16:36 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-16-16 15:16:36 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-16-16 15:16:36 INFO: System shut down \ OFFLINE.
+2023-17-16 15:17:14 INFO: INIT \ 10bd71c232934
+2023-17-16 15:17:14 INFO: System start up \ Initialization.
+2023-17-16 15:17:14 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-17-16 15:17:14 INFO: Read Catalogue file. \ Source file populated.
+2023-17-16 15:17:14 INFO: Populated 18 entities from file. \ 
+2023-17-16 15:17:14 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-17-16 15:17:14 INFO: Read User Database file. \ Source file populated.
+2023-17-16 15:17:14 INFO: Populated 7 entities from file. \ 
+2023-17-16 15:17:14 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-17-16 15:17:14 INFO: Read Order Database file. \ Source file populated.
+2023-17-16 15:17:14 INFO: Populated 2 entities from file. \ 
+2023-17-16 15:17:14 INFO: Initializing GUI \ Initialization
+2023-17-16 15:17:20 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-17-16 15:17:20 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-17-16 15:17:20 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-17-16 15:17:20 INFO: System shut down \ OFFLINE.
+2023-18-16 15:18:51 INFO: INIT \ 10bd71d21f39c
+2023-18-16 15:18:51 INFO: System start up \ Initialization.
+2023-18-16 15:18:51 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-18-16 15:18:51 INFO: Read Catalogue file. \ Source file populated.
+2023-18-16 15:18:51 INFO: Populated 18 entities from file. \ 
+2023-18-16 15:18:51 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-18-16 15:18:51 INFO: Read User Database file. \ Source file populated.
+2023-18-16 15:18:51 INFO: Populated 7 entities from file. \ 
+2023-18-16 15:18:51 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-18-16 15:18:51 INFO: Read Order Database file. \ Source file populated.
+2023-18-16 15:18:51 INFO: Populated 2 entities from file. \ 
+2023-18-16 15:18:51 INFO: Initializing GUI \ Initialization
+2023-19-16 15:19:06 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-19-16 15:19:06 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-19-16 15:19:06 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-19-16 15:19:06 INFO: System shut down \ OFFLINE.
+2023-19-16 15:19:24 INFO: INIT \ 10bd71d7b6314
+2023-19-16 15:19:24 INFO: System start up \ Initialization.
+2023-19-16 15:19:25 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-19-16 15:19:25 INFO: Read Catalogue file. \ Source file populated.
+2023-19-16 15:19:25 INFO: Populated 18 entities from file. \ 
+2023-19-16 15:19:25 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-19-16 15:19:25 INFO: Read User Database file. \ Source file populated.
+2023-19-16 15:19:25 INFO: Populated 7 entities from file. \ 
+2023-19-16 15:19:25 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-19-16 15:19:25 INFO: Read Order Database file. \ Source file populated.
+2023-19-16 15:19:25 INFO: Populated 2 entities from file. \ 
+2023-19-16 15:19:25 INFO: Initializing GUI \ Initialization
+2023-19-16 15:19:40 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-19-16 15:19:40 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-19-16 15:19:40 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-19-16 15:19:40 INFO: System shut down \ OFFLINE.
+2023-20-16 15:20:18 INFO: INIT \ 10bd71e084aee
+2023-20-16 15:20:18 INFO: System start up \ Initialization.
+2023-20-16 15:20:18 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-20-16 15:20:18 INFO: Read Catalogue file. \ Source file populated.
+2023-20-16 15:20:18 INFO: Populated 18 entities from file. \ 
+2023-20-16 15:20:18 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-20-16 15:20:18 INFO: Read User Database file. \ Source file populated.
+2023-20-16 15:20:18 INFO: Populated 7 entities from file. \ 
+2023-20-16 15:20:18 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-20-16 15:20:18 INFO: Read Order Database file. \ Source file populated.
+2023-20-16 15:20:18 INFO: Populated 2 entities from file. \ 
+2023-20-16 15:20:18 INFO: Initializing GUI \ Initialization
+2023-20-16 15:20:30 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-20-16 15:20:30 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-20-16 15:20:30 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-20-16 15:20:30 INFO: System shut down \ OFFLINE.
+2023-01-16 16:01:31 INFO: INIT \ 10bd737891379
+2023-01-16 16:01:31 INFO: System start up \ Initialization.
+2023-01-16 16:01:31 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-01-16 16:01:31 INFO: Read Catalogue file. \ Source file populated.
+2023-01-16 16:01:31 INFO: Populated 18 entities from file. \ 
+2023-01-16 16:01:31 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-01-16 16:01:31 INFO: Read User Database file. \ Source file populated.
+2023-01-16 16:01:31 INFO: Populated 7 entities from file. \ 
+2023-01-16 16:01:31 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-01-16 16:01:31 INFO: Read Order Database file. \ Source file populated.
+2023-01-16 16:01:31 INFO: Populated 2 entities from file. \ 
+2023-01-16 16:01:31 INFO: Initializing GUI \ Initialization
+2023-02-16 16:02:37 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-02-16 16:02:37 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-02-16 16:02:37 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-02-16 16:02:37 INFO: System shut down \ OFFLINE.
+2023-02-16 16:02:51 INFO: INIT \ 10bd7385d4011
+2023-02-16 16:02:51 INFO: System start up \ Initialization.
+2023-02-16 16:02:52 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-02-16 16:02:52 INFO: Read Catalogue file. \ Source file populated.
+2023-02-16 16:02:52 INFO: Populated 18 entities from file. \ 
+2023-02-16 16:02:52 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-02-16 16:02:52 INFO: Read User Database file. \ Source file populated.
+2023-02-16 16:02:52 INFO: Populated 7 entities from file. \ 
+2023-02-16 16:02:52 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-02-16 16:02:52 INFO: Read Order Database file. \ Source file populated.
+2023-02-16 16:02:52 INFO: Populated 2 entities from file. \ 
+2023-02-16 16:02:52 INFO: Initializing GUI \ Initialization
+2023-07-16 16:07:25 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-07-16 16:07:25 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-07-16 16:07:25 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-07-16 16:07:25 INFO: System shut down \ OFFLINE.
+2023-07-16 16:07:40 INFO: INIT \ 10bd73b5715dc
+2023-07-16 16:07:40 INFO: System start up \ Initialization.
+2023-07-16 16:07:40 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-07-16 16:07:40 INFO: Read Catalogue file. \ Source file populated.
+2023-07-16 16:07:40 INFO: Populated 18 entities from file. \ 
+2023-07-16 16:07:40 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-07-16 16:07:40 INFO: Read User Database file. \ Source file populated.
+2023-07-16 16:07:40 INFO: Populated 7 entities from file. \ 
+2023-07-16 16:07:40 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-07-16 16:07:40 INFO: Read Order Database file. \ Source file populated.
+2023-07-16 16:07:40 INFO: Populated 2 entities from file. \ 
+2023-07-16 16:07:40 INFO: Initializing GUI \ Initialization
+2023-07-16 16:07:47 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-07-16 16:07:47 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-07-16 16:07:47 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-07-16 16:07:47 INFO: System shut down \ OFFLINE.
+2023-07-16 16:07:57 INFO: INIT \ 10bd73b828bec
+2023-07-16 16:07:57 INFO: System start up \ Initialization.
+2023-07-16 16:07:57 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-07-16 16:07:57 INFO: Read Catalogue file. \ Source file populated.
+2023-07-16 16:07:57 INFO: Populated 18 entities from file. \ 
+2023-07-16 16:07:57 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-07-16 16:07:57 INFO: Read User Database file. \ Source file populated.
+2023-07-16 16:07:57 INFO: Populated 7 entities from file. \ 
+2023-07-16 16:07:57 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-07-16 16:07:57 INFO: Read Order Database file. \ Source file populated.
+2023-07-16 16:07:57 INFO: Populated 2 entities from file. \ 
+2023-07-16 16:07:57 INFO: Initializing GUI \ Initialization
+2023-08-16 16:08:04 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-08-16 16:08:04 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-08-16 16:08:04 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-08-16 16:08:04 INFO: System shut down \ OFFLINE.
+2023-08-16 16:08:11 INFO: INIT \ 10bd73ba8deea
+2023-08-16 16:08:11 INFO: System start up \ Initialization.
+2023-08-16 16:08:11 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-08-16 16:08:11 INFO: Read Catalogue file. \ Source file populated.
+2023-08-16 16:08:11 INFO: Populated 18 entities from file. \ 
+2023-08-16 16:08:11 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-08-16 16:08:11 INFO: Read User Database file. \ Source file populated.
+2023-08-16 16:08:11 INFO: Populated 7 entities from file. \ 
+2023-08-16 16:08:11 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-08-16 16:08:11 INFO: Read Order Database file. \ Source file populated.
+2023-08-16 16:08:11 INFO: Populated 2 entities from file. \ 
+2023-08-16 16:08:11 INFO: Initializing GUI \ Initialization
+2023-08-16 16:08:15 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-08-16 16:08:15 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-08-16 16:08:15 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-08-16 16:08:15 INFO: System shut down \ OFFLINE.
+2023-08-16 16:08:22 INFO: INIT \ 10bd73bc49cb3
+2023-08-16 16:08:22 INFO: System start up \ Initialization.
+2023-08-16 16:08:22 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-08-16 16:08:22 INFO: Read Catalogue file. \ Source file populated.
+2023-08-16 16:08:22 INFO: Populated 18 entities from file. \ 
+2023-08-16 16:08:22 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-08-16 16:08:22 INFO: Read User Database file. \ Source file populated.
+2023-08-16 16:08:22 INFO: Populated 7 entities from file. \ 
+2023-08-16 16:08:22 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-08-16 16:08:22 INFO: Read Order Database file. \ Source file populated.
+2023-08-16 16:08:22 INFO: Populated 2 entities from file. \ 
+2023-08-16 16:08:22 INFO: Initializing GUI \ Initialization
+2023-08-16 16:08:28 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-08-16 16:08:28 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-08-16 16:08:28 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-08-16 16:08:28 INFO: System shut down \ OFFLINE.
+2023-08-16 16:08:43 INFO: INIT \ 10bd73bfe622c
+2023-08-16 16:08:43 INFO: System start up \ Initialization.
+2023-08-16 16:08:44 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-08-16 16:08:44 INFO: Read Catalogue file. \ Source file populated.
+2023-08-16 16:08:44 INFO: Populated 18 entities from file. \ 
+2023-08-16 16:08:44 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-08-16 16:08:44 INFO: Read User Database file. \ Source file populated.
+2023-08-16 16:08:44 INFO: Populated 7 entities from file. \ 
+2023-08-16 16:08:44 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-08-16 16:08:44 INFO: Read Order Database file. \ Source file populated.
+2023-08-16 16:08:44 INFO: Populated 2 entities from file. \ 
+2023-08-16 16:08:44 INFO: Initializing GUI \ Initialization
+2023-09-16 16:09:01 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-09-16 16:09:01 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-09-16 16:09:01 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-09-16 16:09:01 INFO: System shut down \ OFFLINE.
+2023-11-16 16:11:26 INFO: INIT \ 10bd73dabc0b2
+2023-11-16 16:11:26 INFO: System start up \ Initialization.
+2023-11-16 16:11:26 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-11-16 16:11:26 INFO: Read Catalogue file. \ Source file populated.
+2023-11-16 16:11:26 INFO: Populated 18 entities from file. \ 
+2023-11-16 16:11:26 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-11-16 16:11:26 INFO: Read User Database file. \ Source file populated.
+2023-11-16 16:11:26 INFO: Populated 7 entities from file. \ 
+2023-11-16 16:11:26 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-11-16 16:11:26 INFO: Read Order Database file. \ Source file populated.
+2023-11-16 16:11:26 INFO: Populated 2 entities from file. \ 
+2023-11-16 16:11:26 INFO: Initializing GUI \ Initialization
+2023-11-16 16:11:33 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-11-16 16:11:33 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-11-16 16:11:33 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-11-16 16:11:33 INFO: System shut down \ OFFLINE.
+2023-12-16 16:12:05 INFO: INIT \ 10bd73e12d955
+2023-12-16 16:12:05 INFO: System start up \ Initialization.
+2023-12-16 16:12:05 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-12-16 16:12:05 INFO: Read Catalogue file. \ Source file populated.
+2023-12-16 16:12:05 INFO: Populated 18 entities from file. \ 
+2023-12-16 16:12:05 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-12-16 16:12:05 INFO: Read User Database file. \ Source file populated.
+2023-12-16 16:12:05 INFO: Populated 7 entities from file. \ 
+2023-12-16 16:12:05 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-12-16 16:12:05 INFO: Read Order Database file. \ Source file populated.
+2023-12-16 16:12:05 INFO: Populated 2 entities from file. \ 
+2023-12-16 16:12:05 INFO: Initializing GUI \ Initialization
+2023-12-16 16:12:22 INFO: INIT \ 10bd73e3f4ac9
+2023-12-16 16:12:22 INFO: System start up \ Initialization.
+2023-12-16 16:12:22 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-12-16 16:12:22 INFO: Read Catalogue file. \ Source file populated.
+2023-12-16 16:12:22 INFO: Populated 18 entities from file. \ 
+2023-12-16 16:12:22 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-12-16 16:12:22 INFO: Read User Database file. \ Source file populated.
+2023-12-16 16:12:22 INFO: Populated 7 entities from file. \ 
+2023-12-16 16:12:22 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-12-16 16:12:22 INFO: Read Order Database file. \ Source file populated.
+2023-12-16 16:12:22 INFO: Populated 2 entities from file. \ 
+2023-12-16 16:12:22 INFO: Initializing GUI \ Initialization
+2023-12-16 16:12:26 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-12-16 16:12:26 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-12-16 16:12:26 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-12-16 16:12:26 INFO: System shut down \ OFFLINE.
+2023-14-16 16:14:55 INFO: INIT \ 10bd73fd203f9
+2023-14-16 16:14:55 INFO: System start up \ Initialization.
+2023-14-16 16:14:55 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-14-16 16:14:55 INFO: Read Catalogue file. \ Source file populated.
+2023-14-16 16:14:55 INFO: Populated 18 entities from file. \ 
+2023-14-16 16:14:55 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-14-16 16:14:55 INFO: Read User Database file. \ Source file populated.
+2023-14-16 16:14:55 INFO: Populated 7 entities from file. \ 
+2023-14-16 16:14:55 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-14-16 16:14:55 INFO: Read Order Database file. \ Source file populated.
+2023-14-16 16:14:55 INFO: Populated 2 entities from file. \ 
+2023-14-16 16:14:55 INFO: Initializing GUI \ Initialization
+2023-15-16 16:15:02 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-15-16 16:15:02 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-15-16 16:15:02 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-15-16 16:15:02 INFO: System shut down \ OFFLINE.
+2023-15-16 16:15:39 INFO: INIT \ 10bd740463df2
+2023-15-16 16:15:39 INFO: System start up \ Initialization.
+2023-15-16 16:15:39 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-15-16 16:15:39 INFO: Read Catalogue file. \ Source file populated.
+2023-15-16 16:15:39 INFO: Populated 18 entities from file. \ 
+2023-15-16 16:15:39 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-15-16 16:15:39 INFO: Read User Database file. \ Source file populated.
+2023-15-16 16:15:39 INFO: Populated 7 entities from file. \ 
+2023-15-16 16:15:39 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-15-16 16:15:39 INFO: Read Order Database file. \ Source file populated.
+2023-15-16 16:15:39 INFO: Populated 2 entities from file. \ 
+2023-15-16 16:15:39 INFO: Initializing GUI \ Initialization
+2023-16-16 16:16:02 INFO: INIT \ 10bd74083cdd7
+2023-16-16 16:16:02 INFO: System start up \ Initialization.
+2023-16-16 16:16:02 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-16-16 16:16:02 INFO: Read Catalogue file. \ Source file populated.
+2023-16-16 16:16:02 INFO: Populated 18 entities from file. \ 
+2023-16-16 16:16:02 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-16-16 16:16:02 INFO: Read User Database file. \ Source file populated.
+2023-16-16 16:16:02 INFO: Populated 7 entities from file. \ 
+2023-16-16 16:16:02 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-16-16 16:16:02 INFO: Read Order Database file. \ Source file populated.
+2023-16-16 16:16:02 INFO: Populated 2 entities from file. \ 
+2023-16-16 16:16:02 INFO: Initializing GUI \ Initialization
+2023-16-16 16:16:22 INFO: Control Panel Button Press \ Log in
+2023-16-16 16:16:22 INFO: READ: username, password \ Log in
+2023-16-16 16:16:22 INFO: Log in existing user \ 
+2023-16-16 16:16:22 INFO: Searching for user "username" \ Log in
+2023-16-16 16:16:22 WARNING: User log in Failed \ username
+2023-16-16 16:16:22 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-16-16 16:16:22 INFO: Control Panel Button Press \ Log in
+2023-16-16 16:16:22 INFO: READ: username, ******** \ Log in
+2023-16-16 16:16:22 INFO: Log in existing user \ 
+2023-16-16 16:16:22 INFO: Searching for user "username" \ Log in
+2023-16-16 16:16:22 INFO: User log in Successful \ username
+2023-16-16 16:16:22 INFO: 2107 : username \ User set
+2023-16-16 16:16:22 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-16-16 16:16:26 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-16-16 16:16:26 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-16-16 16:16:26 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-16-16 16:16:26 INFO: System shut down \ OFFLINE.
+2023-38-16 16:38:54 INFO: INIT \ 10bd74ea926f1
+2023-38-16 16:38:54 INFO: System start up \ Initialization.
+2023-38-16 16:38:54 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-38-16 16:38:54 INFO: Read Catalogue file. \ Source file populated.
+2023-38-16 16:38:54 INFO: Populated 18 entities from file. \ 
+2023-38-16 16:38:54 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-38-16 16:38:54 INFO: Read User Database file. \ Source file populated.
+2023-38-16 16:38:54 INFO: Populated 7 entities from file. \ 
+2023-38-16 16:38:54 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-38-16 16:38:54 INFO: Read Order Database file. \ Source file populated.
+2023-38-16 16:38:54 INFO: Populated 2 entities from file. \ 
+2023-38-16 16:38:54 INFO: Initializing GUI \ Initialization
+2023-47-16 16:47:59 INFO: INIT \ 10bd75447dd2f
+2023-47-16 16:47:59 INFO: System start up \ Initialization.
+2023-47-16 16:47:59 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-47-16 16:47:59 INFO: Read Catalogue file. \ Source file populated.
+2023-47-16 16:47:59 INFO: Populated 18 entities from file. \ 
+2023-47-16 16:47:59 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-47-16 16:47:59 INFO: Read User Database file. \ Source file populated.
+2023-47-16 16:47:59 INFO: Populated 7 entities from file. \ 
+2023-47-16 16:47:59 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-47-16 16:47:59 INFO: Read Order Database file. \ Source file populated.
+2023-47-16 16:47:59 INFO: Populated 2 entities from file. \ 
+2023-47-16 16:47:59 INFO: Initializing GUI \ Initialization
+2023-48-16 16:48:01 INFO: Control Panel Button Press \ Check Out
+2023-48-16 16:48:01 INFO: READ: username, password \ Check Out
+2023-48-16 16:48:01 WARNING: Cannot check out \ User is null
+2023-48-16 16:48:01 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-48-16 16:48:03 INFO: Control Panel Button Press \ Log in
+2023-48-16 16:48:03 INFO: READ: username, password \ Log in
+2023-48-16 16:48:03 INFO: Log in existing user \ 
+2023-48-16 16:48:03 INFO: Searching for user "username" \ Log in
+2023-48-16 16:48:03 WARNING: User log in Failed \ username
+2023-48-16 16:48:03 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-48-16 16:48:03 INFO: Control Panel Button Press \ Log in
+2023-48-16 16:48:03 INFO: READ: username, ******** \ Log in
+2023-48-16 16:48:03 INFO: Log in existing user \ 
+2023-48-16 16:48:03 INFO: Searching for user "username" \ Log in
+2023-48-16 16:48:03 INFO: User log in Successful \ username
+2023-48-16 16:48:03 INFO: 2107 : username \ User set
+2023-48-16 16:48:03 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-48-16 16:48:07 INFO: Control Panel Button Press \ Check Out
+2023-48-16 16:48:07 INFO: READ: username, ******** \ Check Out
+2023-48-16 16:48:07 INFO: Check out \ 
+2023-48-16 16:48:07 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-49-16 16:49:02 INFO: INIT \ 10bd754ee9ae8
+2023-49-16 16:49:02 INFO: System start up \ Initialization.
+2023-49-16 16:49:02 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-49-16 16:49:02 INFO: Read Catalogue file. \ Source file populated.
+2023-49-16 16:49:02 INFO: Populated 18 entities from file. \ 
+2023-49-16 16:49:02 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-49-16 16:49:02 INFO: Read User Database file. \ Source file populated.
+2023-49-16 16:49:02 INFO: Populated 7 entities from file. \ 
+2023-49-16 16:49:02 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-49-16 16:49:02 INFO: Read Order Database file. \ Source file populated.
+2023-49-16 16:49:02 INFO: Populated 2 entities from file. \ 
+2023-49-16 16:49:02 INFO: Initializing GUI \ Initialization
+2023-49-16 16:49:04 INFO: Control Panel Button Press \ Log in
+2023-49-16 16:49:04 INFO: READ: username, password \ Log in
+2023-49-16 16:49:04 INFO: Log in existing user \ 
+2023-49-16 16:49:04 INFO: Searching for user "username" \ Log in
+2023-49-16 16:49:04 WARNING: User log in Failed \ username
+2023-49-16 16:49:04 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-49-16 16:49:05 INFO: Control Panel Button Press \ Log in
+2023-49-16 16:49:05 INFO: READ: username, ******** \ Log in
+2023-49-16 16:49:05 INFO: Log in existing user \ 
+2023-49-16 16:49:05 INFO: Searching for user "username" \ Log in
+2023-49-16 16:49:05 INFO: User log in Successful \ username
+2023-49-16 16:49:05 INFO: 2107 : username \ User set
+2023-49-16 16:49:05 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-49-16 16:49:05 INFO: Control Panel Button Press \ Log in
+2023-49-16 16:49:05 INFO: READ: username, ******** \ Log in
+2023-49-16 16:49:05 INFO: Log in existing user \ 
+2023-49-16 16:49:05 INFO: Searching for user "username" \ Log in
+2023-49-16 16:49:05 INFO: User log in Successful \ username
+2023-49-16 16:49:05 INFO: 2107 : username \ User set
+2023-49-16 16:49:05 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-49-16 16:49:06 INFO: Control Panel Button Press \ Check Out
+2023-49-16 16:49:06 INFO: READ: username, ******** \ Check Out
+2023-49-16 16:49:06 INFO: Check out \ 
+2023-49-16 16:49:06 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-50-16 16:50:47 INFO: INIT \ 10bd75603fb4c
+2023-50-16 16:50:47 INFO: System start up \ Initialization.
+2023-50-16 16:50:47 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-50-16 16:50:47 INFO: Read Catalogue file. \ Source file populated.
+2023-50-16 16:50:47 INFO: Populated 18 entities from file. \ 
+2023-50-16 16:50:47 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-50-16 16:50:47 INFO: Read User Database file. \ Source file populated.
+2023-50-16 16:50:47 INFO: Populated 7 entities from file. \ 
+2023-50-16 16:50:47 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-50-16 16:50:47 INFO: Read Order Database file. \ Source file populated.
+2023-50-16 16:50:47 INFO: Populated 2 entities from file. \ 
+2023-50-16 16:50:47 INFO: Initializing GUI \ Initialization
+2023-50-16 16:50:49 INFO: Control Panel Button Press \ Log in
+2023-50-16 16:50:49 INFO: READ: username, password \ Log in
+2023-50-16 16:50:49 INFO: Log in existing user \ 
+2023-50-16 16:50:49 INFO: Searching for user "username" \ Log in
+2023-50-16 16:50:49 WARNING: User log in Failed \ username
+2023-50-16 16:50:49 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-50-16 16:50:49 INFO: Control Panel Button Press \ Log in
+2023-50-16 16:50:49 INFO: READ: username, ******** \ Log in
+2023-50-16 16:50:49 INFO: Log in existing user \ 
+2023-50-16 16:50:49 INFO: Searching for user "username" \ Log in
+2023-50-16 16:50:49 INFO: User log in Successful \ username
+2023-50-16 16:50:49 INFO: 2107 : username \ User set
+2023-50-16 16:50:49 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-50-16 16:50:50 INFO: Control Panel Button Press \ Check Out
+2023-50-16 16:50:50 INFO: READ: username, ******** \ Check Out
+2023-50-16 16:50:50 INFO: Check out \ 
+2023-50-16 16:50:50 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-52-16 16:52:45 INFO: INIT \ 10bd7573bcb41
+2023-52-16 16:52:45 INFO: System start up \ Initialization.
+2023-52-16 16:52:45 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-52-16 16:52:45 INFO: Read Catalogue file. \ Source file populated.
+2023-52-16 16:52:45 INFO: Populated 18 entities from file. \ 
+2023-52-16 16:52:45 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-52-16 16:52:45 INFO: Read User Database file. \ Source file populated.
+2023-52-16 16:52:45 INFO: Populated 7 entities from file. \ 
+2023-52-16 16:52:45 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-52-16 16:52:45 INFO: Read Order Database file. \ Source file populated.
+2023-52-16 16:52:45 INFO: Populated 2 entities from file. \ 
+2023-52-16 16:52:45 INFO: Initializing GUI \ Initialization
+2023-52-16 16:52:47 INFO: Control Panel Button Press \ Log in
+2023-52-16 16:52:47 INFO: READ: username, password \ Log in
+2023-52-16 16:52:47 INFO: Log in existing user \ 
+2023-52-16 16:52:47 INFO: Searching for user "username" \ Log in
+2023-52-16 16:52:47 WARNING: User log in Failed \ username
+2023-52-16 16:52:47 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-52-16 16:52:48 INFO: Control Panel Button Press \ Log in
+2023-52-16 16:52:48 INFO: READ: username, ******** \ Log in
+2023-52-16 16:52:48 INFO: Log in existing user \ 
+2023-52-16 16:52:48 INFO: Searching for user "username" \ Log in
+2023-52-16 16:52:48 INFO: User log in Successful \ username
+2023-52-16 16:52:48 INFO: 2107 : username \ User set
+2023-52-16 16:52:48 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-52-16 16:52:49 INFO: Control Panel Button Press \ Check Out
+2023-52-16 16:52:49 INFO: READ: username, ******** \ Check Out
+2023-52-16 16:52:49 INFO: Check out \ 
+2023-52-16 16:52:49 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-54-16 16:54:04 INFO: INIT \ 10bd7580bb476
+2023-54-16 16:54:04 INFO: System start up \ Initialization.
+2023-54-16 16:54:04 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-54-16 16:54:04 INFO: Read Catalogue file. \ Source file populated.
+2023-54-16 16:54:04 INFO: Populated 18 entities from file. \ 
+2023-54-16 16:54:04 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-54-16 16:54:04 INFO: Read User Database file. \ Source file populated.
+2023-54-16 16:54:04 INFO: Populated 7 entities from file. \ 
+2023-54-16 16:54:04 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-54-16 16:54:04 INFO: Read Order Database file. \ Source file populated.
+2023-54-16 16:54:04 INFO: Populated 2 entities from file. \ 
+2023-54-16 16:54:04 INFO: Initializing GUI \ Initialization
+2023-54-16 16:54:05 INFO: Control Panel Button Press \ Log in
+2023-54-16 16:54:05 INFO: READ: username, password \ Log in
+2023-54-16 16:54:05 INFO: Log in existing user \ 
+2023-54-16 16:54:05 INFO: Searching for user "username" \ Log in
+2023-54-16 16:54:05 WARNING: User log in Failed \ username
+2023-54-16 16:54:05 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-54-16 16:54:06 INFO: Control Panel Button Press \ Log in
+2023-54-16 16:54:06 INFO: READ: username, ******** \ Log in
+2023-54-16 16:54:06 INFO: Log in existing user \ 
+2023-54-16 16:54:06 INFO: Searching for user "username" \ Log in
+2023-54-16 16:54:06 INFO: User log in Successful \ username
+2023-54-16 16:54:06 INFO: 2107 : username \ User set
+2023-54-16 16:54:06 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-54-16 16:54:07 INFO: Control Panel Button Press \ Check Out
+2023-54-16 16:54:07 INFO: READ: username, ******** \ Check Out
+2023-54-16 16:54:07 INFO: Check out \ 
+2023-54-16 16:54:07 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT

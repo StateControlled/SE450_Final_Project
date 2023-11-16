@@ -1,4 +1,4 @@
-package edu.depaul.handlers;
+package edu.depaul.gui.actions;
 
 import java.util.ArrayList;
 

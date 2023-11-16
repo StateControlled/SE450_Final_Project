@@ -1,10 +1,12 @@
-package edu.depaul.handlers;
+package edu.depaul.gui.actions;
 
 import java.awt.event.ActionEvent;
 
 import edu.depaul.customer.User;
+import edu.depaul.gui.CheckOutScreen;
 import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
+import edu.depaul.paymentprocessor.PaymentProcessor;
 
 public class ButtonHandler {
 
@@ -22,7 +24,13 @@ public class ButtonHandler {
             currentUser = AccountHandler.checkUser(username, password, e.getActionCommand());
 		} else if (e.getActionCommand().equals("Check Out")) { 
             // TODO
+            if (currentUser == null) {
+                LogWriter.log(Level.WARNING, "Cannot check out", "User is null");
+                return null;
+            }
             LogWriter.log(Level.INFO, "Check out", "");
+            //PaymentProcessor.validateCreditCard(password, username, password);
+            new CheckOutScreen(currentUser);
         } else {
 			LogWriter.log(Level.WARNING, "Unhandled Operation", e.getActionCommand());
 		}

@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 //import javax.swing.ScrollPaneConstants;
 
 import edu.depaul.customer.User;
-import edu.depaul.handlers.AccountHandler;
+import edu.depaul.gui.actions.AccountHandler;
 //import edu.depaul.item.AbstractItem;
 import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
