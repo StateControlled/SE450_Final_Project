@@ -1,5 +1,6 @@
 package edu.depaul.gui;
 
+import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -48,6 +49,7 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
     // }
 
     public ControlPanel() {
+        this.setBounds(0, 0, 400, 800);
         loginButton = new JButton("Log in");
         newUserButton = new JButton("Create Account");
         checkOutButton = new JButton("Check Out");
@@ -56,16 +58,32 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
         newUserButton.addActionListener(this);
         checkOutButton.addActionListener(this);
 
-        setLayout(new GridBagLayout());
+        label.setBounds(72, 0, 256, 72);
+        message.setBounds(72, 80, 256, 72);
+
+        loginButton.setBounds(16, 160, 128, 72);
         
-        add(label, 			setGridBagConstraints(0, 0, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(message, 		setGridBagConstraints(0, 1, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        newUserButton.setBounds(160, 160, 128, 72);
+        checkOutButton.setBounds(304, 160, 128, 72);
+
+        this.add(label);
+        this.add(message);
+        this.add(loginButton);
+        this.add(newUserButton);
+        this.add(checkOutButton);
+
+        this.setPreferredSize(new Dimension(400, 800));
+
+        // setLayout(new GridBagLayout());
         
-        add(loginButton,	setGridBagConstraints(0, 2, 0.0, 0.0, 1, 1, GridBagConstraints.WEST, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(newUserButton, 	setGridBagConstraints(1, 2, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        // add(label, 			setGridBagConstraints(0, 0, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        // add(message, 		setGridBagConstraints(0, 1, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
-        add(usernameField, 	setGridBagConstraints(0, 3, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(passwordField, 	setGridBagConstraints(0, 4, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        // add(loginButton,	setGridBagConstraints(0, 2, 0.0, 0.0, 1, 1, GridBagConstraints.WEST, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        // add(newUserButton, 	setGridBagConstraints(1, 2, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        
+        // add(usernameField, 	setGridBagConstraints(0, 3, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        // add(passwordField, 	setGridBagConstraints(0, 4, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
         //PanelScrollList cartWindow = new PanelScrollList(2);
 
@@ -78,16 +96,16 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
         //cartItemList.setVisibleRowCount(2);
         
         //add(scrollPane,     setGridBagConstraints(0, 5, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(checkOutButton, setGridBagConstraints(1, 6, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        //add(checkOutButton, setGridBagConstraints(1, 6, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
     } // END CONSTRUCTOR
 
     /**
      * @return	The content of the text fields "username" and "password" as an array.
      **/
-    public String[] getTextFields() {
-    	return new String[]{usernameField.getText(), passwordField.getText()};
-    }
+    // public String[] getTextFields() {
+    // 	return new String[]{usernameField.getText(), passwordField.getText()};
+    // }
 
     public static void setUser(User user) {
         currentUser = user;

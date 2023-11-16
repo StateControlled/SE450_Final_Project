@@ -1,6 +1,8 @@
 package edu.depaul.gui;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -8,37 +10,43 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
 import edu.depaul.catalogue.Catalogue;
+import edu.depaul.customer.User;
 import edu.depaul.gui.actions.ActionExit;
+import edu.depaul.handlers.ButtonHandler;
 import edu.depaul.item.AbstractItem;
+import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
 
 public class Application {
-
-    static {
-        LogWriter.getLogWriter("New Application");
-    }
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Application();
-            }
-        });
-    }   
+    private final JLabel label = new JLabel("Actions");
+    private JLabel message = new JLabel("********");
+    private JTextField usernameField = new JTextField("username", 32);
+    private JTextField passwordField = new JTextField("password", 32);
+    private JButton loginButton;
+    private JButton newUserButton;
+    private JButton checkOutButton;
+    private boolean userAuthenticated = false;
+    
+    private static User currentUser;
 
     public Application() {
-        initialize();
+        LogWriter.log(Level.INFO, "Initializing GUI", "Initialization");
+        init();
     }
 
-    public void initialize() {
+    public void init() {
         JFrame frame = new JFrame();
         frame.setBounds(100, 100, 1200, 800);
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //String[] values = new String[]{"Case", "Motherboard", "CPU", "RAM", "GPU", "HDD", "PSU"};
@@ -71,7 +79,7 @@ public class Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 listRight.getSelectedValuesList().stream().forEach((data) -> {
-                    modelListLeft.addElement(data);
+                    //modelListLeft.addElement(data);
                     modelListRight.removeElement(data);
                 });
                 listLeft.revalidate();
@@ -79,7 +87,7 @@ public class Application {
             }
         }); 
 
-        removeButton.setBounds(300, 400, 128, 64);
+        removeButton.setBounds(360, 400, 128, 64);
         frame.getContentPane().add(removeButton);
 
         JButton addButton = new JButton("ADD >>");
@@ -88,29 +96,32 @@ public class Application {
             public void actionPerformed(ActionEvent e) {
                 // get list of selected values and for each one of them do following
                 listLeft.getSelectedValuesList().stream().forEach((data) -> {
-                    // moving data
                     modelListRight.addElement(data);
-                    // remove from other side
-                    modelListLeft.removeElement(data);
+                    //modelListLeft.removeElement(data);
                 });
-                // refreshing the view after changes
+                // refresh the view after changes
                 listLeft.revalidate();
                 listRight.revalidate();
             }
         });
 
-        addButton.setBounds(300, 200, 128, 64);
+        addButton.setBounds(360, 200, 128, 64);
         frame.getContentPane().add(addButton);
 
         listLeft.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        listLeft.setBounds(0, 0, 300, 800);
+        listLeft.setBounds(0, 0, 350, 800);
         listLeft.setModel(modelListLeft);
         frame.getContentPane().add(listLeft);
 
         listRight.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        listRight.setBounds(500, 0, 300, 800);
+        listRight.setBounds(500, 0, 350, 800);
         listRight.setModel(modelListRight);
-        frame.getContentPane().add(listRight);                
+        frame.getContentPane().add(listRight);            
+        
+        //ControlPanel controls = new ControlPanel();
+        //controls.setBounds(800, 0, 400, 800);
+        //controls.setPreferredSize(new Dimension(400, 800));
+        //frame.getContentPane().add(controls);
 
         // Add items to list
         Catalogue c = Catalogue.getInstance();
@@ -120,6 +131,76 @@ public class Application {
             modelListLeft.addElement(i.view());
         }
 
+        loginButton = new JButton("Log in");
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentUser = ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                passwordField.setText("********");
+                if (currentUser != null) {
+                    userAuthenticated = true;
+                    message.setText("Welcome " + currentUser.getName() + "!");
+                }
+                LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");
+            }
+        });
+
+        newUserButton = new JButton("Create Account");
+        newUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentUser = ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                passwordField.setText("********");
+                if (currentUser != null) {
+                    userAuthenticated = true;
+                    message.setText("Welcome " + currentUser.getName() + "!");
+                }
+                LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");
+            }
+        });
+
+        checkOutButton = new JButton("Check Out");
+        checkOutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");
+            }
+        });
+        
+        //loginButton.addActionListener(this);
+        //newUserButton.addActionListener(this);
+        //checkOutButton.addActionListener(this);
+
+        label.setBounds(948, 0, 256, 72);
+        label.setFont(new Font("Serif", Font.BOLD, 36));
+        message.setBounds(948, 80, 256, 72);
+        message.setFont(new Font("Serif", Font.PLAIN, 28));
+
+        loginButton.setBounds(850, 160, 100, 36);
+        newUserButton.setBounds(952, 160, 128, 36);
+        checkOutButton.setBounds(1080, 160, 100, 36);
+
+        usernameField.setBounds(850, 240, 256, 40);
+        passwordField.setBounds(850, 284, 256, 40);
+
+        frame.getContentPane().add(label);
+        frame.getContentPane().add(message);
+        frame.getContentPane().add(loginButton);
+        frame.getContentPane().add(newUserButton);
+        frame.getContentPane().add(checkOutButton);
+        frame.getContentPane().add(usernameField);
+        frame.getContentPane().add(passwordField);
+
+        frame.setResizable(false);
         frame.setVisible(true);
     } 
+
+    public static User getUser() {
+        return currentUser;
+    }
+
+    public static void setUser(User newUser) {
+        currentUser = newUser;
+    }
 }

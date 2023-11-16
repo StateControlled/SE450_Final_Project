@@ -1,0 +1,29 @@
+2023-36-16 13:36:01 INFO: INIT \ 10bd6dd836016
+2023-36-16 13:36:01 INFO: System start up \ Initialization.
+2023-36-16 13:36:01 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-36-16 13:36:01 INFO: Read Catalogue file. \ Source file populated.
+2023-36-16 13:36:01 INFO: Populated 18 entities from file. \ 
+2023-36-16 13:36:01 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-36-16 13:36:01 INFO: Read User Database file. \ Source file populated.
+2023-36-16 13:36:01 INFO: Populated 7 entities from file. \ 
+2023-36-16 13:36:01 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-36-16 13:36:01 INFO: Read Order Database file. \ Source file populated.
+2023-36-16 13:36:01 INFO: Populated 2 entities from file. \ 
+2023-36-16 13:36:01 INFO: Initializing GUI \ Initialization
+2023-36-16 13:36:05 INFO: Control Panel Button Press \ Log in
+2023-36-16 13:36:05 INFO: READ: username, password \ Log in
+2023-36-16 13:36:05 INFO: Log in existing user \ 
+2023-36-16 13:36:05 INFO: Searching for user "username" \ Log in
+2023-36-16 13:36:05 WARNING: User log in Failed \ username
+2023-36-16 13:36:05 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-36-16 13:36:06 INFO: Control Panel Button Press \ Log in
+2023-36-16 13:36:06 INFO: READ: username, ******** \ Log in
+2023-36-16 13:36:06 INFO: Log in existing user \ 
+2023-36-16 13:36:06 INFO: Searching for user "username" \ Log in
+2023-36-16 13:36:06 INFO: User log in Successful \ username
+2023-36-16 13:36:06 INFO: 2107 : username \ User set
+2023-36-16 13:36:06 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-36-16 13:36:47 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-36-16 13:36:47 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-36-16 13:36:47 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-36-16 13:36:47 INFO: System shut down \ OFFLINE.

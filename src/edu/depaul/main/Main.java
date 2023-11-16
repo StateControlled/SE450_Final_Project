@@ -10,7 +10,8 @@ import edu.depaul.catalogue.OrderDatabase;
 import edu.depaul.catalogue.UserDatabase;
 import edu.depaul.catalogue.UserPopulator;
 import edu.depaul.customer.User;
-import edu.depaul.gui.GUI;
+import edu.depaul.gui.Application;
+//import edu.depaul.gui.GUI;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.ItemPopulator;
 import edu.depaul.logwriter.Level;
@@ -41,7 +42,8 @@ public class Main {
         // START GUI
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                GUI.createAndShowGUI();
+                //GUI.createAndShowGUI();
+                new Application();
             }
         });
     }
