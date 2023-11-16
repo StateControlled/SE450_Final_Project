@@ -19,17 +19,11 @@ import edu.depaul.order.Order;
 import edu.depaul.order.OrderPopulator;
 import edu.depaul.resources.constants.StorageFiles;
 
+/**
+ * Constructs the UserDatabase, Catalogue, and OrderDatabase then creates the GUI.
+ **/
 public class Main {
-    private static User currentUser;
-
-    public static void setUser(User user) {
-        currentUser = user;
-    }
-
-    public static User getUser() {
-        return currentUser;
-    }
-	
+    // Initialize the LogWriter	before anything else.
 	static {
 		LogWriter.getLogWriter(StorageFiles.LOG_NAME);
 	}

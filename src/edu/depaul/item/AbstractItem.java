@@ -79,6 +79,6 @@ public abstract class AbstractItem {
      **/
     @Override
     public String toString() {
-        return String.format("Item: %s\nDescription: %s\nManufacturer: %s\nPrice: %,.2f",this.getClass().getSimpleName(), itemName, manufacturer, price);
+        return String.format("Item: %s\r\nDescription: %s\r\nManufacturer: %s\r\nPrice: %,.2f",this.getClass().getSimpleName(), itemName, manufacturer, price);
     }
 }

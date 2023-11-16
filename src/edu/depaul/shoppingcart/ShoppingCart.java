@@ -39,9 +39,8 @@ public class ShoppingCart {
 	 **/
 	public static int addToCart(AbstractItem item) {
 		if (shoppingList.keySet().contains(item)) {
-			int temp = shoppingList.get(item);
-			shoppingList.put(item, temp + 1);
-			LogWriter.log(Level.INFO, "Item " + item.getItemName() + " added to cart.", "Quantity " + temp + 1);
+			shoppingList.put(item, shoppingList.get(item) + 1);
+			LogWriter.log(Level.INFO, "Item " + item.getItemName() + " added to cart.", "Quantity " + shoppingList.get(item));
 			setTotal();
 			return shoppingList.get(item);
 		}
@@ -63,12 +62,14 @@ public class ShoppingCart {
 	}
 	
 	public static void setTotal() {
-		for (AbstractItem item : shoppingList.keySet()) {
-			double p = item.getPrice();
-			int q = shoppingList.get(item);
-			total += (p * q);
+		double newTotal = 0.0;
+		for (HashMap.Entry<AbstractItem, Integer> entry : shoppingList.entrySet()) {
+			double price = entry.getKey().getPrice();
+			int quantity = entry.getValue();
+			newTotal += (price * quantity);
 		}
-		LogWriter.log(Level.INFO, String.format("Total updated %,.2f", total), "PRICE UPDATED");
+		total = newTotal;
+		LogWriter.log(Level.INFO, String.format("Total updated %,.2f", newTotal), "PRICE UPDATED");
 	}
 
 	public double getTotal() {

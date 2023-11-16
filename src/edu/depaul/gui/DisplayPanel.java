@@ -24,7 +24,7 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
     private JLabel itemNameLabel = new JLabel();
     private JLabel itemManufacturerLabel = new JLabel();
     private JLabel itemPriceLabel = new JLabel();
-    private boolean isDisplay;
+    private boolean isCatalogueItem;
     static User currentUser;
 
     /**
@@ -50,16 +50,18 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
     /**
      * Constructs a new DisplayPanel object and initializes data.
      **/
-    public DisplayPanel(AbstractItem item, boolean isDisplay) {
+    public DisplayPanel(AbstractItem item, boolean isCatalogueItem) {
         this();
         setData(item);
-        this.isDisplay = isDisplay;
+        //add(new JLabel(itemData.toString()));
+        this.isCatalogueItem = isCatalogueItem;
         this.addMouseListener(new MouseAdapter() {
         	@Override
         	public void mouseClicked(MouseEvent e) {
-                LogWriter.log(Level.INFO, "User clicked " + this.toString(), item.view());
-                if (isDisplay) {
+                LogWriter.log(Level.INFO, "User clicked " + this.toString(), item.view() + " is in cart: " + !isCatalogueItem);
+                if (isCatalogueItem) {
                     CartOperations.addToCart(ControlPanel.getUser(), item);
+                    GUI.addToCart(item);
                 } else {
                     // TODO
                     // is not display = remove from cart
@@ -68,6 +70,10 @@ public class DisplayPanel extends JPanel implements GridBagConstraintsConstructo
                 
         	}
         });
+    }
+
+    public boolean isCatalogueItem() {
+        return isCatalogueItem;
     }
 
     /**

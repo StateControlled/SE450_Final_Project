@@ -10,7 +10,6 @@ import javax.swing.SwingConstants;
 
 import edu.depaul.item.AbstractItem;
 
-@SuppressWarnings("serial")
 public class PanelScrollList extends JPanel implements Scrollable {
     private int visibleRowCount;
 
@@ -21,6 +20,16 @@ public class PanelScrollList extends JPanel implements Scrollable {
 
     public void addItemToScrollList(AbstractItem item, boolean isDisplay) {
         add(new DisplayPanel(item, isDisplay));
+    }
+
+    public void removeItemFromScrollList(AbstractItem item) {
+        DisplayPanel[] listItems = (DisplayPanel[]) getComponents();
+        for (DisplayPanel p : listItems) {
+            if (p.getData().equals(item)) {
+                remove(p);
+                return;
+            }
+        }
     }
 
     @Override

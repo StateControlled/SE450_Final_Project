@@ -6,22 +6,20 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.DefaultListModel;
+//import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JList;
+//import javax.swing.JList;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+//import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+//import javax.swing.ScrollPaneConstants;
 
 import edu.depaul.customer.User;
 import edu.depaul.handlers.AccountHandler;
-import edu.depaul.item.AbstractItem;
-import edu.depaul.item.factory.SuperFactory;
+//import edu.depaul.item.AbstractItem;
 import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
-//import edu.depaul.main.Main;
-import edu.depaul.main.Main;
 
 @SuppressWarnings("serial")
 public class ControlPanel extends JPanel implements ActionListener, GridBagConstraintsConstructor {
@@ -32,21 +30,31 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
     private JTextField passwordField = new JTextField("password", 32);
     private JButton loginButton;
     private JButton newUserButton;
-    private JButton getCartButton;
+    private JButton checkOutButton;
     private boolean userAuthenticated = false;
-    private DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
-    private JList<AbstractItem> cartItemList = new JList<>(dataModel);
+
+    //private static DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
+    //private static JList<AbstractItem> cartItemList = new JList<>(dataModel);
+
+    
     /**The user that is currently logged into the application**/
     private static User currentUser;
+    /**List to display items in cart**/
+    //private static PanelScrollList cartWindow = new PanelScrollList(2);
+
+    // public static void addItemToCart(AbstractItem item) {
+    //     cartWindow.addItemToScrollList(item, false);
+    //     dataModel.addElement(item);
+    // }
 
     public ControlPanel() {
         loginButton = new JButton("Log in");
         newUserButton = new JButton("Create Account");
-        getCartButton = new JButton("Cart");
+        checkOutButton = new JButton("Check Out");
         
         loginButton.addActionListener(this);
         newUserButton.addActionListener(this);
-        getCartButton.addActionListener(this);
+        checkOutButton.addActionListener(this);
 
         setLayout(new GridBagLayout());
         
@@ -55,24 +63,22 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
         
         add(loginButton,	setGridBagConstraints(0, 2, 0.0, 0.0, 1, 1, GridBagConstraints.WEST, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         add(newUserButton, 	setGridBagConstraints(1, 2, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
-        add(getCartButton,  setGridBagConstraints(2, 2, 0.0, 0.0, 1, 1, GridBagConstraints.EAST, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
         add(usernameField, 	setGridBagConstraints(0, 3, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         add(passwordField, 	setGridBagConstraints(0, 4, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
-        PanelScrollList cartWindow = new PanelScrollList(2);
+        //PanelScrollList cartWindow = new PanelScrollList(2);
+
+        //JScrollPane scrollPane = new JScrollPane(cartWindow);
+        //scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         
-        cartWindow.addItemToScrollList(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "Electric Violin", "Shar", 25000.0), false);
-        cartWindow.addItemToScrollList(SuperFactory.createProduct("INSTRUMENT", "VIOLA", "Electric Viola", "Shar", 22000.0), false);
-        cartWindow.addItemToScrollList(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "Electric Violin 2", "Shar", 25000.0), false);
-        cartWindow.addItemToScrollList(SuperFactory.createProduct("INSTRUMENT", "VIOLA", "Electric Viola 2", "Shar", 22000.0), false);
-        cartWindow.addItemToScrollList(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "Electric Violin 3", "Shar", 25000.0), false);
-        cartWindow.addItemToScrollList(SuperFactory.createProduct("INSTRUMENT", "VIOLA", "Electric Viola 3", "Shar", 22000.0), false);
         
-        JScrollPane scrollPane = new JScrollPane(cartWindow);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        //cartItemList.setCellRenderer(new ScrollListRenderer());
+        //cartItemList.setPrototypeCellValue(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "LONG FORM DESCRIPTION", "MANUFACTURER NAME", 10000000.00));
+        //cartItemList.setVisibleRowCount(2);
         
-        add(scrollPane, setGridBagConstraints(0, 5, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        //add(scrollPane,     setGridBagConstraints(0, 5, 0.0, 0.0, 3, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
+        add(checkOutButton, setGridBagConstraints(1, 6, 0.0, 0.0, 1, 1, GridBagConstraints.CENTER, CONSTRAINT_INSET, GridBagConstraints.HORIZONTAL));
         
     } // END CONSTRUCTOR
 
@@ -93,6 +99,7 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+        // TODO implement check out and cart(?)
 		if (e.getActionCommand().equals("Log in") || e.getActionCommand().equals("Create Account")) {
 			LogWriter.log(Level.INFO, "Control Panel Button Press", e.getActionCommand());
             LogWriter.log(Level.INFO, String.format("READ: %s, %s", usernameField.getText(), passwordField.getText()), e.getActionCommand());
@@ -101,9 +108,10 @@ public class ControlPanel extends JPanel implements ActionListener, GridBagConst
                 userAuthenticated = true;
                 LogWriter.log(Level.INFO, currentUser.toString(), "User set");
                 message.setText("Welcome " + currentUser.getName() + "!");
-                Main.setUser(currentUser);
             }
-		} else {
+		//} else if (e.getActionCommand().equals("Check Out")) { 
+
+        } else {
 			LogWriter.log(Level.WARNING, "Unhandled Operation", e.getActionCommand());
 		}
         LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");

@@ -1,5 +1,6 @@
 package edu.depaul.gui;
 
+//import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -24,13 +25,20 @@ import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
 import edu.depaul.resources.constants.StorageFiles;
 
-@SuppressWarnings("serial")
+/**
+ * This is the primary frame for the shopping application.
+ **/
 public class GUI extends JPanel implements GridBagConstraintsConstructor {
     private File catalogueFile = StorageFiles.CATALOGUE_SOURCE;
     private static final int INIT_MAX_ROWS = 8;
     private static final int CONSTRAINT_INSET = 2;
-    private DefaultListModel<AbstractItem> dataModel = new DefaultListModel<>();
-    private JList<AbstractItem> guiItemList = new JList<>(dataModel);
+    private PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
+    private DefaultListModel<AbstractItem> catalogueScrollList = new DefaultListModel<>();
+    private JList<AbstractItem> renderedCatalogueList = new JList<>(catalogueScrollList);
+
+    private static PanelScrollList cartPanelList = new PanelScrollList(INIT_MAX_ROWS);
+    private static DefaultListModel<AbstractItem> cartScrollList = new DefaultListModel<>();
+    private JList<AbstractItem> renderedCartList = new JList<>(cartScrollList);
     
     public static void createAndShowGUI() {
     	LogWriter.getLogWriter(StorageFiles.LOG_NAME);
@@ -40,6 +48,7 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GUI main = new GUI();
         
+        // Add Menu Bar
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
         JMenuItem exit = new JMenuItem("Quit");
@@ -54,8 +63,10 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
         menuBar.add(fileMenu);
         menuBar.add(helpMenu);
 
+        // Add Control Panel
         ControlPanel panel = new ControlPanel();
 
+        // Finish
         frame.setLayout(new GridBagLayout());
         frame.add(menuBar,  setGridBagConstraints(0, 0, 0, 0, 2, 1, GridBagConstraints.BASELINE_LEADING));
         frame.add(main,     setGridBagConstraints(0, 1, 0, 0, 1, 1, GridBagConstraints.BASELINE_LEADING));
@@ -63,9 +74,9 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
 
         frame.pack();
 
-        //frame.setSize(main.getSize().width + panel.getSize().width, main.getSize().height);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
+        //frame.setPreferredSize(new Dimension(512, 512));
         frame.setVisible(true);
     }
 
@@ -73,23 +84,46 @@ public class GUI extends JPanel implements GridBagConstraintsConstructor {
      * Constructor.
      **/
     public GUI() {
-        PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
+        // Setup Cataoluge Scroll List
+        // PanelScrollList scrollList = new PanelScrollList(INIT_MAX_ROWS);
         Catalogue catalogue = Catalogue.getInstance();
         ArrayList<AbstractItem> items = catalogue.readFromFile(catalogueFile);
 
         for (AbstractItem i : items) {
             scrollList.addItemToScrollList(i, true);
-            dataModel.addElement(i);
+            catalogueScrollList.addElement(i);
         }
 
+        // Add Left Panel for showing catalogue
         JScrollPane scrollPane = new JScrollPane(scrollList);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         this.add(scrollPane);
         
-        guiItemList.setVisibleRowCount(INIT_MAX_ROWS);
-        guiItemList.setCellRenderer(new ScrollListRenderer());
-        guiItemList.setPrototypeCellValue(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "LONG FORM DESCRIPTION", "MANUFACTURER NAME", 10000000.00));
+        renderedCatalogueList.setVisibleRowCount(INIT_MAX_ROWS);
+        renderedCatalogueList.setCellRenderer(new ScrollListRenderer());
+        renderedCatalogueList.setPrototypeCellValue(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "LONG FORM DESCRIPTION", "MANUFACTURER NAME", 10000000.00));
+
+        // Add Right Panel for showing cart
+        // PanelScrollList cartPanelList = new PanelScrollList(INIT_MAX_ROWS);
+        addToCart(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "Small Violin", "Shar", 250.0));
+        JScrollPane cartPane = new JScrollPane(cartPanelList);
+        cartPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+        this.add(cartPane);
+
+        renderedCartList.setVisibleRowCount(INIT_MAX_ROWS);
+        renderedCartList.setCellRenderer(new ScrollListRenderer());
+        renderedCartList.setPrototypeCellValue(SuperFactory.createProduct("INSTRUMENT", "VIOLIN", "LONG FORM DESCRIPTION", "MANUFACTURER NAME", 10000000.00));
+    }
+
+    public static void addToCart(AbstractItem item) {
+        cartPanelList.addItemToScrollList(item, false);
+        cartScrollList.addElement(item);
+    }
+
+    public static void removeFromCart(AbstractItem item) {
+        // TODO
     }
 
     private static GridBagConstraints setGridBagConstraints(int xCoordinate, int yCoordinate, double xWeight, double yWeight, int componentWidth, int componentHeight, int alignment) {
