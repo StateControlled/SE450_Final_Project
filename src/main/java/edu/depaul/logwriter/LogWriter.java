@@ -1,4 +1,4 @@
-package edu.depaul.logwriter;
+package main.java.edu.depaul.logwriter;
 
 import java.io.File;
 import java.io.FileWriter;

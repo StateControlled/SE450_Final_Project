@@ -1,13 +1,13 @@
-package edu.depaul.gui.actions;
+package main.java.edu.depaul.gui.actions;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import edu.depaul.catalogue.Catalogue;
-import edu.depaul.catalogue.OrderDatabase;
-import edu.depaul.catalogue.UserDatabase;
-import edu.depaul.logwriter.Level;
-import edu.depaul.logwriter.LogWriter;
+import main.java.edu.depaul.catalogue.Catalogue;
+import main.java.edu.depaul.catalogue.OrderDatabase;
+import main.java.edu.depaul.catalogue.UserDatabase;
+import main.java.edu.depaul.logwriter.Level;
+import main.java.edu.depaul.logwriter.LogWriter;
 
 public class ActionExit implements ActionListener {
     @Override

@@ -1,4 +1,4 @@
-package edu.depaul.logwriter;
+package main.java.edu.depaul.logwriter;
 
 public enum Level {
     INFO,

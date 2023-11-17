@@ -1,12 +1,12 @@
-package edu.depaul.gui.actions;
+package main.java.edu.depaul.gui.actions;
 
 import java.util.ArrayList;
 
-import edu.depaul.authenticator.Authenticator;
-import edu.depaul.catalogue.UserDatabase;
-import edu.depaul.customer.User;
-import edu.depaul.logwriter.Level;
-import edu.depaul.logwriter.LogWriter;
+import main.java.edu.depaul.authenticator.Authenticator;
+import main.java.edu.depaul.catalogue.UserDatabase;
+import main.java.edu.depaul.customer.User;
+import main.java.edu.depaul.logwriter.Level;
+import main.java.edu.depaul.logwriter.LogWriter;
 
 public class AccountHandler {
     private AccountHandler() {

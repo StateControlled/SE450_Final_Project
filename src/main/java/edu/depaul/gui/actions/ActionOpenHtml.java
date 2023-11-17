@@ -1,11 +1,12 @@
-package edu.depaul.gui.actions;
+package main.java.edu.depaul.gui.actions;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Desktop;
 import java.net.URI;
 
-import edu.depaul.logwriter.Level;
-import edu.depaul.logwriter.LogWriter;
+import main.java.edu.depaul.logwriter.Level;
+import main.java.edu.depaul.logwriter.LogWriter;
 
 import java.io.File;
 

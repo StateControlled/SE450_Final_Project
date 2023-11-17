@@ -1,4 +1,4 @@
-package edu.depaul.gui;
+package main.java.edu.depaul.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -22,15 +22,15 @@ import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 
-import edu.depaul.catalogue.Catalogue;
-import edu.depaul.customer.User;
-import edu.depaul.gui.actions.ActionExit;
-import edu.depaul.gui.actions.ActionOpenHtml;
-import edu.depaul.gui.actions.ButtonHandler;
-import edu.depaul.item.AbstractItem;
-import edu.depaul.logwriter.Level;
-import edu.depaul.logwriter.LogWriter;
-import edu.depaul.shoppingcart.ShoppingCart;
+import main.java.edu.depaul.catalogue.Catalogue;
+import main.java.edu.depaul.customer.User;
+import main.java.edu.depaul.gui.actions.ActionExit;
+import main.java.edu.depaul.gui.actions.ActionOpenHtml;
+import main.java.edu.depaul.gui.actions.ButtonHandler;
+import main.java.edu.depaul.item.AbstractItem;
+import main.java.edu.depaul.logwriter.Level;
+import main.java.edu.depaul.logwriter.LogWriter;
+import main.java.edu.depaul.shoppingcart.ShoppingCart;
 
 public class Application {
     private final JLabel label = new JLabel("SHOPPING", SwingConstants.CENTER);

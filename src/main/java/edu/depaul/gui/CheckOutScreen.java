@@ -1,28 +1,27 @@
-package edu.depaul.gui;
+package main.java.edu.depaul.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-
-import edu.depaul.catalogue.OrderDatabase;
-import edu.depaul.customer.User;
-import edu.depaul.logwriter.Level;
-import edu.depaul.logwriter.LogWriter;
-import edu.depaul.order.Order;
-import edu.depaul.paymentprocessor.PaymentProcessor;
-import edu.depaul.shoppingcart.ShoppingCart;
-import javax.swing.JOptionPane;
-
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+import main.java.edu.depaul.catalogue.OrderDatabase;
+import main.java.edu.depaul.customer.User;
+import main.java.edu.depaul.logwriter.Level;
+import main.java.edu.depaul.logwriter.LogWriter;
+import main.java.edu.depaul.order.Order;
+import main.java.edu.depaul.paymentprocessor.PaymentProcessor;
+import main.java.edu.depaul.shoppingcart.ShoppingCart;
 
 public class CheckOutScreen {
     private JTextField creditCard = new JTextField();
