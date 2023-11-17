@@ -15,6 +15,7 @@ public class PaymentProcessor {
 
     public static PaymentProcessor getProcessor() {
         if (processor == null) {
+            LogWriter.log(Level.INFO, "Initialized PaymentProcessor", "INIT");
             processor = new PaymentProcessor();
         }
         return processor;
@@ -32,6 +33,7 @@ public class PaymentProcessor {
         try {
             LogWriter.log(Level.INFO, "Received credit card processing request", "Credit Card processor validateCreditCard");
             LogWriter.log(Level.INFO, String.format("Read NUMBER : %s // EXPIRATION : %s // SECURITY : %s", number, expiration, security), "LOG DATA");
+
             String sNumber = number.replaceAll("[^0-9]", "");
             if (sNumber.length() != 16) {
                 LogWriter.log(Level.WARNING, "Credit Card length " + sNumber.length() + " is not acceptable", "REJECTED");

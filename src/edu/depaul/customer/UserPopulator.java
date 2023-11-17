@@ -2,12 +2,11 @@ package edu.depaul.customer;
 
 import java.util.ArrayList;
 
-public class UserPopulator {
-	private UserPopulator() {
-		;
-	}
+import edu.depaul.catalogue.IPopulatorInterface;
+
+public class UserPopulator implements IPopulatorInterface<User> {
 	
-	public static ArrayList<User> generateUsers() {
+	public ArrayList<User> generate() {
 		ArrayList<User> list = new ArrayList<>();
 		User c1 = new User(2000, "Joe", "password1");
 		list.add(c1);

@@ -10,7 +10,7 @@ import java.io.StringWriter;
 import java.io.PrintWriter;
 
 /**
- * LogWriter handles logging events.
+ * LogWriter handles logging events. Subsequent logs will be appended to the same log file as previous logs.
  **/
 public class LogWriter {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
@@ -20,6 +20,7 @@ public class LogWriter {
 
     /**
      * Private constructor. Can't touch this.
+     * Ensures that the first line of every log includes the ID.
      **/
     private LogWriter(File log) {
         logFile = log;
@@ -27,6 +28,9 @@ public class LogWriter {
         log(Level.INFO, "INIT", Long.toHexString(id));
     }
     
+    /**
+     * Creates a unique ID number for this logger
+     **/
     private static void setID() {
     	id = (System.currentTimeMillis() + logFile.hashCode()) * 173;
     }
@@ -46,6 +50,10 @@ public class LogWriter {
         return instance;
     }
 
+    /**
+     * Returns the file where this logger writes its logs.
+     * @returns The file defined by the constructor
+     **/
     public static File getLog() {
         return logFile;
     }
@@ -70,6 +78,9 @@ public class LogWriter {
 
     /**
      * Writes an event to the log file. This form is intended for use with exceptions and errors.
+     * @param level	an indicator of how serious this event is.
+     * @param event	a short description of the event being logged.
+     * @param e	the exception
      **/
     public static void log(Level level, String event, Exception exception) {
         try (FileWriter writer = new FileWriter(logFile, true)) {

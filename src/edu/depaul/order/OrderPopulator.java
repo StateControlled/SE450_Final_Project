@@ -3,18 +3,16 @@ package edu.depaul.order;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import edu.depaul.catalogue.IPopulatorInterface;
 import edu.depaul.customer.User;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.item.ItemPopulator;
 
-public class OrderPopulator {
-	private OrderPopulator() {
-		;
-	}
+public class OrderPopulator implements IPopulatorInterface<Order> {
 	
-	public static ArrayList<Order> generateOrders() {
+	public ArrayList<Order> generate() {
 		ArrayList<Order> list = new ArrayList<>();
-		ArrayList<AbstractItem> items = ItemPopulator.generateItems();
+		ArrayList<AbstractItem> items = new ItemPopulator().generate();
 		
 		HashMap<AbstractItem, Integer> cart1 = new HashMap<>();
 		cart1.put(items.get(0), 2);

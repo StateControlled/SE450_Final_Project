@@ -36,3 +36,82 @@
 2023-49-16 20:49:50 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
 2023-49-16 20:49:50 INFO: Read NUMBER : 4489151612121111 // EXPIRATION : 05/28 // SECURITY : 331 \ LOG DATA
 2023-49-16 20:49:50 INFO: Credit Card approved! \ APPROVED
+2023-14-16 23:14:37 INFO: INIT \ 10bd8437cadf3
+2023-14-16 23:14:37 INFO: Initialized PaymentProcessor \ INIT
+2023-14-16 23:14:37 INFO: System start up \ Initialization.
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type VIOLIN \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type VIOLIN \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type VIOLA \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type VIOLA \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type CELLO \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type CELLO \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type BASS \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type BASS \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type PIANO \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type PIANO \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type CELLPHONE \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type CELLPHONE \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type COMPUTER \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type COMPUTER \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type SPEAKER \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type SPEAKER \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type TELEVISION \ 
+2023-14-16 23:14:37 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-14-16 23:14:37 INFO: Read item type TELEVISION \ 
+2023-14-16 23:14:37 INFO: CATALOGUE SOURCE: src\edu\depaul\resources\item-catalogue.json \ Source file set.
+2023-14-16 23:14:37 INFO: Read Catalogue file. \ Source file populated.
+2023-14-16 23:14:37 INFO: Populated 18 entities from file. \ 
+2023-14-16 23:14:37 INFO: USER DATABASE SOURCE: src\edu\depaul\resources\user-database.json \ Source file set.
+2023-14-16 23:14:37 INFO: Read User Database file. \ Source file populated.
+2023-14-16 23:14:37 INFO: Populated 7 entities from file. \ 
+2023-14-16 23:14:37 INFO: ORDER DATABASE SOURCE: src\edu\depaul\resources\order-database.json \ Source file set.
+2023-14-16 23:14:37 INFO: Read Order Database file. \ Source file populated.
+2023-14-16 23:14:37 INFO: Populated 2 entities from file. \ 
+2023-14-16 23:14:37 INFO: Initializing GUI \ Initialization
+2023-14-16 23:14:46 INFO: Control Panel Button Press \ Log in
+2023-14-16 23:14:46 INFO: READ: Sam, trumpet \ Log in
+2023-14-16 23:14:46 INFO: Log in existing user \ 
+2023-14-16 23:14:46 INFO: Searching for user "Sam" \ Log in
+2023-14-16 23:14:46 INFO: Successfully hashed password \ 
+2023-14-16 23:14:46 INFO: User log in Successful \ Sam
+2023-14-16 23:14:46 INFO: 2105 : Sam \ User set
+2023-14-16 23:14:46 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-15-16 23:15:03 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-15-16 23:15:03 INFO: Built new ShoppingCart \ INIT
+2023-15-16 23:15:03 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
+2023-15-16 23:15:03 INFO: Item Professional Viola added to cart. \ Quantity 1
+2023-15-16 23:15:03 INFO: Total updated 19,500.00 \ PRICE UPDATED
+2023-15-16 23:15:03 INFO: Item Student Viola added to cart. \ Quantity 1
+2023-15-16 23:15:03 INFO: Total updated 20,300.00 \ PRICE UPDATED
+2023-15-16 23:15:03 INFO: Item Davidov Stradivarius added to cart. \ Quantity 1
+2023-15-16 23:15:03 INFO: Total updated 3,520,300.00 \ PRICE UPDATED
+2023-15-16 23:15:03 INFO: Control Panel Button Press \ Check Out
+2023-15-16 23:15:03 INFO: READ: Sam, ******** \ Check Out
+2023-15-16 23:15:03 INFO: Check out \ 
+2023-15-16 23:15:03 INFO: Check Out Screen initialized \ CHECK OUT
+2023-15-16 23:15:03 INFO: Check out successful! \ CHECK OUT EVENT
+2023-15-16 23:15:25 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-15-16 23:15:25 INFO: Read NUMBER : 6011222255558888 // EXPIRATION : 06/29 // SECURITY : 335 \ LOG DATA
+2023-15-16 23:15:25 INFO: Credit Card approved! \ APPROVED
+2023-15-16 23:15:29 INFO: CREATE ORDER \ Order confirmed
+2023-15-16 23:15:36 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-15-16 23:15:36 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-15-16 23:15:36 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-15-16 23:15:36 INFO: System shut down \ OFFLINE.

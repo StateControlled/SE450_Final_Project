@@ -9,7 +9,7 @@ import edu.depaul.shoppingcart.ShoppingCart;
  * A class representing a customer. Stores the customer's username and (hashed) password and customer ID number.
  * The plaintext password should not be stored.
  **/
-public class User {
+public class User implements IUserInterface {
     private int customerID;
     private String name;
     private String password;
@@ -30,9 +30,6 @@ public class User {
         return name;
     }
 
-    /**
-     * Hashes the password before associating it with the password field.
-     **/
     public boolean setPassword(String password) {
         if (password != null) {
             this.password = Hash.hash(password);
@@ -47,10 +44,6 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
-
-    public void resetPassword(String password) {
-        this.password = password;
     }
 
     public int getCustomerID() {

@@ -2,14 +2,12 @@ package edu.depaul.item;
 
 import java.util.ArrayList;
 
+import edu.depaul.catalogue.IPopulatorInterface;
 import edu.depaul.item.factory.SuperFactory;
 
-public class ItemPopulator {
-	private ItemPopulator() {
-		;
-	}
+public class ItemPopulator implements IPopulatorInterface<AbstractItem> {
 	
-    public static ArrayList<AbstractItem> generateItems() {
+    public ArrayList<AbstractItem> generate() {
         ArrayList<AbstractItem> result = new ArrayList<>();
         AbstractItem item1a = SuperFactory.createProduct("INSTRUMENT", "violin", "Trash Violin", "Amazon", 99.95);
         result.add(item1a);

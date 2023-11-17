@@ -72,7 +72,7 @@ public class ShoppingCart {
 		LogWriter.log(Level.INFO, String.format("Total updated %,.2f", newTotal), "PRICE UPDATED");
 	}
 
-	public double getTotal() {
+	public static double getTotal() {
 		return total;
 	}
 

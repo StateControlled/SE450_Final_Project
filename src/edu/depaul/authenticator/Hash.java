@@ -1,6 +1,8 @@
 package edu.depaul.authenticator;
 
 import java.security.MessageDigest;
+import edu.depaul.logwriter.Level;
+import edu.depaul.logwriter.LogWriter;
 
 public class Hash {
     private static final String SALT = "germanaugmentedsixthchord";
@@ -22,11 +24,10 @@ public class Hash {
             for (int i = 0; i < byteArray.length; i++) {
                 builder.append(Integer.toHexString(0xFF & byteArray[i]));
             }
+            LogWriter.log(Level.INFO, "Successfully hashed password", "");
             return builder.toString();
         } catch (Exception e) {
-            System.out.println("This shouldn't happen.");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
+            LogWriter.log(Level.SEVERE, "Failed to hash password", e);
             return null;
         }
     }

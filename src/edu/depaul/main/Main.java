@@ -50,7 +50,7 @@ public class Main {
     }
 
     /**
-     * Des the work of initializing the databases
+     * Does the work of initializing the databases
      **/
     private static void initDatabases(String argument1) {
         // CATALOGUE
@@ -59,7 +59,7 @@ public class Main {
         LogWriter.log(Level.INFO, "CATALOGUE SOURCE: " + catalogue.toPath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
-            ArrayList<AbstractItem> items = ItemPopulator.generateItems();
+            ArrayList<AbstractItem> items = new ItemPopulator().generate();
             cat.writeToFile(catalogue, items);        	
         }
 
@@ -74,7 +74,7 @@ public class Main {
         LogWriter.log(Level.INFO, "USER DATABASE SOURCE: " + userDatabase.toPath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
-        	ArrayList<User> users = UserPopulator.generateUsers();
+        	ArrayList<User> users = new UserPopulator().generate();
         	dat.writeToFile(userDatabase, users);
         }
         LogWriter.log(Level.INFO, "Read User Database file.", "Source file populated.");
@@ -88,7 +88,7 @@ public class Main {
         LogWriter.log(Level.INFO, "ORDER DATABASE SOURCE: " + orderDatabase.toPath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
-        	ArrayList<Order> orders = OrderPopulator.generateOrders();
+        	ArrayList<Order> orders = new OrderPopulator().generate();
         	ord.writeToFile(orderDatabase, orders);
         }
         LogWriter.log(Level.INFO, "Read Order Database file.", "Source file populated.");

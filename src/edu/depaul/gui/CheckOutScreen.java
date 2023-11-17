@@ -53,9 +53,17 @@ public class CheckOutScreen {
                     int confirm = JOptionPane.showOptionDialog(frame, "Thank you!\r\nYour order has shipped.", "Credit Card approved", JOptionPane.OK_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
                     if (confirm == JOptionPane.YES_OPTION) {
                         LogWriter.log(Level.INFO, "CREATE ORDER", "Order confirmed");
-                        OrderDatabase od = OrderDatabase.getInstance();
+                        OrderDatabase orderDatabase = OrderDatabase.getInstance();
                         user.getCart();
-                        od.addEntry(new Order(user, ShoppingCart.getShoppingList()));
+
+                        Order o = new Order(user, ShoppingCart.getShoppingList());
+                        LogWriter.log(Level.INFO, "Added order " + o.getOrderID() + " to Order Database", "Database update");
+
+                        orderDatabase.addEntry(o);
+                        frame.dispose();
+                    } else {
+                        LogWriter.log(Level.INFO, "Order refused", "Order refused");
+                        JOptionPane.showMessageDialog(frame, "Order cancelled");
                         frame.dispose();
                     }
                 }
@@ -68,8 +76,9 @@ public class CheckOutScreen {
 
         creditCard.setText("****************");
         expiration.setText("mm/yy");
-        security.setText("ccv");
-        priceLabel.setText(String.format("TOTAL $%,.2f", user.getCart().getTotal()));
+        security.setText("CCV");
+        user.getCart();
+        priceLabel.setText(String.format("TOTAL $%,.2f", ShoppingCart.getTotal()));
 
         cardLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         expirationLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
