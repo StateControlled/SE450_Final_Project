@@ -2,8 +2,6 @@ package edu.depaul.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
-//import java.awt.Dimension;
-//import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,7 +20,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
-//import javax.swing.border.Border;
 import javax.swing.SwingConstants;
 
 import edu.depaul.catalogue.Catalogue;
@@ -33,6 +30,7 @@ import edu.depaul.gui.actions.ButtonHandler;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
+import edu.depaul.shoppingcart.ShoppingCart;
 
 public class Application {
     private final JLabel label = new JLabel("SHOPPING", SwingConstants.CENTER);
@@ -57,12 +55,10 @@ public class Application {
         frame.setBounds(0, 0, 1200, 700);
         frame.setMinimumSize(new Dimension(1200, 700));
         frame.setLocationRelativeTo(null);
+        frame.getContentPane().setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // using default list model to display items in catalogue
-        //DefaultListModel<String> modelListLeft = new DefaultListModel<>();
-        //DefaultListModel<String> modelListRight = new DefaultListModel<>();
-
         DefaultListModel<AbstractItem> modelListLeft = new DefaultListModel<>();
         DefaultListModel<AbstractItem> modelListRight = new DefaultListModel<>();
 
@@ -85,11 +81,7 @@ public class Application {
         about.addActionListener(new ActionOpenHtml());
         helpMenu.add(about);
 
-        frame.getContentPane().setLayout(null);
         //
-        //JList<String> listLeft = new JList<>();
-        //JList<String> listRight = new JList<>();
-
         JList<AbstractItem> listLeft = new JList<>();
         JList<AbstractItem> listRight = new JList<>();        
 
@@ -98,7 +90,6 @@ public class Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 listRight.getSelectedValuesList().stream().forEach((data) -> {
-                    //modelListLeft.addElement(data);
                     modelListRight.removeElement(data);
                 });
                 listLeft.revalidate();
@@ -109,16 +100,18 @@ public class Application {
         removeButton.setBounds(360, 120, 128, 64);
         frame.getContentPane().add(removeButton);
 
+        //
         JButton addButton = new JButton("ADD >>");
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // get list of selected values and for each one of them do following
-                listLeft.getSelectedValuesList().stream().forEach((data) -> {
-                    modelListRight.addElement(data);
-                    //modelListLeft.removeElement(data);
-                });
-                // refresh the view after changes
+                if (userAuthenticated) {
+                    listLeft.getSelectedValuesList().stream().forEach((data) -> {
+                        modelListRight.addElement(data);
+                    });
+                } else {
+                    LogWriter.log(Level.WARNING, "Cannot add to cart", "No User logged in");
+                }
                 listLeft.revalidate();
                 listRight.revalidate();
             }
@@ -128,9 +121,7 @@ public class Application {
         frame.getContentPane().add(addButton);
 
         listLeft.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        //listLeft.setBounds(0, 0, 350, 800);
         listLeft.setModel(modelListLeft);
-        //frame.getContentPane().add(listLeft);
         JScrollPane scrollListLeft = new JScrollPane(listLeft);
         scrollListLeft.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         JPanel leftScrollPanel = new JPanel();
@@ -138,16 +129,10 @@ public class Application {
         leftScrollPanel.setBounds(0, 50, 350, 800);
         leftScrollPanel.add(scrollListLeft);
         
-        //System.out.println(leftScrollPanel.getLocation());
-        //System.out.println(leftScrollPanel.getSize());
-        //frame.getContentPane().add(test);
         frame.add(leftScrollPanel);
-        //frame.getContentPane().add(scrollListLeft);
         
         listRight.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        //listRight.setBounds(500, 0, 350, 800);
-        listRight.setModel(modelListRight);
-        //frame.getContentPane().add(listRight);    
+        listRight.setModel(modelListRight);   
         JScrollPane scrollListRight = new JScrollPane(listRight);
         scrollListRight.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         JPanel rightScrollPanel = new JPanel();
@@ -161,7 +146,7 @@ public class Application {
         ArrayList<AbstractItem> items = c.getCatalogue();  
         
         for (AbstractItem i : items) {
-            modelListLeft.addElement(i); // i.view()
+            modelListLeft.addElement(i);
         }
 
         loginButton = new JButton("Log in");
@@ -175,6 +160,7 @@ public class Application {
                     message.setText("Welcome " + currentUser.getName() + "!");
                 }
                 LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");
+                
             }
         });
 
@@ -196,8 +182,20 @@ public class Application {
         checkOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
-                LogWriter.log(Level.INFO, "Control Panel received user authentication as " + userAuthenticated, "AUTHENTICATION EVENT");
+                if (currentUser != null) {
+                    currentUser.getCart();
+                    ShoppingCart.getInstance();
+
+                    int j = modelListRight.getSize();
+                    for (int i = 0; i < j; i++) {
+                        ShoppingCart.addToCart(modelListRight.get(i));
+                    }
+
+                    ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                    LogWriter.log(Level.INFO, "Check out successful!", "CHECK OUT EVENT");
+                } else {
+                    LogWriter.log(Level.WARNING, "Cannot check out.", "User is null");
+                }
             }
         });
 

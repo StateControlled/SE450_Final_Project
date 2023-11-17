@@ -1,21 +1,20 @@
 package edu.depaul.gui.actions;
 
 import edu.depaul.customer.User;
-//import edu.depaul.gui.ControlPanel;
 import edu.depaul.item.AbstractItem;
 import edu.depaul.logwriter.Level;
 import edu.depaul.logwriter.LogWriter;
 import edu.depaul.shoppingcart.ShoppingCart;
 
-public class CartOperations {
-    private CartOperations() {
+public class CartHandler {
+    private CartHandler() {
         ;
     }    
 
     public static void addToCart(User user, AbstractItem item) {
         try {
-            //ShoppingCart.getInstance();
             user.getCart();
+            ShoppingCart.getInstance();
             ShoppingCart.addToCart(item);
             LogWriter.log(Level.INFO, "Added item to cart", item.getItemName());
         } catch (Exception e) {

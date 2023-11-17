@@ -1,8 +1,6 @@
-package edu.depaul.catalogue;
+package edu.depaul.customer;
 
 import java.util.ArrayList;
-
-import edu.depaul.customer.User;
 
 public class UserPopulator {
 	private UserPopulator() {
