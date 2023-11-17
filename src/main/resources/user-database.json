@@ -40,5 +40,23 @@
     "name": "Alex",
     "password": "dc5cbd635924bc72a2eb96232b844ccdb55bc41d714d54f9ab113ba594971c3",
     "cart": {}
+  },
+  {
+    "customerID": 2110,
+    "name": "Julie",
+    "password": "a8b3a2244d07aefb07ebdce16aa3b6215f7e121b4444a6d813273ae9075bc",
+    "cart": {}
+  },
+  {
+    "customerID": 2111,
+    "name": "Jacob",
+    "password": "6cc2bfefccf3945cf49e28b69b9a2a326aef579ff7cbaf7efcf2f486d5f75",
+    "cart": {}
+  },
+  {
+    "customerID": 2112,
+    "name": "Caroline",
+    "password": "65d2a66745bc40b5dc2c7fc7c52caf886d3e527fa2beb7c7e572414596d184d",
+    "cart": {}
   }
 ]

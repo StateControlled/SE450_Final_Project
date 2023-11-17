@@ -49,22 +49,29 @@ public class CheckOutScreen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (PaymentProcessor.validateCreditCard(creditCard.getText(), expiration.getText(), security.getText())) {
-                    int confirm = JOptionPane.showOptionDialog(frame, "Thank you!\r\nYour order has shipped.", "Credit Card approved", JOptionPane.OK_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                    int confirm = JOptionPane.showOptionDialog(frame, "Credit Card approved\r\nYour order has shipped.\r\nThank you!", "Credit Card approved", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                    
                     if (confirm == JOptionPane.YES_OPTION) {
                         LogWriter.log(Level.INFO, "CREATE ORDER", "Order confirmed");
                         OrderDatabase orderDatabase = OrderDatabase.getInstance();
                         user.getCart();
 
-                        Order o = new Order(user, ShoppingCart.getShoppingList());
-                        LogWriter.log(Level.INFO, "Added order " + o.getOrderID() + " to Order Database", "Database update");
+                        Order order = new Order(user, ShoppingCart.getShoppingList());
+                        LogWriter.log(Level.INFO, "Added order " + order.getOrderID() + " to Order Database", "Database update");
+                        JOptionPane.showMessageDialog(frame, String.format("Please save this information:\r\nOrder date: %s\r\nOrder number: %d", order.getOrderDate(), order.getOrderID()));
 
-                        orderDatabase.addEntry(o);
+                        orderDatabase.addEntry(order);
+                        user.clearCart();
                         frame.dispose();
                     } else {
-                        LogWriter.log(Level.INFO, "Order refused", "Order refused");
-                        JOptionPane.showMessageDialog(frame, "Order cancelled");
+                        LogWriter.log(Level.INFO, "Order Cancelled by client", "Order cancelled");
+                        JOptionPane.showMessageDialog(frame, "Order cancelled.");
                         frame.dispose();
                     }
+                } else {
+                    LogWriter.log(Level.INFO, "Credit Card rejected", "Order refused");
+                    JOptionPane.showMessageDialog(frame, "Credit Card Rejected");
+                    frame.dispose();
                 }
             }
             

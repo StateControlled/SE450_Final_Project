@@ -51,22 +51,27 @@ public class ShoppingCart {
 	}
 
 	/**
-	 * Completely removes an item from the cart. If quantity is greater than 1, this method will
-	 * remove all items of that type.
+	 * Completely removes an item from the cart.
 	 **/
 	public static AbstractItem removeFromCart(AbstractItem item) {
-		shoppingList.remove(item);
+		if (shoppingList.get(item) > 1) {
+			shoppingList.put(item, shoppingList.get(item) - 1);
+		} else {
+			shoppingList.remove(item);
+		}
 		setTotal();
-		LogWriter.log(Level.INFO, "Item " + item.getItemName() + " removed from cart.", "");
+		LogWriter.log(Level.INFO, "Item " + item.getItemName() + " removed from cart.", "Remaining " + shoppingList.get(item));
 		return item;
 	}
 	
 	public static void setTotal() {
 		double newTotal = 0.0;
-		for (HashMap.Entry<AbstractItem, Integer> entry : shoppingList.entrySet()) {
-			double price = entry.getKey().getPrice();
-			int quantity = entry.getValue();
-			newTotal += (price * quantity);
+		if (shoppingList != null && shoppingList.size() > 0) {
+			for (HashMap.Entry<AbstractItem, Integer> entry : shoppingList.entrySet()) {
+				double price = entry.getKey().getPrice();
+				int quantity = entry.getValue();
+				newTotal += (price * quantity);
+			}
 		}
 		total = newTotal;
 		LogWriter.log(Level.INFO, String.format("Total updated %,.2f", newTotal), "PRICE UPDATED");
@@ -78,6 +83,12 @@ public class ShoppingCart {
 
 	public static HashMap<AbstractItem, Integer> getShoppingList() {
 		return shoppingList;
+	}
+
+	public static void clearCart() {
+		LogWriter.log(Level.WARNING, "Shopping Cart cleared", "CART CLEARED");
+		shoppingList.clear();
+		setTotal();
 	}
 	
 	/**

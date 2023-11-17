@@ -21,4 +21,12 @@ public interface IUserInterface {
     public int getCustomerID();
     
     public ShoppingCart getCart();
+
+    public void clearCart();
+
+    /**
+     * Retrieves the total of all items in the user's cart.
+     * @return  The total cost of all items in the user's shopping cart
+     **/
+    public double getCartTotal();
 }

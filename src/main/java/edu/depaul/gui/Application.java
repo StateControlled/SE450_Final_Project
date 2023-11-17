@@ -32,6 +32,9 @@ import main.java.edu.depaul.logwriter.Level;
 import main.java.edu.depaul.logwriter.LogWriter;
 import main.java.edu.depaul.shoppingcart.ShoppingCart;
 
+/**
+ * This class does the setup for the actual GUI.
+ **/
 public class Application {
     private final JLabel label = new JLabel("SHOPPING", SwingConstants.CENTER);
     private JLabel message = new JLabel("********", SwingConstants.CENTER);
@@ -41,8 +44,7 @@ public class Application {
     private JButton loginButton;
     private JButton newUserButton;
     private JButton checkOutButton;
-    private boolean userAuthenticated = false;
-    
+    private static boolean userAuthenticated = false;
     private static User currentUser;
 
     public Application() {
@@ -89,9 +91,15 @@ public class Application {
         removeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                listRight.getSelectedValuesList().stream().forEach((data) -> {
-                    modelListRight.removeElement(data);
-                });
+                if (userAuthenticated) {
+                    currentUser.getCart();
+                    ShoppingCart.getInstance();
+                    listRight.getSelectedValuesList().stream().forEach((data) -> {
+                        modelListRight.removeElement(data);
+                        ShoppingCart.removeFromCart(data);
+                    });
+                    setCartTotalLabel(currentUser.getCartTotal());
+                }
                 listLeft.revalidate();
                 listRight.revalidate();
             }
@@ -106,9 +114,13 @@ public class Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (userAuthenticated) {
+                    currentUser.getCart();
+                    ShoppingCart.getInstance();
                     listLeft.getSelectedValuesList().stream().forEach((data) -> {
                         modelListRight.addElement(data);
+                        ShoppingCart.addToCart(data);
                     });
+                    setCartTotalLabel(currentUser.getCartTotal());
                 } else {
                     LogWriter.log(Level.WARNING, "Cannot add to cart", "No User logged in");
                 }
@@ -183,15 +195,15 @@ public class Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (currentUser != null) {
-                    currentUser.getCart();
-                    ShoppingCart.getInstance();
-
-                    int j = modelListRight.getSize();
-                    for (int i = 0; i < j; i++) {
-                        ShoppingCart.addToCart(modelListRight.get(i));
+                    if (userAuthenticated) {
+                        modelListRight.removeAllElements();
+                        setCartTotalLabel(currentUser.getCartTotal());
                     }
+                    listLeft.revalidate();
+                    listRight.revalidate();
 
                     ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                    setCartTotalLabel(0);
                     LogWriter.log(Level.INFO, "Check out successful!", "CHECK OUT EVENT");
                 } else {
                     LogWriter.log(Level.WARNING, "Cannot check out.", "User is null");
@@ -237,6 +249,7 @@ public class Application {
     }
 
     public static void setCartTotalLabel(double total) {
-        cartTotalLabel.setText(String.format("Cart total : $,.2f", total));
+        cartTotalLabel.setText(String.format("Cart total : $%,.2f", total));
+        LogWriter.log(Level.INFO, "Updated total on screen to " + total, "UPDATE");
     }
 }

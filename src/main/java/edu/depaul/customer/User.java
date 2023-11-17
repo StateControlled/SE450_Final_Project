@@ -26,10 +26,12 @@ public class User implements IUserInterface {
         setPassword(password);
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public boolean setPassword(String password) {
         if (password != null) {
             this.password = Hash.hash(password);
@@ -38,18 +40,22 @@ public class User implements IUserInterface {
         return false;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
 
+    @Override
     public int getCustomerID() {
         return customerID;
     }
     
+    @Override
     public ShoppingCart getCart() {
         return cart;
     }
@@ -57,5 +63,15 @@ public class User implements IUserInterface {
     @Override
     public String toString() {
         return String.format("%d : %s", this.customerID, this.name);
+    }
+
+    @Override
+    public double getCartTotal() {
+        return ShoppingCart.getTotal();
+    }
+
+    @Override
+    public void clearCart() {
+        ShoppingCart.clearCart();
     }
 }

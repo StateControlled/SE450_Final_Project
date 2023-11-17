@@ -54,7 +54,7 @@ public class Main {
         // CATALOGUE
         File catalogue = StorageFiles.CATALOGUE_SOURCE;
         Catalogue cat = Catalogue.getInstance();
-        LogWriter.log(Level.INFO, "CATALOGUE SOURCE: " + catalogue.toPath(), "Source file set.");
+        LogWriter.log(Level.INFO, "CATALOGUE SOURCE: " + catalogue.getAbsolutePath(), "Source file set.");
         
         if (argument1 != null && argument1.equals("-p")) {
             ArrayList<AbstractItem> items = new ItemPopulator().generate();
