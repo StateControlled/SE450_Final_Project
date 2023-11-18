@@ -33,6 +33,7 @@ public class Main {
     	String argument1 = null;
     	if (args.length > 0) {
     		argument1 = args[0];
+            System.out.println(argument1);
     	}
 
         LogWriter.log(Level.INFO, "System start up", "Initialization.");

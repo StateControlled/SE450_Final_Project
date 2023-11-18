@@ -4,6 +4,7 @@ import main.java.edu.depaul.authenticator.Hash;
 import main.java.edu.depaul.logwriter.Level;
 import main.java.edu.depaul.logwriter.LogWriter;
 import main.java.edu.depaul.shoppingcart.ShoppingCart;
+import java.util.ArrayList;
 
 /**
  * A class representing a customer. Stores the customer's username and (hashed) password and customer ID number.
@@ -14,6 +15,7 @@ public class User implements IUserInterface {
     private String name;
     private String password;
     private ShoppingCart cart;
+    private ArrayList<Long> orders;
 
     /**
      * Constructor.
@@ -23,7 +25,16 @@ public class User implements IUserInterface {
         this.name = name;
         this.customerID = customerID;
         this.cart = ShoppingCart.getInstance();
+        this.orders = new ArrayList<>();
         setPassword(password);
+    }
+
+    public ArrayList<Long> getOrders() {
+        return orders;
+    }
+
+    public void addOrder(long orderID) {
+        this.orders.add(orderID);
     }
 
     @Override

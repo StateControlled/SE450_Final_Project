@@ -61,6 +61,7 @@ public class CheckOutScreen {
                         JOptionPane.showMessageDialog(frame, String.format("Please save this information:\r\nOrder date: %s\r\nOrder number: %d", order.getOrderDate(), order.getOrderID()));
 
                         orderDatabase.addEntry(order);
+                        user.addOrder(order.getOrderID());
                         user.clearCart();
                         frame.dispose();
                     } else {
