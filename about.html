@@ -5,31 +5,168 @@
     </head>
 
     <body>
-        <p>
-            This is an explanation of how the system works and the components of the system.</br>
+        <header>
+            <h1>About Final Project : Shopping System</h1>
+        </header>
 
-            <dl>
-            <dt>Initialization</dt>
-                <dd>On startup, the program generates the catalogue from a list of items.</dd>
-                <dd>A factory method builds the items from the data retrieved from the file and adds them to an internal "database."</dd>
+        <article>
+            <h3>By William Berthouex, Fall Quarter 2023</h3>
+        </article>
 
-            <dt>User operation</dt>
-                <dd>A user can log in to an existing account or create a new account. A unique shopping cart is associated with each account.</dd>
-                <dd>The user can browse a (text only) catalogue of products.</dd>
-                <dd>Products can be added to or removed from the user's cart.</dd>
-                <dd>The user can "check out" to make a purchase.</dd>
-                    <dl><dt>Authentication</dt>
-                        <dd>Credit card information will be validated (simulated).</dd>
-                        <dd>Payment will be processed (simulated).</dd>
-                    </dl>
-                <dd>An record of the order will be kept.</dd>
+        <article>
+            <h2>Major Project Components</h2>
+            <p>
+                <dl>
+                    <dt><b>User Interface</b></dt>
+                    <dd>A GUI allows a User to interact with the application with mouse and keyboard.<br />
+                        A User can log in to an existing account; create a new account; and browse products, add them to a cart, and check out.</dd>
 
-            <dt>Shutdown</dt>
-                <dd>Any changes to the product "database" are written to a file.</dd>
-                <dd>Records of new orders are written to file.</dd>
-                <dd>New user information is written to file.</dd>
-            </dl>
+                    <dt><b>Product Catalogue</b></dt>
+                    <dd>A <em>Catalogue Interface</em> serves as a basis for the three Catalogues in the system.<br />
+                        The first is a "Catalogue" for storing product data, the second a "Database" for storing User information, <br />
+                            and the third an "Order Database" for storing records of all completed orders.<br />
+                        The Catalogues are implemented as <em>Singleton Patterns</em> and instantiated before the application runs.</dd>
 
-        </p>
+                    <dt><b>Logging</b></dt>
+                    <dd>A LogWriter class records user actions and logs errors. It is implemented as a <em>Singleton Pattern</em>.<br />
+                        The LogWriter is instantiated in a static block before the application runs.</dd>
+
+                    <dt><b>User Authentication</b></dt>
+                    <dd>A User can enter a username and password into the GUI and the application will search for a matching account in the User Database.<br />
+                        Adhearing to best practices, the plaintext password is never saved to disk. Only a record of the hashed password is kept.</dd>
+
+                    <dt><b>Payment Processing</b></dt>
+                    <dd>Payment processing is simulated by a PaymentProcessor class. It makes simple validation checks for some given information and returns <em>true</em> if the information passes the checks.<br />
+                        It is possible for a credit card to "fail" validation, in which case the order is cancelled.<br />
+                        It is purely a simulation and is not secure nor is it intended to truely represent actual credit card validation.</dd>
+
+                    <dt><b>Order Processing</b></dt>
+                    <dd>Once a User's credit card passes validation checks, a new Order is created and added to the Order Database.<br />
+                        The User is given an order number as confirmation.</dd>
+                </dl>
+            </p>
+        </article>
+
+        <article>
+            <h2>How to run</h2>
+            <p>
+                <ol>
+                    <li>Run CompileProject.bat</li>
+                    <li>Program will run and show GUI</li>
+                    <li>Log will output to FinalProjectLog.log</li>
+                </ol>         
+            </p>
+        </article>
+
+        <article>
+            <h2>File Structure</h2>
+            <p>
+                The structure is taken from the <a href="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html">standard directory layout</a> of a Maven project and 
+                <a href="https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">package naming conventions</a> from Oracle's recommended naming conventions.
+            </p>
+            <a href="FinalProject_UML.svg">Project UML</a>
+            <p>
+                <pre>
+                    bin
+                    lib
+                    src
+                    |---main
+                        |---java
+                    |       |---edu
+                    |   |       |---depaul
+                    |   |           |---authenticator
+                    |   |           |---catalogue
+                    |   |           |---customer
+                    |   |           |---gui
+                    |   |               |---actions
+                    |   |           |---item
+                    |   |               |---electronics
+                    |   |               |---factory
+                    |   |               |---instrument
+                    |   |           |---logwriter
+                    |   |           |---order
+                    |   |           |---paymentprocessor
+                    |   |           |---shoppingcart
+                    |   |---resources
+                    |       |---constants
+                    |---test
+                        |---java
+                </pre>
+            </p>
+        </article>
+
+        <article>
+            <h2>Selected File List</h2>
+            <ul>
+                <li> Java Source Files
+                    <pre>
+                        AbstractItem.java
+                        AccountHandler.java
+                        ActionExit.java
+                        ActionOpenHtml.java
+                        Application.java
+                        Authenticator.java
+                        Bass.java
+                        ButtonHandler.java
+                        CartHandler.java
+                        Catalogue.java
+                        CellPhone.java
+                        Cello.java
+                        CheckOutScreen.java
+                        Computer.java
+                        ElectronicsFactory.java
+                        Hash.java
+                        IAbstractCatalogue.java
+                        IOrderInterface.java
+                        IPopulatorInterface.java
+                        IUserInterface.java
+                        InstrumentFactory.java
+                        ItemAdapter.java
+                        ItemPopulator.java
+                        Level.java
+                        LogWriter.java
+                        Main.java
+                        Order.java
+                        OrderDatabase.java
+                        OrderPopulator.java
+                        PaymentProcessor.java
+                        Piano.java
+                        ShoppingCart.java
+                        Speaker.java
+                        StorageFiles.java
+                        SuperFactory.java
+                        Television.java
+                        User.java
+                        UserDatabase.java
+                        UserPopulator.java
+                        Viola.java
+                        Violin.java
+                    </pre>
+                </li>
+                <li> Other Files
+                    <pre>
+                        about.html
+                        CompileProject.bat
+                        FinalProject_UML.svg
+                        paths.txt
+                        README.txt
+                    </pre>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Assignment</h2>
+            <p>
+                DePaul University<br />
+                SE450 Object-Oriented Software Development<br />
+                Final Project: Shopping Program<br />
+                Fall Quarter, November 2023<br />
+                William Berthouex<br />
+                <br />
+                <a href="https://github.com/StateControlled/SE450_Final_Project.git">Githib link to project</a><br />
+                <a href="mailto:wberthou@depaul.edu">wberthou@depaul.edu</a>
+            </p>
+        </article>
     </body>
 </html>
