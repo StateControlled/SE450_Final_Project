@@ -1,0 +1,75 @@
+2023-11-18 08:25:49 INFO: INIT \ 10bdd136f4eaa
+2023-11-18 08:25:49 INFO: Initialized PaymentProcessor \ INIT
+2023-11-18 08:25:49 INFO: System start up \ Initialization.
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type VIOLIN \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type VIOLIN \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type VIOLA \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type VIOLA \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type CELLO \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type CELLO \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type BASS \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type BASS \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type PIANO \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type PIANO \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type CELLPHONE \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type CELLPHONE \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type COMPUTER \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type COMPUTER \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type SPEAKER \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type SPEAKER \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type TELEVISION \ 
+2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 08:25:49 INFO: Read item type TELEVISION \ 
+2023-11-18 08:25:49 INFO: CATALOGUE SOURCE: D:\Programming\SE450 Object Oriented Software Development\Final Project\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
+2023-11-18 08:25:49 INFO: Read Catalogue file. \ Source file populated.
+2023-11-18 08:25:49 INFO: Populated 18 entities from file. \ 
+2023-11-18 08:25:49 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
+2023-11-18 08:25:49 INFO: Read User Database file. \ Source file populated.
+2023-11-18 08:25:49 INFO: Populated 10 entities from file. \ 
+2023-11-18 08:25:49 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
+2023-11-18 08:25:49 INFO: Read Order Database file. \ Source file populated.
+2023-11-18 08:25:49 INFO: Populated 17 entities from file. \ 
+2023-11-18 08:25:49 INFO: Initializing GUI \ Initialization
+2023-11-18 08:42:06 INFO: Control Panel Button Press \ Log in
+2023-11-18 08:42:06 INFO: READ: username, password \ Log in
+2023-11-18 08:42:06 INFO: Log in existing user \ 
+2023-11-18 08:42:06 INFO: Searching for user "username" \ Log in
+2023-11-18 08:42:06 INFO: Successfully hashed password \ 
+2023-11-18 08:42:06 WARNING: User log in Failed \ username
+2023-11-18 08:42:06 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-11-18 08:42:07 INFO: Control Panel Button Press \ Log in
+2023-11-18 08:42:07 INFO: READ: username, ******** \ Log in
+2023-11-18 08:42:07 INFO: Log in existing user \ 
+2023-11-18 08:42:07 INFO: Searching for user "username" \ Log in
+2023-11-18 08:42:07 INFO: Successfully hashed password \ 
+2023-11-18 08:42:07 INFO: User log in Successful \ username
+2023-11-18 08:42:07 INFO: 2107 : username \ User set
+2023-11-18 08:42:07 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-11-18 08:42:08 INFO: Control Panel Button Press \ Create Account
+2023-11-18 08:42:08 INFO: READ: username, ******** \ Create Account
+2023-11-18 08:42:08 INFO: Create new user \ 
+2023-11-18 08:42:08 INFO: Searching for user "username" \ Create Account
+2023-11-18 08:42:08 INFO: Successfully hashed password \ 
+2023-11-18 08:42:08 INFO: User log in Successful \ username
+2023-11-18 08:42:08 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-11-18 08:42:13 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-11-18 08:42:13 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-11-18 08:42:13 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-11-18 08:42:13 INFO: System shut down \ OFFLINE.
