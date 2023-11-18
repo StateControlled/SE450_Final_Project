@@ -144,5 +144,49 @@
     "cart": {
       "Davidov Stradivarius": 3
     }
+  },
+  {
+    "orderID": 1699733288806,
+    "totalCost": 3349.93,
+    "orderDate": "2023-59-17 18:59:26",
+    "customerID": 2108,
+    "customerName": "Will",
+    "cart": {
+      "Aurora R15": 1,
+      "SoundBar": 1,
+      "Trash Violin": 1
+    }
+  },
+  {
+    "orderID": 1699733357478,
+    "totalCost": 3099.6499999999996,
+    "orderDate": "2023-00-17 19:00:01",
+    "customerID": 2108,
+    "customerName": "Will",
+    "cart": {
+      "SuperCool Widescreen": 1,
+      "Trash Violin": 6
+    }
+  },
+  {
+    "orderID": 1699734613885,
+    "totalCost": 5249.889999999999,
+    "orderDate": "2023-11-17 19:10:29",
+    "customerID": 2107,
+    "customerName": "username",
+    "cart": {
+      "SuperCool Widescreen": 2,
+      "SoundBar": 1
+    }
+  },
+  {
+    "orderID": 1699735129829,
+    "totalCost": 19500.0,
+    "orderDate": "2023-11-17 19:14:47",
+    "customerID": 2107,
+    "customerName": "username",
+    "cart": {
+      "Professional Viola": 1
+    }
   }
 ]

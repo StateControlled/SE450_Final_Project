@@ -165,7 +165,7 @@ public class Application {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                currentUser = ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                currentUser = ButtonHandler.buttonClick(e, currentUser, usernameField.getText(), passwordField.getText());
                 passwordField.setText("********");
                 if (currentUser != null) {
                     userAuthenticated = true;
@@ -180,7 +180,7 @@ public class Application {
         newUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                currentUser = ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                currentUser = ButtonHandler.buttonClick(e, currentUser, usernameField.getText(), passwordField.getText());
                 passwordField.setText("********");
                 if (currentUser != null) {
                     userAuthenticated = true;
@@ -202,7 +202,7 @@ public class Application {
                     listLeft.revalidate();
                     listRight.revalidate();
 
-                    ButtonHandler.actionPerformed(e, currentUser, usernameField.getText(), passwordField.getText());
+                    ButtonHandler.buttonClick(e, currentUser, usernameField.getText(), passwordField.getText());
                     setCartTotalLabel(0);
                     LogWriter.log(Level.INFO, "Check out successful!", "CHECK OUT EVENT");
                 } else {

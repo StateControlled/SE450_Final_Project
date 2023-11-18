@@ -13,7 +13,7 @@ public class ButtonHandler {
         ;
     }
 
-    public static User actionPerformed(ActionEvent e, User currentUser, String username, String password) {
+    public static User buttonClick(ActionEvent e, User currentUser, String username, String password) {
         LogWriter.log(Level.INFO, "Control Panel Button Press", e.getActionCommand());
         LogWriter.log(Level.INFO, String.format("READ: %s, %s", username, password), e.getActionCommand());
 

@@ -13,7 +13,7 @@ import java.io.PrintWriter;
  * LogWriter handles logging events. Subsequent logs will be appended to the same log file as previous logs.
  **/
 public class LogWriter {
-    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
     private static LogWriter instance;
     private static File logFile;
     private static long id;

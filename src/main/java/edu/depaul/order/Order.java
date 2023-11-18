@@ -49,7 +49,7 @@ public class Order implements IOrderInterface {
     }
 
     private void formatDate(Date date) {
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
         this.orderDate = format.format(date);
     }
     

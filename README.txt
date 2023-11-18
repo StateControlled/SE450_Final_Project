@@ -6,4 +6,7 @@ William Berthouex
 
 Program run instructions
 
+Run CompileProject.bat
 
+Program will run.
+Log will output to FinalProjectLog.log
