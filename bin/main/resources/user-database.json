@@ -58,5 +58,28 @@
     "orders": [
       1700023915335
     ]
+  },
+  {
+    "customerID": 2110,
+    "name": "Mike",
+    "password": "97c78d35f26863611f853bfb86114feac3cfa7e9fd571bf0cefe5670238e6",
+    "cart": {},
+    "orders": []
+  },
+  {
+    "customerID": 2111,
+    "name": "username",
+    "password": "494722e106a9b6edd4284bd8b2f93343b123126a3614adfaf87159e953dbe",
+    "cart": {},
+    "orders": []
+  },
+  {
+    "customerID": 2112,
+    "name": "User",
+    "password": "3ac66e9599ca9ad324313ba7e616833a5aef316af5b422a8b844c825c5e137",
+    "cart": {},
+    "orders": [
+      1700027410338
+    ]
   }
 ]

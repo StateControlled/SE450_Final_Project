@@ -95,5 +95,17 @@
       "Beginner Cello": 3,
       "SoundBar": 1
     }
+  },
+  {
+    "orderID": 1700027410338,
+    "totalCost": 2349.94,
+    "orderDate": "2023-11-19 11:50:27",
+    "customerID": 2112,
+    "customerName": "User",
+    "cart": {
+      "Swift 5": 1,
+      "Pixel 6": 1,
+      "SoundBar": 1
+    }
   }
 ]
