@@ -30,7 +30,7 @@ public class ShoppingCart {
 			shoppingCart = new ShoppingCart.ShoppingCartBuilder().build();
 			LogWriter.log(Level.INFO, "Built new ShoppingCart", "INIT");
 		}
-		LogWriter.log(Level.INFO, "User Shopping Cart getInstance method call", "SHOPPING CART");
+		LogWriter.log(Level.INFO, "User Shopping Cart getInstance method call", "SHOPPING CART " + shoppingCart.toString());
 		return shoppingCart;
 	}
 

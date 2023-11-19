@@ -1,0 +1,80 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "item" {
+	abstract class AbstractItem << abstract >> {
+		-category : String
+		-itemType : String
+		-itemName : String
+		-manufacturer : String
+		-price : double
+		+AbstractItem(category: String, itemType : String, itemName : String, manufacturer : String, price : double)
+		+getCategory() : String
+		+getItemType() : String
+		+getItemName() : String
+		+setItemName(itemName : String) : void
+		+getManufacturer() : String
+		+setManufacturer(manufacturer : String) : void
+		+getPrice() : double
+		+setPrice(price : double) : void
+		+view() : String
+		+toString() : String
+	}
+	
+	package "instrument" {
+		class Violin {}
+		class Viola {}
+		class Cello {}
+		class Bass {}
+		class Piano {}
+	}
+	
+	package "electronics" {
+		class CellPhone {}
+		class Speaker {}
+		class Computer {}
+		class Television {}
+	}
+	
+	AbstractItem <|-- Violin
+	AbstractItem <|-- Viola
+	AbstractItem <|-- Cello
+	AbstractItem <|-- Bass
+	AbstractItem <|-- Piano
+	AbstractItem <|-- CellPhone
+	AbstractItem <|-- Speaker
+	AbstractItem <|-- Computer
+	AbstractItem <|-- Television
+	
+	package "factory" {
+		class ElectronicsFactory {
+			-ElectronicsFactory()
+			#{static}createProduct(category : String, itemType : String, itemName : String, manufacturer : String, price : double)
+		}
+		
+		class InstrumentFactory {
+			-InstrumentFactory()
+			#{static}createProduct(category : String, itemType : String, itemName : String, manufacturer : String, price : double)
+		}
+		
+		class SuperFactory {
+			-SuperFactory()
+			+{static}createProduct(category : String, itemType : String, itemName : String, manufacturer : String, price : double)
+		}
+	}
+	
+	ElectronicsFactory -up..> CellPhone
+	ElectronicsFactory -up..> Computer
+	ElectronicsFactory -up..> Television
+	ElectronicsFactory -up..> Speaker
+	
+	InstrumentFactory -up..> Violin
+	InstrumentFactory -up..> Viola
+	InstrumentFactory -up..> Cello
+	InstrumentFactory -up..> Bass
+	InstrumentFactory -up..> Piano
+	
+	SuperFactory -up--> ElectronicsFactory
+	SuperFactory -up--> InstrumentFactory
+}
+@enduml

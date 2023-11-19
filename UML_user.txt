@@ -1,0 +1,87 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "customer" {
+	interface IUserInterface << Interface >> {
+		+{abstract} getName() : String
+		+{abstract} setName(name : String) : void
+		+{abstract} getPassword() : String
+		+{abstract} setPassword(password : String) : void
+		+{abstract} getCustomerID() : int
+		+{abstract} getCart() : ShoppingCart
+		+{abstract} clearCart() : void
+		+{abstract} getCartTotal() : double
+	}
+	
+	class User {
+		-customerID : int
+		-name : String
+		-password : String
+		-cart : ShoppingCart
+		-orders : ArrayList<Long>
+		
+		+User(customerID : int, name : String, password : String)
+		+getOrders() : ArrayList<Long>
+		+addOrder(orderID : long) : void
+		+toString() : String
+	}
+	
+	IUserInterface <.. User
+	
+}
+
+package "order" {
+	interface IOrderInterface << Interface >> {
+		+{abstract} getOrderID() : long
+		+{abstract} getOrderDate() : String
+		+{abstract} getCost() : double
+	}
+	
+	class Order {
+		-orderID : long
+		-totalCost : double
+		-orderDate : String
+		-customerID : int
+		-customerName : String
+		-cart : HashMap<String, Integer>
+		
+		+Order(customer : User, cart : HashMap<AbstractItem, Integer>)
+		-defineOrder(cart : HashMap<AbstractItem, Integer>) : void
+		-setOrderID(date : Date) : void
+		-setCost(cart : HashMap<AbstractItem, Integer>) : void
+		-formatDate(date : Date) : void
+		-setCart(cart : HashMap<AbstractItem, Integer>) : void
+		+getCustomerName() : String
+	}
+	
+	IOrderInterface <.. Order
+}
+
+package "shoppingcart" {
+	class ShoppingCart << Singleton >> {
+		-shoppingCart : ShoppingCart
+		-shoppingList : HashMap<AbstractItem, Integer>
+		-total : double
+		
+		-ShoppingCart(builder : ShoppingCartBuilder)
+		+{static} getInstance() : ShoppingCart
+		+{static} addToCart(item : AbstractItem) : int
+		+{static} removeFromCart(item : AbstractItem) : AbstractItem
+		-{static} setTotal() : void
+		+{static} getTotal() : double
+		+{static} getShoppingList() : HashMap<AbstractItem, Integer>
+		+{static} clearCart() : void
+	}
+	
+	class ShoppingCartBuilder << Static >> {
+		-shoppingList : HashMap<AbstractItem, Integer>
+		+ShoppingCartBuilder()
+		+build() : ShoppingCart
+	}
+	
+	ShoppingCartBuilder -left--* ShoppingCart
+}
+
+User -right-- Order
+User -down--ShoppingCart
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "catalogue" {
+interface AbstractCatalogue<T> << Interface >> {
+		+{abstract} size() : int
+		+{abstract} getSourceFile() : File
+		+{abstract} getCatalogue() : ArrayList<T>
+		+{abstract} addEntry(item : T) : boolean
+		+{abstract} findInCatalogue(key : String) : T
+		+{abstract} readFromFile(jsonFile : File) : ArrayList<T>
+		+{abstract} writeToFile(jsonFile : File, list : ArrayList<T>) : void
+	}
+	
+	class Catalogue<AbstractItem> << Singleton >> {
+		-{static} SOURCE_CATALOGUE_FILE : File
+		-{static} list : ArrayList<AbstractItem>
+		-{static} instance : Catalogue
+		-Catalogue()
+		+{static} getInstance() : Catalogue
+		+{static} close() : void
+	}
+	
+	class UserDatabase<User> << Singleton >> {
+		-{static} SOURCE_CATALOGUE_FILE : File
+		-{static} list : ArrayList<User>
+		-{static} instance : Catalogue
+		-UserDatabase()
+		+{static} getInstance() : UserDatabase
+		+{static} close() : void
+	}
+	
+	class OrderDatabase<Order> << Singleton >> {
+		-{static} SOURCE_CATALOGUE_FILE : File
+		-{static} list : ArrayList<Order>
+		-{static} instance : Catalogue
+		-OrderDatabase()
+		+{static} getInstance() : OrderDatabase
+		+{static} close() : void
+	}
+	
+	AbstractCatalogue <.. Catalogue
+	AbstractCatalogue <.. UserDatabase
+	AbstractCatalogue <.. OrderDatabase
+}
+@enduml

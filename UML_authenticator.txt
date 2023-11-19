@@ -1,0 +1,53 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "authenticator" {
+	class Authenticator << Singleton >> {
+		-Authenticator()
+		+{static} validateCustomerPassword(user : User, typedPassword : String) : boolean
+	}
+	
+	class Hash << Singleton >> {
+		-{static} SALT: String
+		-Hash()
+		+{static} hash(text: String): String
+	}
+	
+	class AccountHandler << Singleton >> {
+		-AccountHandler()
+		+{static} checkUser() : User
+		+{static} loginUser() : User
+		+{static} createNewUser() : User
+	}
+}
+
+package "paymentprocessor" {
+	class PaymentProcessor << Singleton >> {
+		-{static} processor: PaymentProcessor
+		-PaymentProcessor()
+		+{static} getProcessor(): PaymentProcessor
+		+{static} validateCreditCard(number: String, expiration: String, security: String): boolean
+	}
+}
+
+package "orderprocessor" {
+	class OrderProcessor << Singleton >> {
+		-OrderProcessor()
+		+{static} processOrder(user : User): Order
+	}
+}
+
+package "gui" {
+	class Application {}
+	class CheckOutScreen {}
+}
+
+Application -- CheckOutScreen
+Application -left-- AccountHandler
+AccountHandler -- Authenticator
+CheckOutScreen -- PaymentProcessor
+CheckOutScreen -right-- OrderProcessor
+Authenticator -- Hash
+OrderProcessor -[hidden]- PaymentProcessor
+
+@enduml

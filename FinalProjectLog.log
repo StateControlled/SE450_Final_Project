@@ -1,796 +1,101 @@
-2023-11-18 08:25:49 INFO: INIT \ 10bdd136f4eaa
-2023-11-18 08:25:49 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 08:25:49 INFO: System start up \ Initialization.
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type VIOLIN \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type VIOLIN \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type VIOLA \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type VIOLA \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type CELLO \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type CELLO \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type BASS \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type BASS \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type PIANO \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type PIANO \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type CELLPHONE \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type CELLPHONE \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type COMPUTER \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type COMPUTER \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type SPEAKER \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type SPEAKER \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type TELEVISION \ 
-2023-11-18 08:25:49 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 08:25:49 INFO: Read item type TELEVISION \ 
-2023-11-18 08:25:49 INFO: CATALOGUE SOURCE: D:\Programming\SE450 Object Oriented Software Development\Final Project\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 08:25:49 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 08:25:49 INFO: Populated 18 entities from file. \ 
-2023-11-18 08:25:49 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 08:25:49 INFO: Read User Database file. \ Source file populated.
-2023-11-18 08:25:49 INFO: Populated 10 entities from file. \ 
-2023-11-18 08:25:49 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 08:25:49 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 08:25:49 INFO: Populated 17 entities from file. \ 
-2023-11-18 08:25:49 INFO: Initializing GUI \ Initialization
-2023-11-18 08:42:06 INFO: Control Panel Button Press \ Log in
-2023-11-18 08:42:06 INFO: READ: username, password \ Log in
-2023-11-18 08:42:06 INFO: Log in existing user \ 
-2023-11-18 08:42:06 INFO: Searching for user "username" \ Log in
-2023-11-18 08:42:06 INFO: Successfully hashed password \ 
-2023-11-18 08:42:06 WARNING: User log in Failed \ username
-2023-11-18 08:42:06 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
-2023-11-18 08:42:07 INFO: Control Panel Button Press \ Log in
-2023-11-18 08:42:07 INFO: READ: username, ******** \ Log in
-2023-11-18 08:42:07 INFO: Log in existing user \ 
-2023-11-18 08:42:07 INFO: Searching for user "username" \ Log in
-2023-11-18 08:42:07 INFO: Successfully hashed password \ 
-2023-11-18 08:42:07 INFO: User log in Successful \ username
-2023-11-18 08:42:07 INFO: 2107 : username \ User set
-2023-11-18 08:42:07 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-11-18 08:42:08 INFO: Control Panel Button Press \ Create Account
-2023-11-18 08:42:08 INFO: READ: username, ******** \ Create Account
-2023-11-18 08:42:08 INFO: Create new user \ 
-2023-11-18 08:42:08 INFO: Searching for user "username" \ Create Account
-2023-11-18 08:42:08 INFO: Successfully hashed password \ 
-2023-11-18 08:42:08 INFO: User log in Successful \ username
-2023-11-18 08:42:08 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-11-18 08:42:13 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-11-18 08:42:13 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-11-18 08:42:13 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-11-18 08:42:13 INFO: System shut down \ OFFLINE.
-2023-11-18 15:45:35 INFO: INIT \ 10bde23857e35
-2023-11-18 15:45:35 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:45:35 INFO: System start up \ Initialization.
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type BASS \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type BASS \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type PIANO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type PIANO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:35 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type BASS \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type BASS \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type PIANO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type PIANO \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:35 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:35 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:35 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:45:35 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:45:35 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:45:35 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:35 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:45:35 INFO: Built new ShoppingCart \ INIT
-2023-11-18 15:45:35 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:35 INFO: Successfully hashed password \ 
-2023-11-18 15:45:35 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:35 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:35 INFO: Successfully hashed password \ 
-2023-11-18 15:45:35 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:35 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:35 INFO: Successfully hashed password \ 
-2023-11-18 15:45:35 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:45:50 INFO: INIT \ 10bde23ac2f22
-2023-11-18 15:45:50 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:45:50 INFO: System start up \ Initialization.
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type BASS \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type BASS \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type PIANO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type PIANO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:50 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type BASS \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type BASS \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type PIANO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type PIANO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:50 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:45:50 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:45:50 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:45:50 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:50 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:45:50 INFO: Built new ShoppingCart \ INIT
-2023-11-18 15:45:50 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:50 INFO: Successfully hashed password \ 
-2023-11-18 15:45:50 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:50 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:50 INFO: Successfully hashed password \ 
-2023-11-18 15:45:50 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:50 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:50 INFO: Successfully hashed password \ 
-2023-11-18 15:45:50 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:45:50 INFO: Populated 3 entities from file. \ 
-2023-11-18 15:45:50 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLIN \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type VIOLA \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type BASS \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type BASS \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type PIANO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type PIANO \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type COMPUTER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type SPEAKER \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:50 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:45:50 INFO: Read item type TELEVISION \ 
-2023-11-18 15:45:50 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:50 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:50 INFO: Successfully hashed password \ 
-2023-11-18 15:45:50 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:45:50 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:45:50 INFO: Successfully hashed password \ 
-2023-11-18 15:45:50 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 15:47:29 INFO: INIT \ 10bde24b3b506
-2023-11-18 15:47:29 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:47:29 INFO: System start up \ Initialization.
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLIN \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLIN \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLA \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLA \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type BASS \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type BASS \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type PIANO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type PIANO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type COMPUTER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type COMPUTER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type SPEAKER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type SPEAKER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type TELEVISION \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type TELEVISION \ 
-2023-11-18 15:47:30 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLIN \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLIN \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLA \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLA \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type BASS \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type BASS \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type PIANO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type PIANO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type COMPUTER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type COMPUTER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type SPEAKER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type SPEAKER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type TELEVISION \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type TELEVISION \ 
-2023-11-18 15:47:30 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:47:30 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:47:30 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:47:30 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:47:30 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:47:30 INFO: Built new ShoppingCart \ INIT
-2023-11-18 15:47:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:47:30 INFO: Successfully hashed password \ 
-2023-11-18 15:47:30 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:47:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:47:30 INFO: Successfully hashed password \ 
-2023-11-18 15:47:30 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:47:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:47:30 INFO: Successfully hashed password \ 
-2023-11-18 15:47:30 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:47:30 INFO: Populated 3 entities from file. \ 
-2023-11-18 15:47:30 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLIN \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLIN \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLA \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type VIOLA \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type BASS \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type BASS \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type PIANO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type PIANO \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type COMPUTER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type COMPUTER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type SPEAKER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type SPEAKER \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type TELEVISION \ 
-2023-11-18 15:47:30 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:47:30 INFO: Read item type TELEVISION \ 
-2023-11-18 15:47:30 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:47:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:47:30 INFO: Successfully hashed password \ 
-2023-11-18 15:47:30 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:47:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:47:30 INFO: Successfully hashed password \ 
-2023-11-18 15:47:30 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 15:47:30 INFO: Populated 2 entities from file. \ 
-2023-11-18 15:47:30 INFO: Initializing GUI \ Initialization
-2023-11-18 15:47:36 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-11-18 15:47:36 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-11-18 15:47:36 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-11-18 15:47:36 INFO: System shut down \ OFFLINE.
-2023-11-18 15:49:11 INFO: INIT \ 10bde25c0a23d
-2023-11-18 15:49:11 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:49:11 INFO: System start up \ Initialization.
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type VIOLIN \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type VIOLIN \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type VIOLA \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type VIOLA \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type CELLO \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type CELLO \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type BASS \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type BASS \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type PIANO \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type PIANO \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type COMPUTER \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type COMPUTER \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type SPEAKER \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type SPEAKER \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type TELEVISION \ 
-2023-11-18 15:49:11 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:49:11 INFO: Read item type TELEVISION \ 
-2023-11-18 15:49:11 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:49:11 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:49:11 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:49:11 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:49:11 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:49:11 INFO: Populated 3 entities from file. \ 
-2023-11-18 15:49:11 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 15:49:11 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 15:49:11 INFO: Populated 2 entities from file. \ 
-2023-11-18 15:49:12 INFO: Initializing GUI \ Initialization
-2023-11-18 15:49:16 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-11-18 15:49:16 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-11-18 15:49:16 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-11-18 15:49:16 INFO: System shut down \ OFFLINE.
-2023-11-18 15:53:20 INFO: INIT \ 10bde285163e2
-2023-11-18 15:53:20 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:53:20 INFO: System start up \ Initialization.
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type VIOLIN \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type VIOLIN \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type VIOLA \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type VIOLA \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type CELLO \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type CELLO \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type BASS \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type BASS \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type PIANO \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type PIANO \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type COMPUTER \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type COMPUTER \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type SPEAKER \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type SPEAKER \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type TELEVISION \ 
-2023-11-18 15:53:20 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:53:20 INFO: Read item type TELEVISION \ 
-2023-11-18 15:53:20 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:53:20 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:53:20 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:53:20 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:53:20 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:53:20 INFO: Populated 3 entities from file. \ 
-2023-11-18 15:53:20 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 15:53:20 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 15:53:20 INFO: Populated 2 entities from file. \ 
-2023-11-18 15:53:20 INFO: Initializing GUI \ Initialization
-2023-11-18 15:53:30 INFO: Control Panel Button Press \ Create Account
-2023-11-18 15:53:30 INFO: READ: Will, squish \ Create Account
-2023-11-18 15:53:30 INFO: Create new user \ 
-2023-11-18 15:53:30 INFO: Searching for user "Will" \ Create Account
-2023-11-18 15:53:30 INFO: User constructor called. \ CLASS CONSTRUCTOR
-2023-11-18 15:53:30 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:53:30 INFO: Built new ShoppingCart \ INIT
-2023-11-18 15:53:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:30 INFO: Successfully hashed password \ 
-2023-11-18 15:53:30 INFO: Created new user Will \ NEW ACCOUNT CREATED
-2023-11-18 15:53:30 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-11-18 15:53:33 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:33 INFO: Item Student Viola added to cart. \ Quantity 1
-2023-11-18 15:53:33 INFO: Total updated 800.00 \ PRICE UPDATED
-2023-11-18 15:53:33 INFO: Updated total on screen to 800.0 \ UPDATE
-2023-11-18 15:53:34 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:34 INFO: Item Student Viola added to cart. \ Quantity 2
-2023-11-18 15:53:34 INFO: Total updated 1,600.00 \ PRICE UPDATED
-2023-11-18 15:53:34 INFO: Updated total on screen to 1600.0 \ UPDATE
-2023-11-18 15:53:35 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:35 INFO: Item Student Viola added to cart. \ Quantity 3
-2023-11-18 15:53:35 INFO: Total updated 2,400.00 \ PRICE UPDATED
-2023-11-18 15:53:35 INFO: Updated total on screen to 2400.0 \ UPDATE
-2023-11-18 15:53:36 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:36 INFO: Item Beginner Cello added to cart. \ Quantity 1
-2023-11-18 15:53:36 INFO: Total updated 3,300.00 \ PRICE UPDATED
-2023-11-18 15:53:36 INFO: Updated total on screen to 3300.0 \ UPDATE
-2023-11-18 15:53:36 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:36 INFO: Item Beginner Cello added to cart. \ Quantity 2
-2023-11-18 15:53:36 INFO: Total updated 4,200.00 \ PRICE UPDATED
-2023-11-18 15:53:36 INFO: Updated total on screen to 4200.0 \ UPDATE
-2023-11-18 15:53:36 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:36 INFO: Item Beginner Cello added to cart. \ Quantity 3
-2023-11-18 15:53:36 INFO: Total updated 5,100.00 \ PRICE UPDATED
-2023-11-18 15:53:36 INFO: Updated total on screen to 5100.0 \ UPDATE
-2023-11-18 15:53:41 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:41 INFO: Total updated 4,300.00 \ PRICE UPDATED
-2023-11-18 15:53:41 INFO: Item Student Viola removed from cart. \ Remaining 2
-2023-11-18 15:53:41 INFO: Updated total on screen to 4300.0 \ UPDATE
-2023-11-18 15:53:47 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:47 INFO: Item Student Viola added to cart. \ Quantity 3
-2023-11-18 15:53:47 INFO: Total updated 5,100.00 \ PRICE UPDATED
-2023-11-18 15:53:47 INFO: Updated total on screen to 5100.0 \ UPDATE
-2023-11-18 15:53:51 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:51 INFO: Total updated 4,200.00 \ PRICE UPDATED
-2023-11-18 15:53:51 INFO: Item Beginner Cello removed from cart. \ Remaining 2
-2023-11-18 15:53:51 INFO: Updated total on screen to 4200.0 \ UPDATE
-2023-11-18 15:53:53 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:53:53 INFO: Total updated 3,400.00 \ PRICE UPDATED
-2023-11-18 15:53:53 INFO: Item Student Viola removed from cart. \ Remaining 2
-2023-11-18 15:53:53 INFO: Updated total on screen to 3400.0 \ UPDATE
-2023-11-18 15:54:02 INFO: Updated total on screen to 3400.0 \ UPDATE
-2023-11-18 15:54:02 INFO: Control Panel Button Press \ Check Out
-2023-11-18 15:54:02 INFO: READ: Will, ******** \ Check Out
-2023-11-18 15:54:02 INFO: Check out \ 
-2023-11-18 15:54:02 INFO: Check Out Screen initialized \ CHECK OUT
-2023-11-18 15:54:02 INFO: Updated total on screen to 0.0 \ UPDATE
-2023-11-18 15:54:02 INFO: Check out successful! \ CHECK OUT EVENT
-2023-11-18 15:54:17 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
-2023-11-18 15:54:17 INFO: Read NUMBER : 4100111122223333 // EXPIRATION : 05/67 // SECURITY : 334 \ LOG DATA
-2023-11-18 15:54:17 INFO: Credit Card approved! \ APPROVED
-2023-11-18 15:54:20 INFO: CREATE ORDER \ Order confirmed
-2023-11-18 15:54:20 INFO: Added order 1699883875164 to Order Database \ Database update
-2023-11-18 15:54:22 WARNING: Shopping Cart cleared \ CART CLEARED
-2023-11-18 15:54:22 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:54:26 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:54:26 INFO: Item SoundBar added to cart. \ Quantity 1
-2023-11-18 15:54:26 INFO: Total updated 249.99 \ PRICE UPDATED
-2023-11-18 15:54:26 INFO: Updated total on screen to 249.99 \ UPDATE
-2023-11-18 15:54:27 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:54:27 INFO: Item SoundBar added to cart. \ Quantity 2
-2023-11-18 15:54:27 INFO: Total updated 499.98 \ PRICE UPDATED
-2023-11-18 15:54:27 INFO: Updated total on screen to 499.98 \ UPDATE
-2023-11-18 15:54:28 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:54:28 INFO: Item SoundBar added to cart. \ Quantity 3
-2023-11-18 15:54:28 INFO: Total updated 749.97 \ PRICE UPDATED
-2023-11-18 15:54:28 INFO: Updated total on screen to 749.97 \ UPDATE
-2023-11-18 15:54:30 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:54:30 INFO: Item Swift 5 added to cart. \ Quantity 1
-2023-11-18 15:54:30 INFO: Total updated 2,149.92 \ PRICE UPDATED
-2023-11-18 15:54:30 INFO: Updated total on screen to 2149.92 \ UPDATE
-2023-11-18 15:54:31 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:54:31 INFO: Item Swift 5 added to cart. \ Quantity 2
-2023-11-18 15:54:31 INFO: Total updated 3,549.87 \ PRICE UPDATED
-2023-11-18 15:54:31 INFO: Updated total on screen to 3549.87 \ UPDATE
-2023-11-18 15:54:33 INFO: Updated total on screen to 3549.87 \ UPDATE
-2023-11-18 15:54:33 INFO: Control Panel Button Press \ Check Out
-2023-11-18 15:54:33 INFO: READ: Will, ******** \ Check Out
-2023-11-18 15:54:33 INFO: Check out \ 
-2023-11-18 15:54:33 INFO: Check Out Screen initialized \ CHECK OUT
-2023-11-18 15:54:33 INFO: Updated total on screen to 0.0 \ UPDATE
-2023-11-18 15:54:33 INFO: Check out successful! \ CHECK OUT EVENT
-2023-11-18 15:54:48 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
-2023-11-18 15:54:48 INFO: Read NUMBER : 6011444455553333 // EXPIRATION : 09/88 // SECURITY : 555 \ LOG DATA
-2023-11-18 15:54:48 INFO: Credit Card approved! \ APPROVED
-2023-11-18 15:54:49 INFO: CREATE ORDER \ Order confirmed
-2023-11-18 15:54:49 INFO: Added order 1699883934524 to Order Database \ Database update
-2023-11-18 15:54:51 WARNING: Shopping Cart cleared \ CART CLEARED
-2023-11-18 15:54:51 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:54:55 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-11-18 15:54:55 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-11-18 15:54:55 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-11-18 15:54:55 INFO: System shut down \ OFFLINE.
-2023-11-18 15:55:44 INFO: INIT \ 10bde29cd8716
-2023-11-18 15:55:44 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:55:44 INFO: System start up \ Initialization.
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type VIOLIN \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type VIOLIN \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type VIOLA \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type VIOLA \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type CELLO \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type CELLO \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type BASS \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type BASS \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type PIANO \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type PIANO \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type COMPUTER \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type COMPUTER \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type SPEAKER \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type SPEAKER \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type TELEVISION \ 
-2023-11-18 15:55:44 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:55:44 INFO: Read item type TELEVISION \ 
-2023-11-18 15:55:44 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:55:44 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:55:44 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:55:44 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:55:44 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:55:44 INFO: Populated 4 entities from file. \ 
-2023-11-18 15:55:44 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 15:55:44 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 15:55:44 INFO: Populated 4 entities from file. \ 
-2023-11-18 15:55:44 INFO: Initializing GUI \ Initialization
-2023-11-18 15:55:53 INFO: Control Panel Button Press \ Log in
-2023-11-18 15:55:53 INFO: READ: Will, squish \ Log in
-2023-11-18 15:55:53 INFO: Log in existing user \ 
-2023-11-18 15:55:53 INFO: Searching for user "Will" \ Log in
-2023-11-18 15:55:53 INFO: Successfully hashed password \ 
-2023-11-18 15:55:53 INFO: User log in Successful \ Will
-2023-11-18 15:55:53 INFO: 2106 : Will \ User set
-2023-11-18 15:55:53 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
-2023-11-18 15:56:00 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:56:00 INFO: Built new ShoppingCart \ INIT
-2023-11-18 15:56:00 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:56:00 INFO: Item Flip Phone added to cart. \ Quantity 1
-2023-11-18 15:56:00 INFO: Total updated 249.99 \ PRICE UPDATED
-2023-11-18 15:56:00 INFO: Updated total on screen to 249.99 \ UPDATE
-2023-11-18 15:56:00 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:56:00 INFO: Item Flip Phone added to cart. \ Quantity 2
-2023-11-18 15:56:00 INFO: Total updated 499.98 \ PRICE UPDATED
-2023-11-18 15:56:00 INFO: Updated total on screen to 499.98 \ UPDATE
-2023-11-18 15:56:02 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:56:02 INFO: Item SoundBar added to cart. \ Quantity 1
-2023-11-18 15:56:02 INFO: Total updated 749.97 \ PRICE UPDATED
-2023-11-18 15:56:02 INFO: Updated total on screen to 749.97 \ UPDATE
-2023-11-18 15:56:03 INFO: User Shopping Cart getInstance method call \ SHOPPING CART
-2023-11-18 15:56:03 INFO: Total updated 499.98 \ PRICE UPDATED
-2023-11-18 15:56:03 INFO: Item Flip Phone removed from cart. \ Remaining 1
-2023-11-18 15:56:03 INFO: Updated total on screen to 499.98 \ UPDATE
-2023-11-18 15:56:05 INFO: Updated total on screen to 499.98 \ UPDATE
-2023-11-18 15:56:05 INFO: Control Panel Button Press \ Check Out
-2023-11-18 15:56:05 INFO: READ: Will, ******** \ Check Out
-2023-11-18 15:56:05 INFO: Check out \ 
-2023-11-18 15:56:05 INFO: Check Out Screen initialized \ CHECK OUT
-2023-11-18 15:56:05 INFO: Updated total on screen to 0.0 \ UPDATE
-2023-11-18 15:56:05 INFO: Check out successful! \ CHECK OUT EVENT
-2023-11-18 15:56:19 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
-2023-11-18 15:56:19 INFO: Read NUMBER : 5544111122223333 // EXPIRATION : 99/99 // SECURITY : 445 \ LOG DATA
-2023-11-18 15:56:19 INFO: Credit Card approved! \ APPROVED
-2023-11-18 15:56:20 INFO: CREATE ORDER \ Order confirmed
-2023-11-18 15:56:20 INFO: Added order 1699884116732 to Order Database \ Database update
-2023-11-18 15:56:22 WARNING: Shopping Cart cleared \ CART CLEARED
-2023-11-18 15:56:22 INFO: Total updated 0.00 \ PRICE UPDATED
-2023-11-18 15:56:26 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-11-18 15:56:26 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-11-18 15:56:26 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-11-18 15:56:26 INFO: System shut down \ OFFLINE.
-2023-11-18 15:57:09 INFO: INIT \ 10bde2aae342e
-2023-11-18 15:57:09 INFO: Initialized PaymentProcessor \ INIT
-2023-11-18 15:57:09 INFO: System start up \ Initialization.
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type VIOLIN \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type VIOLIN \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type VIOLA \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type VIOLA \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type CELLO \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type CELLO \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type BASS \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type BASS \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type PIANO \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type PIANO \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type CELLPHONE \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type COMPUTER \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type COMPUTER \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type SPEAKER \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type SPEAKER \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type TELEVISION \ 
-2023-11-18 15:57:09 INFO: SuperFactory called \ Pass arguments to sub-factories
-2023-11-18 15:57:09 INFO: Read item type TELEVISION \ 
-2023-11-18 15:57:09 INFO: CATALOGUE SOURCE: C:\Users\willi\Documents\GitHub\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
-2023-11-18 15:57:09 INFO: Read Catalogue file. \ Source file populated.
-2023-11-18 15:57:09 INFO: Populated 18 entities from file. \ 
-2023-11-18 15:57:09 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
-2023-11-18 15:57:09 INFO: Read User Database file. \ Source file populated.
-2023-11-18 15:57:09 INFO: Populated 4 entities from file. \ 
-2023-11-18 15:57:09 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
-2023-11-18 15:57:09 INFO: Read Order Database file. \ Source file populated.
-2023-11-18 15:57:09 INFO: Populated 5 entities from file. \ 
-2023-11-18 15:57:09 INFO: Initializing GUI \ Initialization
-2023-11-18 15:57:12 INFO: Opening ABOUT \ Open file.
-2023-11-18 15:57:27 INFO: Wrote User Database changes to file. \ Operation CLOSE
-2023-11-18 15:57:27 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
-2023-11-18 15:57:27 INFO: Wrote Order Database changes to file. \ Operation CLOSE
-2023-11-18 15:57:27 INFO: System shut down \ OFFLINE.
+2023-11-18 23:06:47 INFO: INIT \ 10bdf347ecbf1
+2023-11-18 23:06:47 INFO: Initialized PaymentProcessor \ INIT
+2023-11-18 23:06:47 INFO: System start up \ Initialization.
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type VIOLIN \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type VIOLIN \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type VIOLA \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type VIOLA \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type CELLO \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type CELLO \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type BASS \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type BASS \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type PIANO \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:47 INFO: Read item type PIANO \ 
+2023-11-18 23:06:47 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type CELLPHONE \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type CELLPHONE \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type COMPUTER \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type COMPUTER \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type SPEAKER \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type SPEAKER \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type TELEVISION \ 
+2023-11-18 23:06:48 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-18 23:06:48 INFO: Read item type TELEVISION \ 
+2023-11-18 23:06:48 INFO: CATALOGUE SOURCE: D:\Programming\SE450 Object Oriented Software Development\Final Project\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
+2023-11-18 23:06:48 INFO: Read Catalogue file. \ Source file populated.
+2023-11-18 23:06:48 INFO: Populated 18 entities from file. \ 
+2023-11-18 23:06:48 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
+2023-11-18 23:06:48 INFO: Read User Database file. \ Source file populated.
+2023-11-18 23:06:48 INFO: Populated 4 entities from file. \ 
+2023-11-18 23:06:48 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
+2023-11-18 23:06:48 INFO: Read Order Database file. \ Source file populated.
+2023-11-18 23:06:48 INFO: Populated 5 entities from file. \ 
+2023-11-18 23:06:48 INFO: Initializing GUI \ Initialization
+2023-11-18 23:06:53 INFO: Control Panel Button Press \ Log in
+2023-11-18 23:06:53 INFO: READ: username, password \ Log in
+2023-11-18 23:06:53 INFO: Log in existing user \ 
+2023-11-18 23:06:53 INFO: Searching for user "username" \ Log in
+2023-11-18 23:06:53 WARNING: User username does not exist. \ LOG IN ERROR
+2023-11-18 23:06:53 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-11-18 23:06:55 INFO: Control Panel Button Press \ Log in
+2023-11-18 23:06:55 INFO: READ: username, ******** \ Log in
+2023-11-18 23:06:55 INFO: Log in existing user \ 
+2023-11-18 23:06:55 INFO: Searching for user "username" \ Log in
+2023-11-18 23:06:55 WARNING: User username does not exist. \ LOG IN ERROR
+2023-11-18 23:06:55 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-11-18 23:07:01 INFO: Control Panel Button Press \ Log in
+2023-11-18 23:07:01 INFO: READ: Will, squish \ Log in
+2023-11-18 23:07:01 INFO: Log in existing user \ 
+2023-11-18 23:07:01 INFO: Searching for user "Will" \ Log in
+2023-11-18 23:07:01 INFO: Successfully hashed password \ 
+2023-11-18 23:07:01 INFO: User log in Successful \ Will
+2023-11-18 23:07:01 INFO: 2106 : Will \ User set
+2023-11-18 23:07:01 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-11-18 23:07:04 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-18 23:07:04 INFO: Built new ShoppingCart \ INIT
+2023-11-18 23:07:04 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@5349de78
+2023-11-18 23:07:04 INFO: Item Beginner Cello added to cart. \ Quantity 1
+2023-11-18 23:07:04 INFO: Total updated 900.00 \ PRICE UPDATED
+2023-11-18 23:07:04 INFO: Updated total on screen to 900.0 \ UPDATE
+2023-11-18 23:07:04 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@5349de78
+2023-11-18 23:07:04 INFO: Item Beginner Cello added to cart. \ Quantity 2
+2023-11-18 23:07:04 INFO: Total updated 1,800.00 \ PRICE UPDATED
+2023-11-18 23:07:04 INFO: Updated total on screen to 1800.0 \ UPDATE
+2023-11-18 23:07:04 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@5349de78
+2023-11-18 23:07:04 INFO: Item Beginner Cello added to cart. \ Quantity 3
+2023-11-18 23:07:04 INFO: Total updated 2,700.00 \ PRICE UPDATED
+2023-11-18 23:07:04 INFO: Updated total on screen to 2700.0 \ UPDATE
+2023-11-18 23:07:06 INFO: Updated total on screen to 2700.0 \ UPDATE
+2023-11-18 23:07:06 INFO: Control Panel Button Press \ Check Out
+2023-11-18 23:07:06 INFO: READ: Will, ******** \ Check Out
+2023-11-18 23:07:06 INFO: Check out \ 
+2023-11-18 23:07:06 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-18 23:07:06 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-18 23:07:06 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-18 23:07:18 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-18 23:07:18 INFO: Read NUMBER : 4147222255553333 // EXPIRATION : 05/28 // SECURITY : 999 \ LOG DATA
+2023-11-18 23:07:18 INFO: Credit Card approved! \ APPROVED
+2023-11-18 23:07:20 INFO: CREATE ORDER \ Order confirmed
+2023-11-18 23:07:20 INFO: Added order 1699935835036 to Order Database \ Database update
+2023-11-18 23:07:20 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-18 23:07:20 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-18 23:07:25 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-11-18 23:07:25 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-11-18 23:07:25 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-11-18 23:07:25 INFO: System shut down \ OFFLINE.

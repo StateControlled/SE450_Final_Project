@@ -1,0 +1,26 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "logwriter" {
+	class LogWriter << Singleton >> {
+		-{static} dateFormat : SimpleDateFormat
+		-{static} instance : LogWriter
+		-{static} logFile : File
+		-{static} id : long
+		
+		-LogWriter(log : File)
+		+{static} getLogWriter(name : String) : LogWriter
+		-{static} setID() : void
+		+{static} getLog() : File
+		+{static} log(level : Level, event : String, optionalMessage : String) : void
+		+{static} log(level : Level, event : String, exception : Exception) : void
+	}
+	
+	enum Level {
+		INFO
+		WARNING
+		SEVERE
+	}
+}
+
+@enduml
