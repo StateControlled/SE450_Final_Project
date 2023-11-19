@@ -201,3 +201,415 @@
 2023-11-18 23:57:51 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
 2023-11-18 23:57:51 INFO: Wrote Order Database changes to file. \ Operation CLOSE
 2023-11-18 23:57:51 INFO: System shut down \ OFFLINE.
+2023-11-19 10:36:22 INFO: INIT \ 10be0df21a6cc
+2023-11-19 10:36:22 INFO: Initialized PaymentProcessor \ INIT
+2023-11-19 10:36:22 INFO: System start up \ Initialization.
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type VIOLIN \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type VIOLIN \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type VIOLA \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type VIOLA \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type CELLO \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type CELLO \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type BASS \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type BASS \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type PIANO \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type PIANO \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type CELLPHONE \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type CELLPHONE \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type COMPUTER \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type COMPUTER \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type SPEAKER \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type SPEAKER \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type TELEVISION \ 
+2023-11-19 10:36:22 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 10:36:22 INFO: Read item type TELEVISION \ 
+2023-11-19 10:36:22 INFO: CATALOGUE SOURCE: D:\Programming\SE450 Object Oriented Software Development\Final Project\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
+2023-11-19 10:36:22 INFO: Read Catalogue file. \ Source file populated.
+2023-11-19 10:36:22 INFO: Populated 18 entities from file. \ 
+2023-11-19 10:36:22 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
+2023-11-19 10:36:22 INFO: Read User Database file. \ Source file populated.
+2023-11-19 10:36:22 INFO: Populated 5 entities from file. \ 
+2023-11-19 10:36:22 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
+2023-11-19 10:36:22 INFO: Read Order Database file. \ Source file populated.
+2023-11-19 10:36:22 INFO: Populated 7 entities from file. \ 
+2023-11-19 10:36:22 INFO: Initializing GUI \ Initialization
+2023-11-19 10:38:37 INFO: Control Panel Button Press \ Log in
+2023-11-19 10:38:37 INFO: READ: Test, newpassword \ Log in
+2023-11-19 10:38:37 INFO: Log in existing user \ 
+2023-11-19 10:38:37 INFO: Searching for user "Test" \ Log in
+2023-11-19 10:38:37 WARNING: User Test does not exist. \ LOG IN ERROR
+2023-11-19 10:38:37 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-11-19 10:38:47 INFO: Control Panel Button Press \ Create Account
+2023-11-19 10:38:47 INFO: READ: Test, passwordtest \ Create Account
+2023-11-19 10:38:47 INFO: Create new user \ 
+2023-11-19 10:38:47 INFO: Searching for user "Test" \ Create Account
+2023-11-19 10:38:47 INFO: User constructor called. \ CLASS CONSTRUCTOR
+2023-11-19 10:38:47 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 10:38:47 INFO: Built new ShoppingCart \ INIT
+2023-11-19 10:38:47 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:38:47 INFO: Successfully hashed password \ 
+2023-11-19 10:38:47 INFO: Created new user Test \ NEW ACCOUNT CREATED
+2023-11-19 10:38:47 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-11-19 10:38:58 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:38:58 INFO: Item Trash Violin added to cart. \ Quantity 1
+2023-11-19 10:38:58 INFO: Total updated 99.95 \ PRICE UPDATED
+2023-11-19 10:38:58 INFO: Updated total on screen to 99.95 \ UPDATE
+2023-11-19 10:38:59 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:38:59 INFO: Item Trash Violin added to cart. \ Quantity 2
+2023-11-19 10:38:59 INFO: Total updated 199.90 \ PRICE UPDATED
+2023-11-19 10:38:59 INFO: Updated total on screen to 199.9 \ UPDATE
+2023-11-19 10:38:59 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:38:59 INFO: Item Trash Violin added to cart. \ Quantity 3
+2023-11-19 10:38:59 INFO: Total updated 299.85 \ PRICE UPDATED
+2023-11-19 10:38:59 INFO: Updated total on screen to 299.85 \ UPDATE
+2023-11-19 10:38:59 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:38:59 INFO: Item Trash Violin added to cart. \ Quantity 4
+2023-11-19 10:38:59 INFO: Total updated 399.80 \ PRICE UPDATED
+2023-11-19 10:38:59 INFO: Updated total on screen to 399.8 \ UPDATE
+2023-11-19 10:39:00 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:39:00 INFO: Item Trash Violin added to cart. \ Quantity 5
+2023-11-19 10:39:00 INFO: Total updated 499.75 \ PRICE UPDATED
+2023-11-19 10:39:00 INFO: Updated total on screen to 499.75 \ UPDATE
+2023-11-19 10:39:03 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:39:03 INFO: Total updated 399.80 \ PRICE UPDATED
+2023-11-19 10:39:03 INFO: Item Trash Violin removed from cart. \ Remaining 4
+2023-11-19 10:39:03 INFO: Updated total on screen to 399.8 \ UPDATE
+2023-11-19 10:39:05 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@2ee3c538
+2023-11-19 10:39:05 INFO: Total updated 299.85 \ PRICE UPDATED
+2023-11-19 10:39:05 INFO: Item Trash Violin removed from cart. \ Remaining 3
+2023-11-19 10:39:05 INFO: Updated total on screen to 299.85 \ UPDATE
+2023-11-19 10:39:11 INFO: Updated total on screen to 299.85 \ UPDATE
+2023-11-19 10:39:11 INFO: Control Panel Button Press \ Check Out
+2023-11-19 10:39:11 INFO: READ: Test, ******** \ Check Out
+2023-11-19 10:39:11 INFO: Check out \ 
+2023-11-19 10:39:11 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 10:39:11 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 10:39:11 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 10:39:33 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 10:39:33 INFO: Read NUMBER : 4400111122223333 // EXPIRATION : 05/16 // SECURITY : 299 \ LOG DATA
+2023-11-19 10:39:33 INFO: Credit Card approved! \ APPROVED
+2023-11-19 10:39:39 INFO: CREATE ORDER \ Order confirmed
+2023-11-19 10:39:39 INFO: Added order 1700018914086 to Order Database \ Database update
+2023-11-19 10:39:39 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 10:39:39 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 10:39:54 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-11-19 10:39:54 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-11-19 10:39:54 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-11-19 10:39:54 INFO: System shut down \ OFFLINE.
+2023-11-19 11:12:43 INFO: INIT \ 10be0f59e6654
+2023-11-19 11:12:43 INFO: Initialized PaymentProcessor \ INIT
+2023-11-19 11:12:43 INFO: System start up \ Initialization.
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type VIOLIN \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type VIOLIN \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type VIOLA \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type VIOLA \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type CELLO \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type CELLO \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type BASS \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type BASS \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type PIANO \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type PIANO \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type CELLPHONE \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type CELLPHONE \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type COMPUTER \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type COMPUTER \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type SPEAKER \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type SPEAKER \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type TELEVISION \ 
+2023-11-19 11:12:43 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:12:43 INFO: Read item type TELEVISION \ 
+2023-11-19 11:12:43 INFO: CATALOGUE SOURCE: D:\Programming\SE450 Object Oriented Software Development\Final Project\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
+2023-11-19 11:12:43 INFO: Read Catalogue file. \ Source file populated.
+2023-11-19 11:12:43 INFO: Populated 18 entities from file. \ 
+2023-11-19 11:12:43 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
+2023-11-19 11:12:43 INFO: Read User Database file. \ Source file populated.
+2023-11-19 11:12:43 INFO: Populated 6 entities from file. \ 
+2023-11-19 11:12:43 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
+2023-11-19 11:12:43 INFO: Read Order Database file. \ Source file populated.
+2023-11-19 11:12:43 INFO: Populated 8 entities from file. \ 
+2023-11-19 11:12:43 INFO: Initializing GUI \ Initialization
+2023-11-19 11:20:00 INFO: Control Panel Button Press \ Log in
+2023-11-19 11:20:00 INFO: READ: Account, newpassword \ Log in
+2023-11-19 11:20:00 INFO: Log in existing user \ 
+2023-11-19 11:20:00 INFO: Searching for user "Account" \ Log in
+2023-11-19 11:20:00 WARNING: User Account does not exist. \ LOG IN ERROR
+2023-11-19 11:20:00 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-11-19 11:20:09 INFO: Control Panel Button Press \ Create Account
+2023-11-19 11:20:09 INFO: READ: Account, newpassword \ Create Account
+2023-11-19 11:20:09 INFO: Create new user \ 
+2023-11-19 11:20:09 INFO: Searching for user "Account" \ Create Account
+2023-11-19 11:20:09 INFO: User constructor called. \ CLASS CONSTRUCTOR
+2023-11-19 11:20:09 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:20:09 INFO: Built new ShoppingCart \ INIT
+2023-11-19 11:20:09 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:09 INFO: Successfully hashed password \ 
+2023-11-19 11:20:09 INFO: Created new user Account \ NEW ACCOUNT CREATED
+2023-11-19 11:20:09 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-11-19 11:20:14 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:14 INFO: Item Beginner Cello added to cart. \ Quantity 1
+2023-11-19 11:20:14 INFO: Total updated 900.00 \ PRICE UPDATED
+2023-11-19 11:20:14 INFO: Updated total on screen to 900.0 \ UPDATE
+2023-11-19 11:20:16 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:16 INFO: Item Beginner Cello added to cart. \ Quantity 2
+2023-11-19 11:20:16 INFO: Total updated 1,800.00 \ PRICE UPDATED
+2023-11-19 11:20:16 INFO: Updated total on screen to 1800.0 \ UPDATE
+2023-11-19 11:20:16 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:16 INFO: Item Beginner Cello added to cart. \ Quantity 3
+2023-11-19 11:20:16 INFO: Total updated 2,700.00 \ PRICE UPDATED
+2023-11-19 11:20:16 INFO: Updated total on screen to 2700.0 \ UPDATE
+2023-11-19 11:20:16 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:16 INFO: Item Beginner Cello added to cart. \ Quantity 4
+2023-11-19 11:20:16 INFO: Total updated 3,600.00 \ PRICE UPDATED
+2023-11-19 11:20:16 INFO: Updated total on screen to 3600.0 \ UPDATE
+2023-11-19 11:20:16 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:16 INFO: Item Beginner Cello added to cart. \ Quantity 5
+2023-11-19 11:20:16 INFO: Total updated 4,500.00 \ PRICE UPDATED
+2023-11-19 11:20:16 INFO: Updated total on screen to 4500.0 \ UPDATE
+2023-11-19 11:20:16 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:16 INFO: Item Beginner Cello added to cart. \ Quantity 6
+2023-11-19 11:20:16 INFO: Total updated 5,400.00 \ PRICE UPDATED
+2023-11-19 11:20:16 INFO: Updated total on screen to 5400.0 \ UPDATE
+2023-11-19 11:20:17 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:17 INFO: Item Beginner Cello added to cart. \ Quantity 7
+2023-11-19 11:20:17 INFO: Total updated 6,300.00 \ PRICE UPDATED
+2023-11-19 11:20:17 INFO: Updated total on screen to 6300.0 \ UPDATE
+2023-11-19 11:20:18 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:18 INFO: Total updated 5,400.00 \ PRICE UPDATED
+2023-11-19 11:20:18 INFO: Item Beginner Cello removed from cart. \ Remaining 6
+2023-11-19 11:20:18 INFO: Updated total on screen to 5400.0 \ UPDATE
+2023-11-19 11:20:19 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:19 INFO: Total updated 4,500.00 \ PRICE UPDATED
+2023-11-19 11:20:19 INFO: Item Beginner Cello removed from cart. \ Remaining 5
+2023-11-19 11:20:19 INFO: Updated total on screen to 4500.0 \ UPDATE
+2023-11-19 11:20:21 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:21 INFO: Item SoundBar added to cart. \ Quantity 1
+2023-11-19 11:20:21 INFO: Total updated 4,749.99 \ PRICE UPDATED
+2023-11-19 11:20:21 INFO: Updated total on screen to 4749.99 \ UPDATE
+2023-11-19 11:20:21 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:21 INFO: Item SoundBar added to cart. \ Quantity 2
+2023-11-19 11:20:21 INFO: Total updated 4,999.98 \ PRICE UPDATED
+2023-11-19 11:20:21 INFO: Updated total on screen to 4999.98 \ UPDATE
+2023-11-19 11:20:22 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:22 INFO: Total updated 4,099.98 \ PRICE UPDATED
+2023-11-19 11:20:22 INFO: Item Beginner Cello removed from cart. \ Remaining 4
+2023-11-19 11:20:22 INFO: Updated total on screen to 4099.98 \ UPDATE
+2023-11-19 11:20:23 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:23 INFO: Total updated 3,199.98 \ PRICE UPDATED
+2023-11-19 11:20:23 INFO: Item Beginner Cello removed from cart. \ Remaining 3
+2023-11-19 11:20:23 INFO: Updated total on screen to 3199.98 \ UPDATE
+2023-11-19 11:20:26 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:20:26 INFO: Total updated 2,949.99 \ PRICE UPDATED
+2023-11-19 11:20:26 INFO: Item SoundBar removed from cart. \ Remaining 1
+2023-11-19 11:20:26 INFO: Updated total on screen to 2949.99 \ UPDATE
+2023-11-19 11:20:32 INFO: Updated total on screen to 2949.99 \ UPDATE
+2023-11-19 11:20:32 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:20:32 INFO: READ: Account, ******** \ Check Out
+2023-11-19 11:20:32 INFO: Check out \ 
+2023-11-19 11:20:32 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:20:32 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:20:32 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:21:11 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:21:11 INFO: Read NUMBER : 4400111122225555 // EXPIRATION : 08/25 // SECURITY : 995 \ LOG DATA
+2023-11-19 11:21:11 INFO: Credit Card approved! \ APPROVED
+2023-11-19 11:21:20 INFO: CREATE ORDER \ Order confirmed
+2023-11-19 11:21:20 INFO: Added order 1700023915335 to Order Database \ Database update
+2023-11-19 11:21:20 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:21:20 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:21:55 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@19122522
+2023-11-19 11:21:55 INFO: Item Swift 5 added to cart. \ Quantity 1
+2023-11-19 11:21:55 INFO: Total updated 1,399.95 \ PRICE UPDATED
+2023-11-19 11:21:55 INFO: Updated total on screen to 1399.95 \ UPDATE
+2023-11-19 11:21:57 INFO: Updated total on screen to 1399.95 \ UPDATE
+2023-11-19 11:21:57 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:21:57 INFO: READ: Account, ******** \ Check Out
+2023-11-19 11:21:57 INFO: Check out \ 
+2023-11-19 11:21:57 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:21:58 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:21:58 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:22:05 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:22:05 INFO: Read NUMBER : **************** // EXPIRATION : mm/yy // SECURITY : CCV \ LOG DATA
+2023-11-19 11:22:05 WARNING: Credit Card length 0 is not acceptable \ REJECTED
+2023-11-19 11:22:05 INFO: Credit Card rejected \ Order refused
+2023-11-19 11:22:07 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:22:07 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:22:14 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:22:14 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:22:14 INFO: READ: Account, ******** \ Check Out
+2023-11-19 11:22:14 INFO: Check out \ 
+2023-11-19 11:22:14 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:22:14 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:22:14 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:22:17 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:22:17 INFO: Read NUMBER : **************** // EXPIRATION : mm/yy // SECURITY : CCV \ LOG DATA
+2023-11-19 11:22:17 WARNING: Credit Card length 0 is not acceptable \ REJECTED
+2023-11-19 11:22:17 INFO: Credit Card rejected \ Order refused
+2023-11-19 11:22:18 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:22:18 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:22:38 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:22:38 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:22:38 INFO: READ: Account, ******** \ Check Out
+2023-11-19 11:22:38 INFO: Check out \ 
+2023-11-19 11:22:38 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:22:38 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:22:38 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:22:52 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:22:52 INFO: Read NUMBER : **************** // EXPIRATION : mm/yy // SECURITY : CCV \ LOG DATA
+2023-11-19 11:22:52 WARNING: Credit Card length 0 is not acceptable \ REJECTED
+2023-11-19 11:22:52 INFO: Credit Card rejected \ Order refused
+2023-11-19 11:22:53 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:22:53 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:23:01 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:23:01 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:23:01 INFO: READ: Account, ******** \ Check Out
+2023-11-19 11:23:01 INFO: Check out \ 
+2023-11-19 11:23:01 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:23:01 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:23:01 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:23:03 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:23:03 INFO: Read NUMBER : **************** // EXPIRATION : mm/yy // SECURITY : CCV \ LOG DATA
+2023-11-19 11:23:03 WARNING: Credit Card length 0 is not acceptable \ REJECTED
+2023-11-19 11:23:03 INFO: Credit Card rejected \ Order refused
+2023-11-19 11:23:04 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:23:04 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:23:07 INFO: Wrote User Database changes to file. \ Operation CLOSE
+2023-11-19 11:23:07 INFO: Wrote Catalogue changes to file. \ Operation CLOSE
+2023-11-19 11:23:07 INFO: Wrote Order Database changes to file. \ Operation CLOSE
+2023-11-19 11:23:07 INFO: System shut down \ OFFLINE.
+2023-11-19 11:23:50 INFO: INIT \ 10be0fc7fb5c5
+2023-11-19 11:23:50 INFO: Initialized PaymentProcessor \ INIT
+2023-11-19 11:23:50 INFO: System start up \ Initialization.
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type VIOLIN \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type VIOLIN \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type VIOLA \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type VIOLA \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type CELLO \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type CELLO \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type BASS \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type BASS \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type PIANO \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type PIANO \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type CELLPHONE \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type CELLPHONE \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type COMPUTER \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type COMPUTER \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type SPEAKER \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type SPEAKER \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type TELEVISION \ 
+2023-11-19 11:23:50 INFO: SuperFactory called \ Pass arguments to sub-factories
+2023-11-19 11:23:50 INFO: Read item type TELEVISION \ 
+2023-11-19 11:23:50 INFO: CATALOGUE SOURCE: D:\Programming\SE450 Object Oriented Software Development\Final Project\SE450_Final_Project\src\main\resources\item-catalogue.json \ Source file set.
+2023-11-19 11:23:50 INFO: Read Catalogue file. \ Source file populated.
+2023-11-19 11:23:50 INFO: Populated 18 entities from file. \ 
+2023-11-19 11:23:50 INFO: USER DATABASE SOURCE: src\main\resources\user-database.json \ Source file set.
+2023-11-19 11:23:50 INFO: Read User Database file. \ Source file populated.
+2023-11-19 11:23:50 INFO: Populated 7 entities from file. \ 
+2023-11-19 11:23:50 INFO: ORDER DATABASE SOURCE: src\main\resources\order-database.json \ Source file set.
+2023-11-19 11:23:50 INFO: Read Order Database file. \ Source file populated.
+2023-11-19 11:23:50 INFO: Populated 9 entities from file. \ 
+2023-11-19 11:23:50 INFO: Initializing GUI \ Initialization
+2023-11-19 11:23:59 WARNING: Cannot add to cart \ No User logged in
+2023-11-19 11:24:00 INFO: Control Panel Button Press \ Log in
+2023-11-19 11:24:00 INFO: READ: username, password \ Log in
+2023-11-19 11:24:00 INFO: Log in existing user \ 
+2023-11-19 11:24:00 INFO: Searching for user "username" \ Log in
+2023-11-19 11:24:00 WARNING: User username does not exist. \ LOG IN ERROR
+2023-11-19 11:24:00 INFO: Control Panel received user authentication as false \ AUTHENTICATION EVENT
+2023-11-19 11:24:21 INFO: Control Panel Button Press \ Create Account
+2023-11-19 11:24:21 INFO: READ: new, pass \ Create Account
+2023-11-19 11:24:21 INFO: Create new user \ 
+2023-11-19 11:24:21 INFO: Searching for user "new" \ Create Account
+2023-11-19 11:24:21 INFO: User constructor called. \ CLASS CONSTRUCTOR
+2023-11-19 11:24:21 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:24:21 INFO: Built new ShoppingCart \ INIT
+2023-11-19 11:24:21 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@250be5bb
+2023-11-19 11:24:21 INFO: Successfully hashed password \ 
+2023-11-19 11:24:21 INFO: Created new user new \ NEW ACCOUNT CREATED
+2023-11-19 11:24:21 INFO: Control Panel received user authentication as true \ AUTHENTICATION EVENT
+2023-11-19 11:24:22 INFO: User Shopping Cart getInstance method call \ SHOPPING CART main.java.edu.depaul.shoppingcart.ShoppingCart@250be5bb
+2023-11-19 11:24:22 INFO: Item Professional Viola added to cart. \ Quantity 1
+2023-11-19 11:24:22 INFO: Total updated 19,500.00 \ PRICE UPDATED
+2023-11-19 11:24:22 INFO: Updated total on screen to 19500.0 \ UPDATE
+2023-11-19 11:24:24 INFO: Updated total on screen to 19500.0 \ UPDATE
+2023-11-19 11:24:24 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:24:24 INFO: READ: new, ******** \ Check Out
+2023-11-19 11:24:24 INFO: Check out \ 
+2023-11-19 11:24:24 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:24:24 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:24:24 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:24:34 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:24:34 INFO: Read NUMBER : **************** // EXPIRATION : mm/yy // SECURITY : CCV \ LOG DATA
+2023-11-19 11:24:34 WARNING: Credit Card length 0 is not acceptable \ REJECTED
+2023-11-19 11:24:34 INFO: Credit Card rejected \ Order refused
+2023-11-19 11:24:35 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:24:35 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:24:50 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:24:50 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:24:50 INFO: READ: new, ******** \ Check Out
+2023-11-19 11:24:50 INFO: Check out \ 
+2023-11-19 11:24:50 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:24:50 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:24:50 INFO: Check out successful! \ CHECK OUT EVENT
+2023-11-19 11:24:52 INFO: Received credit card processing request \ Credit Card processor validateCreditCard
+2023-11-19 11:24:52 INFO: Read NUMBER : **************** // EXPIRATION : mm/yy // SECURITY : CCV \ LOG DATA
+2023-11-19 11:24:52 WARNING: Credit Card length 0 is not acceptable \ REJECTED
+2023-11-19 11:24:52 INFO: Credit Card rejected \ Order refused
+2023-11-19 11:24:53 WARNING: Shopping Cart cleared \ CART CLEARED
+2023-11-19 11:24:53 INFO: Total updated 0.00 \ PRICE UPDATED
+2023-11-19 11:26:11 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:26:11 INFO: Control Panel Button Press \ Check Out
+2023-11-19 11:26:11 INFO: READ: new, ******** \ Check Out
+2023-11-19 11:26:11 INFO: Check out \ 
+2023-11-19 11:26:11 INFO: Check Out Screen initialized \ CHECK OUT
+2023-11-19 11:26:11 INFO: Updated total on screen to 0.0 \ UPDATE
+2023-11-19 11:26:11 INFO: Check out successful! \ CHECK OUT EVENT
