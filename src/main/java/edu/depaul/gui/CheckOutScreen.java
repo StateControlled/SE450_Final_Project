@@ -15,7 +15,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import main.java.edu.depaul.catalogue.OrderDatabase;
 import main.java.edu.depaul.customer.User;
 import main.java.edu.depaul.logwriter.Level;
 import main.java.edu.depaul.logwriter.LogWriter;
