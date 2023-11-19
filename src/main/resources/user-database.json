@@ -31,5 +31,14 @@
       1699884116732,
       1699935835036
     ]
+  },
+  {
+    "customerID": 2107,
+    "name": "Username",
+    "password": "26c730606cb09c57d984e7bf3054ac3a4d6da4ef3626dc8f6e97a1284c6adf",
+    "cart": {},
+    "orders": [
+      1699941866333
+    ]
   }
 ]

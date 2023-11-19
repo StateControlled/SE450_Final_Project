@@ -36,6 +36,7 @@
 ".\\src\\main\\java\\edu\\depaul\\order\\IOrderInterface.java"
 ".\\src\\main\\java\\edu\\depaul\\order\\Order.java"
 ".\\src\\main\\java\\edu\\depaul\\order\\OrderPopulator.java"
+".\\src\\main\\java\\edu\\depaul\\order\\OrderProcessor.java"
 ".\\src\\main\\java\\edu\\depaul\\paymentprocessor\\PaymentProcessor.java"
 ".\\src\\main\\java\\edu\\depaul\\shoppingcart\\ShoppingCart.java"
 ".\\src\\main\\resources\\constants\\StorageFiles.java"
